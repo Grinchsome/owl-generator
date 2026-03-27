@@ -4,9 +4,10 @@ import OpenAI from "openai";
 const app = express();
 const port = process.env.PORT || 3000;
 
-const client = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY
-});
+const appUsesOpenAI = Boolean(process.env.OPENAI_API_KEY);
+const client = appUsesOpenAI
+  ? new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
+  : null;
 
 app.use(express.json({ limit: "1mb" }));
 app.use(express.static("public"));
@@ -25,12 +26,12 @@ function normalizeText(value) {
 const DEMO_LOOKUP_ITEMS = [
   { match: ["barco", "udm"], item: "Barco UDM Projector", weightKg: 48.0 },
   { match: ["epson", "pu1008"], item: "Epson EB-PU1008B Projector", weightKg: 16.3 },
-  { match: ["d b", "y10p"], item: "d&b audiotechnik Y10P", weightKg: 21.0 },
+  { match: ["d", "b", "y10p"], item: "d&b audiotechnik Y10P", weightKg: 21.0 },
   { match: ["meyer", "upj"], item: "Meyer Sound UPJ", weightKg: 18.1 },
   { match: ["robe", "mega", "pointe"], item: "Robe MegaPointe", weightKg: 22.0 },
   { match: ["robe", "esprite"], item: "Robe ESPRITE", weightKg: 29.0 },
   { match: ["martin", "aura", "xb"], item: "Martin MAC Aura XB", weightKg: 8.0 },
-  { match: ["l acoustics", "x12"], item: "L-Acoustics X12", weightKg: 20.0 },
+  { match: ["l", "acoustics", "x12"], item: "L-Acoustics X12", weightKg: 20.0 },
   { match: ["panasonic", "rz", "projector"], item: "Panasonic PT-RZ120 Projector", weightKg: 23.0 },
   { match: ["christie", "projector"], item: "Christie Projector", weightKg: 32.0 }
 ];
@@ -51,7 +52,12 @@ function mockLookup(equipmentName) {
   if (q.includes("speaker")) {
     return { item: equipmentName.trim(), weightKg: 18.0, photo: "" };
   }
-  if (q.includes("wash") || q.includes("profile") || q.includes("spot") || q.includes("light")) {
+  if (
+    q.includes("wash") ||
+    q.includes("profile") ||
+    q.includes("spot") ||
+    q.includes("light")
+  ) {
     return { item: equipmentName.trim(), weightKg: 12.0, photo: "" };
   }
 
@@ -72,8 +78,7 @@ function extractOutputText(response) {
       }
     }
   }
-  return parts.join("
-").trim();
+  return parts.join("\n").trim();
 }
 
 app.post("/api/equipment-weight-lookup", async (req, res) => {
@@ -84,7 +89,8 @@ app.post("/api/equipment-weight-lookup", async (req, res) => {
       return res.status(400).json({ error: "Please enter equipment name." });
     }
 
-    const demoMode = process.env.DEMO_MODE === "1" || !process.env.OPENAI_API_KEY;
+    const demoMode = process.env.DEMO_MODE === "1" || !appUsesOpenAI;
+
     if (demoMode) {
       return res.json(mockLookup(equipmentName));
     }
@@ -143,15 +149,13 @@ app.post("/api/equipment-weight-lookup", async (req, res) => {
       photo
     });
   } catch (err) {
-    const message = err && err.message ? err.message : "Lookup failed.";
+    const equipmentName = String(req.body?.equipmentName || "").trim();
 
-    if (process.env.ALLOW_MOCK_FALLBACK === "1") {
-      const equipmentName = String(req.body?.equipmentName || "").trim();
-      if (equipmentName) {
-        return res.json(mockLookup(equipmentName));
-      }
+    if (process.env.ALLOW_MOCK_FALLBACK === "1" && equipmentName) {
+      return res.json(mockLookup(equipmentName));
     }
 
+    const message = err && err.message ? err.message : "Lookup failed.";
     return res.status(500).json({ error: message });
   }
 });
