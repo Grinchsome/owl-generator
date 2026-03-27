@@ -1451,7 +1451,33 @@
       calcTotals();
       closeBackupLookup();
     }
+let tableBound = false;
 
+function bindTableInteractions(){
+  if(tableBound) return;
+  tableBound = true;
+
+  linesEl.addEventListener("click", (e) => {
+    const removeBtn = e.target.closest("[data-remove]");
+    if (removeBtn){
+      const i = Number(removeBtn.getAttribute("data-remove"));
+      if (i >= 0 && i < lines.length){
+        lines.splice(i, 1);
+        render();
+        calcTotals();
+      }
+      return;
+    }
+
+    const photoEl = e.target.closest("[data-photo]");
+    if (photoEl){
+      const photo = photoEl.getAttribute("data-photo");
+      const title = photoEl.getAttribute("data-title") || "Photo";
+      openModal(photo, title);
+    }
+  });
+}
+    
     function render(){
       bindTableInteractions();
       linesEl.innerHTML = "";
