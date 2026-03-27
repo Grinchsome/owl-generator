@@ -475,6 +475,11 @@
       .equipmentActionsRow{
         flex-direction: column;
       }
+.backupLookupActions button,
+.equipmentActionsRow button{
+  flex: 0 0 auto;
+  min-height: 52px;
+}
     }
 
     #riggingCard.is-collapsed #riggingBody{
@@ -1373,11 +1378,23 @@
     }
 
     function updateBackupTotal(){
-      const qty = Math.max(1, Number(backupLookupQtyEl.value) || 1);
-      backupLookupQtyEl.value = qty;
-      const total = backupLookupState ? qty * Number(backupLookupState.weight) : 0;
-      backupLookupTotalEl.value = total.toFixed(2) + " kg";
-    }
+  const rawValue = backupLookupQtyEl.value.trim();
+
+  if (rawValue === "") {
+    backupLookupTotalEl.value = "0.00 kg";
+    return;
+  }
+
+  const qty = Number(rawValue);
+
+  if (!Number.isFinite(qty) || qty < 1) {
+    backupLookupTotalEl.value = "0.00 kg";
+    return;
+  }
+
+  const total = backupLookupState ? qty * Number(backupLookupState.weight) : 0;
+  backupLookupTotalEl.value = total.toFixed(2) + " kg";
+}
 
     async function runBackupLookup(){
       const searchText = backupLookupNameEl.value.trim();
@@ -1427,7 +1444,12 @@
     function addBackupLookupResult(){
       if (!backupLookupState) return;
 
-      const qty = Math.max(1, Number(backupLookupQtyEl.value) || 1);
+      const qty = Number(backupLookupQtyEl.value);
+if (!Number.isFinite(qty) || qty < 1) {
+  alert("Please enter a quantity of 1 or more.");
+  backupLookupQtyEl.focus();
+  return;
+}
       const eachKg = Number(backupLookupState.weight);
       const existing = lines.find(l => l.kind === "Equipment" && l.name === backupLookupState.name);
 
@@ -1477,7 +1499,7 @@ function bindTableInteractions(){
     }
   });
 }
-    
+
     function render(){
       bindTableInteractions();
       linesEl.innerHTML = "";
