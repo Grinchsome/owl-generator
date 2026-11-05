@@ -1,0 +1,3861 @@
+    <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OWL Generator</title><meta name="theme-color" content="#172c40"><link rel="manifest" href="./manifest.webmanifest"><link rel="icon" href="./icon.svg">
+
+  <style>
+
+
+    :root{
+      --bg:#f6f6f6;
+      --card:#ffffff;
+      --text:#111111;
+      --muted:rgba(0,0,0,.72);
+      --border:#dddddd;
+      --shadow:0 1px 12px rgba(0,0,0,.07);
+      --soft:#fafafa;
+      --btn:#111111;
+      --btnText:#ffffff;
+      --btnGhost:#eeeeee;
+      --btnDanger:#b00020;
+      --btnCopy:#0b5;
+      --btnWarn:#ffb020;
+      --modalBg:rgba(0,0,0,.72);
+      --imgBg:#f0f0f0;
+    }
+    body.dark{
+      --bg:#0f1115;
+      --card:#171a21;
+      --text:#f2f4f8;
+      --muted:rgba(255,255,255,.72);
+      --border:#2a2f3a;
+      --shadow:0 1px 14px rgba(0,0,0,.35);
+      --soft:#12151b;
+      --btn:#f2f4f8;
+      --btnText:#0f1115;
+      --btnGhost:#232838;
+      --btnDanger:#ff3b5c;
+      --btnCopy:#22c55e;
+      --btnWarn:#fbbf24;
+      --modalBg:rgba(0,0,0,.78);
+      --imgBg:#0b0e14;
+    }
+
+    body{ font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background:var(--bg); margin:0; color:var(--text); }
+    .wrap{ max-width: 980px; margin: 0 auto; padding: 18px; }
+
+    .stickyTop{
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: var(--bg);
+      padding: 10px 0;
+    }
+
+    .card{
+      background:var(--card);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 16px;
+      border: 1px solid rgba(0,0,0,.35);
+    }
+    body.dark .card{ border: 1px solid var(--border); }
+
+    .sectionCard{ margin-top: 12px; }
+
+    h1{ font-size: 20px; margin: 0 0 6px; }
+    .sub{ font-size: 13px; opacity: .85; margin: 0 0 12px; color: var(--muted); }
+
+    .sectionTitle{
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: .2px;
+      margin: 0;
+    }
+    .sectionHint{ font-size: 12px; color: var(--muted); margin-top: 6px; }
+
+    .divider{
+      height: 1px;
+      background: rgba(0,0,0,.08);
+      margin: 14px 0;
+      border-radius: 999px;
+    }
+    body.dark .divider{ background: rgba(255,255,255,.10); }
+
+    label{ display:block; font-size: 12px; opacity:.9; margin: 12px 0 6px; color: var(--muted); }
+    input{
+      width:100%;
+      padding:12px;
+      font-size:16px;
+      border-radius:12px;
+      border:1px solid var(--border);
+      box-sizing:border-box;
+      background:var(--card);
+      color:var(--text);
+    }
+    input::placeholder{ color: var(--muted); opacity:.75; }
+
+    #barName { font-weight: 600; }
+
+    .row{ display:flex; gap:14px; align-items:flex-end; margin-top:10px; flex-wrap: wrap; }
+
+    .field-bar  { flex: 1 1 320px; max-width: 520px; }
+    .field-total{ flex: 0 0 220px; }
+
+    .field-type { flex: 1 1 260px; max-width: 640px; }
+    .field-wpm  { flex: 0 0 140px; }
+    .field-len  { flex: 0 0 180px; }
+
+    .field-item { flex: 1 1 360px; max-width: 680px; }
+    .field-qty  { flex: 0 0 120px; }
+
+    .totalInput{
+      font-weight: 900;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    button{
+      width:100%;
+      padding:12px;
+      font-size:16px;
+      border:0;
+      border-radius:12px;
+      cursor:pointer;
+    }
+    .btn-primary{ background:var(--btn); color:var(--btnText); }
+    .btn-ghost{ background:var(--btnGhost); color:var(--text); border:1px solid var(--border); }
+    .btn-danger{ background:var(--btnDanger); color:#fff; }
+    .btn-copy{ background:var(--btnCopy); color:#fff; }
+    body.dark .btn-copy{ color:#0f1115; }
+    .btn-warn{ background: var(--btnWarn); color:#111; }
+    .btn-small{ padding:10px 12px; font-size:14px; }
+
+    .toast{
+      margin-top: 10px;
+      font-size: 13px;
+      padding: 10px 12px;
+      background: rgba(34,197,94,.12);
+      border: 1px solid rgba(34,197,94,.35);
+      border-radius: 12px;
+      display:none;
+      color: var(--text);
+    }
+    body.dark .toast{
+      background: rgba(34,197,94,.14);
+      border-color: rgba(34,197,94,.28);
+    }
+
+    table{ width:100%; border-collapse: collapse; margin-top: 14px; overflow:hidden; border-radius: 14px; }
+    th, td{ padding: 10px; border-bottom: 1px solid rgba(0,0,0,.08); text-align:left; vertical-align: middle; }
+    body.dark th, body.dark td{ border-bottom: 1px solid rgba(255,255,255,.08); }
+    th{ font-size: 12px; opacity:.85; color: var(--muted); }
+    .right{ text-align:right; }
+
+    .pill{
+      display:inline-block;
+      padding: 3px 8px;
+      font-size: 12px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      background: var(--soft);
+      white-space: nowrap;
+    }
+
+    .clickable-photo{ cursor: zoom-in; }
+    img.tablePhoto{
+      width: 56px;
+      height: 56px;
+      object-fit: cover;
+      border-radius: 10px;
+      background:var(--imgBg);
+      border: 1px solid rgba(0,0,0,.06);
+    }
+    body.dark img.tablePhoto{ border-color: rgba(255,255,255,.08); }
+
+    #equipPreviewImg, #hwPreviewImg, #barPreviewImg, #susPreviewImg, #equipLinPreviewImg{
+      width: 84px;
+      height: 84px;
+      object-fit: cover;
+      border-radius: 12px;
+      background:var(--imgBg);
+      border: 1px solid rgba(0,0,0,.06);
+      display:none;
+    }
+    body.dark #equipPreviewImg,
+    body.dark #hwPreviewImg,
+    body.dark #barPreviewImg,
+    body.dark #susPreviewImg,
+    body.dark #equipLinPreviewImg{ border-color: rgba(255,255,255,.08); }
+
+    .previewRow{ display:none; margin-top:10px; gap:10px; align-items:center; }
+    .previewMeta{ font-size: 14px; color: var(--muted); line-height: 1.2; }
+    .previewMeta b{ font-size: 16px; color: var(--text); }
+
+    .totalsStrip{
+      display:flex;
+      gap: 10px;
+      margin-top: 14px;
+      flex-wrap: wrap;
+    }
+    .miniTotalBox{
+      flex: 1 1 200px;
+      border: 1px solid rgba(0,0,0,.10);
+      background: rgba(255,255,255,.55);
+      border-radius: 14px;
+      padding: 10px 12px;
+    }
+    body.dark .miniTotalBox{
+      border-color: rgba(255,255,255,.10);
+      background: rgba(0,0,0,.12);
+    }
+    .miniLabel{
+      font-size: 12px;
+      opacity: .75;
+      color: var(--muted);
+    }
+    .miniValue{
+      font-size: 22px;
+      font-weight: 900;
+      margin-top: 4px;
+    }
+
+    .modalOverlay{
+      position: fixed;
+      inset:0;
+      background: var(--modalBg);
+      display:none;
+      align-items:center;
+      justify-content:center;
+      padding: 18px;
+      z-index: 9999;
+    }
+    .modalCard{
+      width: min(720px, 100%);
+      background:#111;
+      border-radius: 18px;
+      padding: 12px;
+      box-shadow: 0 1px 18px rgba(0,0,0,.35);
+    }
+    .modalTop{ display:flex; justify-content: space-between; align-items:center; color:#fff; gap: 10px; margin-bottom: 10px; }
+    .modalTitle{ font-size: 14px; opacity:.9; overflow:hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .modalClose{ width:auto; padding: 8px 12px; border-radius: 12px; background:#fff; color:#111; font-size: 14px; cursor:pointer; border:0; }
+    .modalImg{ width:100%; max-height: 75vh; object-fit: contain; border-radius: 14px; background:#000; display:block; }
+
+    .topBox{ background: #fff7e6; }
+    .riggingBox{ background: #eaf4ff; }
+    .equipmentBox{ background: #DDEBFF; }
+    .resultsBox{ background: #eafff1; }
+    .savedBox{ background: #f3e8ff; }
+
+    body.dark .topBox,
+    body.dark .riggingBox,
+    body.dark .equipmentBox,
+    body.dark .resultsBox,
+    body.dark .savedBox{
+      background: var(--card);
+    }
+
+    /* NEW: compact top header (logo + title left, dark mode small button right) */
+    .topHeader{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      margin-bottom: 8px;
+    }
+    .topBrand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      min-width:0;
+    }
+    .brandLogo{ height:32px; width:auto; }
+    .topTitle{
+      margin:0;
+      font-size:20px;
+      white-space:nowrap;
+    }
+    .topDarkBtn{
+      width:auto !important;
+      padding: 8px 10px !important;
+      font-size: 13px !important;
+      border-radius: 10px !important;
+      flex: 0 0 auto;
+    }
+
+    /* Rigging collapse logic */
+    .riggingBody{ display:none; }
+    .riggingBody.open{ display:block; }
+    .riggingBox.is-collapsed .riggingBody{ display:none !important; }
+
+    /* NEW: remove the big empty space when collapsed */
+    .riggingBox.is-collapsed{
+      padding: 12px !important;
+      height: auto !important;
+      min-height: 0 !important;
+    }
+    .riggingBox.is-collapsed .divider{ display:none !important; }
+    .riggingBox.is-collapsed .sectionHint{ display:none; }
+
+    .actionsRow{
+      display:flex;
+      gap:10px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+    .actionsRow button{ flex: 1 1 220px; }
+
+    /* Saved bars style */
+    .savedItem{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      justify-content: space-between;
+      padding: 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(0,0,0,.10);
+      background: rgba(255,255,255,.65);
+      margin-top: 10px;
+    }
+    body.dark .savedItem{
+      border-color: rgba(255,255,255,.10);
+      background: rgba(0,0,0,.12);
+    }
+    .savedItemLeft{ min-width: 0; }
+    .savedItemName{
+      font-weight: 900;
+      font-size: 16px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .savedItemTotal{
+      margin-top: 4px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .savedItemRight{
+      display:flex;
+      gap:8px;
+      align-items:center;
+      flex: 0 0 auto;
+    }
+    .savedItemKg{
+      font-weight: 900;
+      font-size: 16px;
+    }
+
+    @media (max-width: 520px){
+      .wrap{ padding: 12px; }
+      .row{ flex-direction: column; gap: 10px; align-items: stretch; }
+      .field-bar, .field-total, .field-type, .field-wpm, .field-len, .field-item, .field-qty{ max-width:none; flex: 1 1 auto; }
+      table{ display:block; overflow-x:auto; white-space: nowrap; }
+      .totalInput{ text-align:left; }
+      .stickyTop{ padding: 6px 0; }
+
+      .card{ padding: 12px; border-radius: 14px; }
+      .sectionCard{ margin-top: 10px; }
+      label{ margin: 8px 0 4px; font-size: 11px; }
+      input{ padding: 10px; font-size: 15px; border-radius: 10px; }
+      button{ padding: 10px; font-size: 15px; border-radius: 10px; }
+      .btn-small{ padding: 8px 10px; font-size: 13px; }
+      h1{ font-size: 18px; }
+      .divider{ margin: 10px 0; }
+      .totalInput{ font-size: 16px; }
+      img.tablePhoto{ width: 46px; height: 46px; border-radius: 9px; }
+      #equipPreviewImg, #hwPreviewImg, #barPreviewImg, #susPreviewImg, #equipLinPreviewImg{ width: 72px; height: 72px; border-radius: 12px; }
+      .row{ gap: 10px; margin-top: 8px; }
+
+      .totalsStrip{ flex-direction: column; }
+      .miniTotalBox{ flex: 1 1 auto; }
+      .miniValue{ font-size: 20px; }
+
+      /* Make the top header tighter on mobile */
+      .brandLogo{ height:26px; }
+      .topTitle{ font-size:16px; }
+      .topDarkBtn{
+        padding: 6px 8px !important;
+        font-size: 12px !important;
+      }
+
+      /* Rigging card: very tight when collapsed on mobile */
+      .riggingBox.is-collapsed{
+        padding: 10px !important;
+      }
+      .riggingBox.is-collapsed .row{
+        margin-top: 0 !important;
+        gap: 8px !important;
+      }
+      #riggingToggleBtn{ width:100%; }
+    }
+/* ===== Rigging card: collapse must remove layout height ===== */
+
+/* Collapsed = body removed from layout */
+#riggingCard.is-collapsed #riggingBody{
+  display: none !important;
+}
+
+/* Expanded = show body (optional if your default is already visible) */
+#riggingCard:not(.is-collapsed) #riggingBody{
+  display: block;
+}
+
+/* Mobile: tighten the rigging header/card when collapsed */
+@media (max-width: 600px){
+  #riggingCard{
+    padding: 10px !important;
+  }
+
+  /* Optional: hide hint on mobile to reduce height */
+  #riggingCard .sectionHint{
+    display: none !important;
+  }
+
+  /* Keep the toggle button compact but tappable */
+  #riggingToggleBtn{
+    padding: 8px 10px !important;
+  }
+}
+
+    /* (your existing CSS rules are above) */
+
+  #riggingCard.is-collapsed #riggingBody { 
+    display: none !important; 
+  }
+
+#riggingCard.is-collapsed { 
+  min-height: 0 !important;
+  height: auto !important;
+  padding-bottom: 8px !important;
+}
+
+
+/* ===== Gallery (single clean block) ===== */
+body.gallery-open{ overflow: hidden; }
+
+#galleryModal{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  overscroll-behavior: contain;
+}
+#galleryModal.is-hidden{ display:none; }
+
+#galleryModal .galleryPanel{
+  width: min(980px, 95vw);
+  height: min(740px, 88vh);
+  background: #0b1220;
+  border-radius: 14px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.35);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: #f3f4f6;
+}
+
+#galleryModal .galleryHeader,
+#galleryModal .galleryFooter{
+  padding: 10px 12px;
+  display:flex;
+  gap: 10px;
+  align-items:center;
+  justify-content: space-between;
+  background: rgba(255,255,255,0.06);
+}
+
+#galleryModal .galleryControls{
+  display:flex;
+  gap: 10px;
+  padding: 10px 12px 0;
+}
+
+#galleryModal .gallerySelect,
+#galleryModal .gallerySearch{
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.28);
+  background: rgba(255,255,255,0.14);
+  color: #fff;
+}
+#galleryModal .gallerySearch{ flex: 1; }
+#galleryModal .gallerySearch::placeholder{ color: rgba(255,255,255,0.70); }
+#galleryModal .gallerySelect option{ background:#fff; color:#111827; }
+
+#galleryModal .galleryGrid{
+  padding: 12px;
+  display:grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+#galleryModal .galleryCard{
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.06);
+  border-radius: 12px;
+  overflow:hidden;
+  cursor: pointer;
+  display: grid;
+  grid-template-rows: 110px auto;
+}
+
+#galleryModal .galleryCard.is-selected{
+  outline: 3px solid rgba(56,189,248,0.9);
+}
+
+#galleryModal .galleryCard img{
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  display:block;
+  background: rgba(255,255,255,0.06);
+}
+
+#galleryModal .galleryName{
+  padding: 8px 10px;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  color: #f3f4f6;
+}
+
+@media (max-width: 800px){
+  #galleryModal .galleryControls{ flex-direction: column; }
+  #galleryModal .galleryGrid{ grid-template-columns: repeat(3, 1fr); }
+  #galleryModal .galleryCard{ grid-template-rows: 120px auto; }
+  #galleryModal .galleryCard img{ height: 120px; }
+}
+/* gap between Equipment name input and Gallery button */
+#openGalleryBtn{
+  margin-top: 10px;
+}
+/* ===== Phone: make the Rigging card much smaller when collapsed ===== */
+@media (max-width: 520px){
+
+  /* Always remove the body when collapsed (belt + braces) */
+  #riggingCard.is-collapsed #riggingBody{
+    display: none !important;
+  }
+
+  /* Reduce padding in the collapsed state */
+  #riggingCard.is-collapsed{
+    padding: 8px 10px !important;
+  }
+
+  /* Hide the hint when collapsed to save height */
+  #riggingCard.is-collapsed .sectionHint{
+    display: none !important;
+    margin: 0 !important;
+  }
+
+  /* KEY BIT: stop the rigging header row stacking vertically */
+  #riggingCard.is-collapsed > .row{
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 10px !important;
+    margin-top: 0 !important;
+  }
+
+  /* Make the toggle button not full-width */
+  #riggingCard.is-collapsed #riggingToggleBtn{
+    width: auto !important;
+    white-space: nowrap;
+    padding: 8px 10px !important;
+  }
+}
+
+</style>
+
+<style>
+summary{font-weight:800;cursor:pointer;min-height:32px;padding:6px 0}select,textarea{width:100%;font:inherit;padding:12px;border-radius:10px;border:1px solid var(--border);background:var(--card);color:var(--text);box-sizing:border-box}small{display:block;margin-top:6px;line-height:1.4}a{color:#1565a7}body.dark a{color:#8bc8ff}.owlTools{display:grid;gap:6px}.owlTools>.row>label{flex:1 1 150px}.owlTools p{font-size:13px;color:var(--muted);line-height:1.5}.overCapacity{color:#b00020;font-weight:800}.savedItem{flex-wrap:wrap}.savedItem button{width:auto;min-width:72px}.savedItem span{flex:1 1 180px}.reportActions{display:flex;gap:12px}.reportActions button{width:auto}#owlReport{display:none;background:white;color:black;max-width:980px;margin:auto;padding:24px}#owlReport small{font-size:11px;overflow-wrap:anywhere}#owlReport td{vertical-align:top}body.report-open>.wrap{display:none}body.report-open #owlReport{display:block}#owlReport table{display:table;white-space:normal;font-size:13px}#owlReport p{line-height:1.5}#capacityStatus{font-size:12px}.stickyTop{position:static}button{min-height:44px}details.sectionCard{padding:12px 16px}body.dark .overCapacity{color:#ff8a9d}
+@media(max-width:520px){.topTitle{font-size:17px}.owlTools>.row{flex-direction:row;gap:8px}.owlTools>.row>label{flex:1 1 130px}.galleryPanel{height:90vh!important}#owlReport{padding:10px}#owlReport th,#owlReport td{padding:6px;font-size:11px}}
+@media print{@page{size:A4;margin:15mm}body>*{display:none!important}#owlReport{display:block!important;padding:0;max-width:none}.reportActions{display:none!important}#owlReport tr{break-inside:avoid}#owlReport thead{display:table-header-group}#owlReport h2{break-after:avoid}#owlReport table{display:table!important;width:100%}#owlReport a{color:black;text-decoration:none}}
+</style></head>
+
+<body>
+  <div class="wrap">
+    <div class="stickyTop">
+      <div class="card topBox">
+
+        <!-- NEW compact header -->
+        <div class="topHeader">
+          <div class="topBrand">
+            <img
+              src="./icon.svg"
+              alt="OWL Generator"
+              class="brandLogo"
+            >
+            <h1 class="topTitle">OWL Generator</h1>
+
+          </div>
+
+          <!-- Dark mode moved top-right and made small -->
+          <button id="darkModeBtn" class="btn-ghost topDarkBtn" type="button">Dark mode: Off</button>
+        </div>
+
+        <div class="row">
+          <div class="field-bar">
+            <label for="barName">Bar name/Asset Number</label>
+            <input id="barName" placeholder='e.g. "LX1", "FOH 2", "Stage Left Bar"' />
+          </div>
+
+          <div class="field-total">
+            <label for="topTotal">Observed Working Load</label>
+            <input id="topTotal" class="totalInput" type="text" readonly value="0.00 kg" />
+          </div>
+        </div>
+
+        <!-- Top card: only Save Bar -->
+        <div class="actionsRow">
+          <button id="saveBarBtn" class="btn-primary" type="button">Save Bar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rigging toggle -->
+    <div id="riggingCard" class="card sectionCard riggingBox is-collapsed">
+      <div class="row" style="margin-top:0;">
+        <div style="flex:1;">
+          <div class="sectionTitle">Rigging</div>
+          <div class="sectionHint">Bars + suspensions + rigging hardware (tap to open when needed).</div>
+        </div>
+        <div style="flex:0 0 180px;">
+          <button id="riggingToggleBtn" class="btn-ghost btn-small" type="button">Rigging: Show</button>
+        </div>
+      </div>
+
+      <div id="riggingBody" class="riggingBody">
+        <div class="divider"></div>
+
+        <!-- Bar -->
+        <div class="row">
+          <div class="field-type">
+            <label for="barType">Bar type</label>
+            <input id="barType" list="barTypeList" placeholder='Start typing… (e.g. "IWB")' />
+            <datalist id="barTypeList"></datalist>
+
+            <div id="barPreviewRow" class="previewRow">
+              <img id="barPreviewImg" class="clickable-photo" alt="Selected bar type preview" />
+              <div class="previewMeta" id="barPreviewMeta"></div>
+            </div>
+          </div>
+
+          <div class="field-wpm">
+            <label for="barWpm">kg/m</label>
+            <input id="barWpm" type="number" step="0.01" readonly placeholder="—" />
+          </div>
+
+          <div class="field-len">
+            <label for="barLen">Bar length (m)</label>
+            <input id="barLen" type="number" min="0" step="0.01" placeholder="e.g. 3.00" />
+          </div>
+        </div>
+
+        <div class="row" style="margin-top: 12px;">
+          <button class="btn-primary" id="addBarBtn" type="button">Add Bar</button>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Suspension -->
+        <div class="row">
+          <div class="field-type">
+            <label for="susType">Suspension type</label>
+            <input id="susType" list="susTypeList" placeholder='Start typing… (e.g. "Threaded Bar")' />
+            <datalist id="susTypeList"></datalist>
+
+            <div id="susPreviewRow" class="previewRow">
+              <img id="susPreviewImg" class="clickable-photo" alt="Selected suspension type preview" />
+              <div class="previewMeta" id="susPreviewMeta"></div>
+            </div>
+          </div>
+
+          <div class="field-wpm">
+            <label for="susWpm">kg/m</label>
+            <input id="susWpm" type="number" step="0.01" readonly placeholder="—" />
+          </div>
+
+          <div class="field-len">
+            <label for="susLen">Suspension length (m)</label>
+            <input id="susLen" type="number" min="0" step="0.01" placeholder="e.g. 6.00" />
+          </div>
+        </div>
+
+        <div class="row" style="margin-top: 12px;">
+          <button class="btn-primary" id="addSusBtn" type="button">Add Suspension</button>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Hardware -->
+        <div class="row">
+          <div class="field-item">
+            <label for="hwName">Hardware</label>
+            <input id="hwName" list="hardwareList" placeholder='Start typing… (e.g. "Stud Hanger")' />
+            <datalist id="hardwareList"></datalist>
+
+            <div id="hwPreviewRow" class="previewRow">
+              <img id="hwPreviewImg" class="clickable-photo" alt="Selected hardware preview" />
+              <div class="previewMeta" id="hwPreviewMeta"></div>
+            </div>
+          </div>
+
+          <div class="field-qty">
+            <label for="hwQty">Qty</label>
+            <input id="hwQty" type="number" min="1" value="1" />
+          </div>
+        </div>
+
+        <div class="row" style="margin-top: 12px;">
+          <button class="btn-primary" id="addHwBtn" type="button">Add Hardware</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Equipment -->
+    <div class="card sectionCard equipmentBox">
+      <div class="sectionTitle">Equipment</div>
+      <div class="sectionHint">Lanterns, speakers, projectors etc.</div>
+
+      <div class="row">
+        <div class="field-item">
+          <label for="equipName">Equipment name</label>
+          <input id="equipName" list="equipmentList" placeholder='Start typing… (e.g. "Strand Quartet F")' />
+          <datalist id="equipmentList"></datalist>
+<button type="button" class="btn-ghost btn-small" id="openGalleryBtn">Gallery</button>
+
+<div id="galleryModal" class="galleryModal is-hidden" aria-hidden="true">
+  <div class="galleryPanel">
+    <div class="galleryHeader">
+      <div style="font-weight:700;">Item Gallery</div>
+      <button type="button" class="btn-ghost btn-small" id="closeGalleryBtn">Close</button>
+    </div>
+
+    <div class="galleryControls">
+      <select id="galleryFilter" class="gallerySelect">
+        <option value="all">All</option>
+        <option value="equipment">Equipment</option>
+        <option value="equipment_linear">Equipment (Linear)</option>
+        <option value="hardware">Hardware</option>
+      </select>
+      <input id="gallerySearch" type="text" placeholder="Search…" class="gallerySearch" />
+    </div>
+
+    <div id="galleryGrid" class="galleryGrid"></div>
+
+    <div class="galleryFooter">
+      <div id="galleryPicked" class="galleryPicked">No item selected</div>
+      <button type="button" class="btn-primary" id="galleryAddBtn" disabled>Add</button>
+    </div>
+  </div>
+</div>
+
+          <div id="equipPreviewRow" class="previewRow">
+            <img id="equipPreviewImg" class="clickable-photo" alt="Selected equipment preview" />
+            <div class="previewMeta" id="equipPreviewMeta"></div>
+          </div>
+        </div>
+
+        <div class="field-qty">
+          <label for="equipQty">Qty</label>
+          <input id="equipQty" type="number" min="1" value="1" />
+        </div>
+      </div>
+
+      <div class="row" style="margin-top: 12px;">
+        <button class="btn-primary" id="addEquipBtn" type="button">Add Equipment</button>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="sectionHint" style="margin-top:0;">Linear items (kg/m) by length.</div>
+
+      <div class="row">
+        <div class="field-type">
+          <label for="equipLinType">Linear item type</label>
+          <input id="equipLinType" list="equipLinList" placeholder='Start typing… (e.g. "Prolyte H30V Box Truss")' />
+          <datalist id="equipLinList"></datalist>
+
+          <div id="equipLinPreviewRow" class="previewRow">
+            <img id="equipLinPreviewImg" class="clickable-photo" alt="Selected linear item preview" />
+            <div class="previewMeta" id="equipLinPreviewMeta"></div>
+          </div>
+        </div>
+
+        <div class="field-wpm">
+          <label for="equipLinWpm">kg/m</label>
+          <input id="equipLinWpm" type="number" step="0.01" readonly placeholder="—" />
+        </div>
+
+        <div class="field-len">
+          <label for="equipLinLen">Length (m)</label>
+          <input id="equipLinLen" type="number" min="0" step="0.01" placeholder="e.g. 6.00" />
+        </div>
+      </div>
+
+      <div class="row" style="margin-top: 12px;">
+        <button class="btn-primary" id="addEquipLinBtn" type="button">Add Linear Item</button>
+      </div>
+    </div>
+
+    <!-- Results -->
+    <div class="card sectionCard resultsBox">
+      <div class="sectionTitle">Current Bar</div>
+      <div class="sectionHint">Total includes: Equipment + Equipment Linear + Hardware + Bars + Suspensions.</div>
+
+      <div id="toast" class="toast"></div>
+
+      <div class="row" style="margin-top: 12px;">
+        <button class="btn-copy" id="copyBtn" type="button">Copy Current Bar</button>
+      </div>
+
+      <div class="actionsRow">
+        <button id="clearBarBtn" class="btn-ghost" type="button">Clear Bar</button>
+        <button id="clearAllBtn" class="btn-danger" type="button">Clear All</button>
+      </div>
+
+      <table id="table" style="display:none;">
+        <thead>
+          <tr>
+            <th>Photo</th>
+            <th>Type</th>
+            <th>Name</th>
+            <th class="right">Qty</th>
+            <th class="right">Each (kg)</th>
+            <th class="right">Line Total (kg)</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="lines"></tbody>
+      </table>
+
+      <div class="totalsStrip">
+        <div class="miniTotalBox">
+          <div class="miniLabel">Rigging total</div>
+          <div id="riggingTotal" class="miniValue">0.00 kg</div>
+        </div>
+        <div class="miniTotalBox">
+          <div class="miniLabel">Equipment total</div>
+          <div id="equipmentTotal" class="miniValue">0.00 kg</div>
+        </div>
+        <div class="miniTotalBox">
+          <div class="miniLabel">Grand total</div>
+          <div id="bottomTotal" class="miniValue">0.00 kg</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Saved bars -->
+    <div class="card sectionCard savedBox">
+      <div class="sectionTitle">Saved Bars</div>
+      <div class="sectionHint">Tap “Save Bar” at the top when a bar is finished.</div>
+
+      <div id="savedList" style="display:none; margin-top:12px;"></div>
+
+      <div class="row" style="margin-top: 12px;">
+        <button class="btn-ghost" id="copyJobBtn" type="button">Copy Whole Job</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="modalOverlay" class="modalOverlay" aria-hidden="true">
+    <div class="modalCard" role="dialog" aria-modal="true">
+      <div class="modalTop">
+        <div id="modalTitle" class="modalTitle">Photo</div>
+        <button id="modalClose" class="modalClose" type="button">Close</button>
+      </div>
+      <img id="modalImg" class="modalImg" alt="Enlarged photo" />
+    </div>
+  </div>
+
+  <script>
+    // =========================
+    // DATA (single source of truth)
+    // =========================
+
+const CATALOG = {
+  "Strand Quartet F": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 3.1,
+    "photo": "./images/7a901a5f1fb8ed76.jpg",
+    "originalPhoto": "https://insightlighting.co.uk/media/Strand-Quartet-F_Strand-Quartet-F_aURcOca-600x.jpg"
+  },
+  "ETC Source Four Jr": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 4.5,
+    "photo": "./images/308b4f42d2dd6b8f.jpg",
+    "originalPhoto": "https://www.etcconnect.com/uploadedImages/Main_Site/Images/Products/Lighting_Fixtures/Source_Four/SourceFour_Jr_Zoom_side-547x400.jpg"
+  },
+  "Chauvet Ovation": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 4,
+    "photo": "./images/f524fcee4e6fd93c.jpg",
+    "originalPhoto": "https://stagedepot.co.uk/sites/default/files/styles/product_display/public/productimages/prod_p56ww_right.png?itok=wOSK-C29"
+  },
+  "Prelude 16/30": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 6.5,
+    "photo": "https://northeasttheatresupplies.co.uk/wp-content/uploads/2022/04/strandPreludeProfile16-30.jpeg"
+  },
+  "Strand T84": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 12.5,
+    "photo": "./images/e44d3ea7f16e0490.jpg",
+    "originalPhoto": "https://content.easyliveauction.com/auctions/images_lots/FDA57E4C5DB5DFDE650E583750725B7A_lag01/1100176538_PREVIEW.JPG"
+  },
+  "Par 64 Long Nose Parcan": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 1.91,
+    "photo": "./images/0f192fb0469af2c8.jpg",
+    "originalPhoto": "https://res.cloudinary.com/ecomsilver/image/upload/w_570,h_570,c_pad,f_auto,q_auto/StageElectrics/product-images/21910.jpg"
+  },
+  "Chauvet Rogue R2 Wash": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 9.25,
+    "photo": "./images/3afd5e39a9226577.jpg",
+    "originalPhoto": "https://hirefrequencies.co.uk/wp-content/uploads/2020/01/Chauvet-Pro-Rogue-R2-335-Watt-RGBW-LED-Moving-Head-Wash-Lighting-Moving-Heads.jpg"
+  },
+  "JBL AC28/26 Speaker": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 18.6,
+    "photo": "./images/55e959aa77e06860.jpg",
+    "originalPhoto": "https://adn.harmanpro.com/product_attachments/product_attachments/7478_1728932866/ac28_front02_z_vert_medium.jpg"
+  },
+  "Chauvet LX10 Effect Light": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 2.3,
+    "photo": "./images/2e685373fd684cfc.jpg",
+    "originalPhoto": "https://cf1.zzounds.com/media/productmedia/fit%2C600by600/quality%2C85/LX10-LEFT-81cafb27c5a58515b899b2ba5db9d46f.jpg"
+  },
+  "ETC ColorSource PAR": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 3.8,
+    "photo": "https://cdn11.bigcommerce.com/s-5ig7x53cx8/images/stencil/1280x1280/products/113/382/cs-par_black_deepblue__49153.1532534085.jpg?c=2",
+    "source": "https://www.etcconnect.com/products/entertainment-fixtures/colorsource-par/tech-specs.aspx",
+    "notes": "Manufacturer explicitly excludes mounting hardware. Existing weight verified.",
+    "brand": "ETC",
+    "category": "lighting",
+    "checked": "2026-11-05"
+  },
+  "Chauvet Colordash Batten": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 8,
+    "photo": "./images/df6238e4931ee469.jpg",
+    "originalPhoto": "https://stagedepot.co.uk/sites/default/files/styles/product_display/public/productimages/COLORDASH%20BATTEN%20H12XIP-RIGHT.jpg?itok=O1Z24kJV"
+  },
+  "Mirrorball 20cm": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 1.06,
+    "photo": "./images/ee367842daa4fd9f.jpg",
+    "originalPhoto": "https://stagedepot.co.uk/sites/default/files/styles/product_display/public/productimages/60404_22.png?itok=OIZBgsa2"
+  },
+  "Mirrorball 50cm": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 4.8,
+    "photo": "./images/637ed9e95431971d.jpg",
+    "originalPhoto": "https://stagedepot.co.uk/sites/default/files/styles/product_display/public/productimages/40cm_0.png?itok=Dv4QuOX3"
+  },
+  "Mirrorball 100cm": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 37.2,
+    "photo": "./images/9c615b82f8bec479.png",
+    "originalPhoto": "https://stagedepot.co.uk/sites/default/files/productimages/20cm_1.png"
+  },
+  "Mirrorball Motor up to 50cm": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 2.6,
+    "photo": "./images/0cb69e36f4f9a84b.jpg",
+    "originalPhoto": "https://stagedepot.co.uk/sites/default/files/styles/product_display/public/productimages/MIRR09_U01.png?itok=D9fJZWqm"
+  },
+  "Mirrorball Motor up to 100cm": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 5.8,
+    "photo": "./images/edd5f5455faa86f0.jpg",
+    "originalPhoto": "https://stagedepot.co.uk/sites/default/files/styles/product_display/public/productimages/60416_37.png?itok=GL3uAbBF"
+  },
+  "Selecon Hui Flood": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 4.1,
+    "photo": "./images/87abac37e42f0dc8.jpg",
+    "originalPhoto": "https://lightsandaudio.co.uk/wp-content/uploads/2021/02/Philips-Selecon-Flood1000.jpg"
+  },
+  "elumen8 MP180 LED Fresnel": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 8.7,
+    "photo": "./images/7ca6d553bc40ff56.webp",
+    "originalPhoto": "https://tse3.mm.bing.net/th/id/OIP.-bAPRc3pG1WoLOTswPhuQQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+  },
+  "Coda Audio G 715-Pro": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 24.3,
+    "photo": "./images/2c0b736e3b2cfd7f.jpg",
+    "originalPhoto": "https://codaaudio.com/wp-content/uploads/2018/01/G-715_3d-left-1200x900.jpg"
+  },
+  "RCF ART 910 Speaker Bracket": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 4.45,
+    "photo": "./images/0dfd27befcbf7ecb.jpg",
+    "originalPhoto": "https://res.cloudinary.com/ecomsilver/image/upload/w_570,h_570,c_pad,f_auto,q_auto/StageElectrics/product-images/24765-7561a148-bfe1-4cbb-accd-8f52d55ce31c-.jpg"
+  },
+  "Showtec Compact Par 18 MK II": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 3,
+    "photo": "./images/f35618a318b4b35b.jpg",
+    "originalPhoto": "https://images.musicstore.de/images/1280/showtec-compact-par-18-mkii-black-18-x-3w-rgb-in-1-led_1_LIG0010542-000.jpg"
+  },
+  "Showtec Performer Fresnel 2000 RGBAL": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 7.6,
+    "photo": "./images/6775e153e393152a.jpg",
+    "originalPhoto": "https://www.simplysoundandlighting.co.uk/cdn/shop/files/17364920-40d3-44ce-97d3-92a670f6401d.jpg?v=1688093149"
+  },
+  "Ledj Spectra Par 12HEX10": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 4.53,
+    "photo": "./images/93a18c3f5813cdac.webp",
+    "originalPhoto": "https://images.shopcdn.co.uk/50/1d/501de001583c8549779b10430aead0ac/1024x1024/webp/fit?force=true&quality=80&compression=80"
+  },
+  "Chauvet Hurricane 1200 Smoke Machine": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 2.9,
+    "photo": "./images/f2e8ad7957b4b878.jpg",
+    "originalPhoto": "https://res.cloudinary.com/ecomsilver/image/upload/w_570,h_570,c_pad,f_auto,q_auto/StageElectrics/product-images/27562.jpg"
+  },
+  "Jem ZR25 Smoke Machine": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 13.7,
+    "photo": "./images/8ef53761a0899d58.jpg",
+    "originalPhoto": "https://res.cloudinary.com/ecomsilver/image/upload/w_570,h_570,c_pad,f_auto,q_auto/StageElectrics/product-images/24260.jpg"
+  },
+  "Panasonic Projector PT-MZ680": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 17.6,
+    "photo": "https://cdn.ballicom.co.uk/?r=peyJpbWciOiJcL1wvaW1hZ2VzXC9jZG5cLzIyXC81NlwvMjI1NjdkMWYtNTBlYi00NDdlLWE4OTYtNTZiOTc1M2U3Y2IzLmpwZyIsInNpemUiOjg1MCwiZXh0ZW5zaW9uIjoid2VicCJ9b"
+  },
+  "LDR Suono 20/40 Plus Profile": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 7,
+    "photo": "./images/e8a09fbca50f722f.jpg",
+    "originalPhoto": "https://plcgd-prolight-gob2b.b-cdn.net/imagecache/694d573e-2834-47fd-a5a0-0a11500de237/LDR10604030-U01_800x800.jpg"
+  },
+  "Luci della Ribalta Nota 8/22 Profile Spotlight": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 14.8,
+    "photo": "./images/551f52b4cca76a1e.jpg",
+    "originalPhoto": "https://www.rvetec.com/210-large_default/projecteurs-nota-822.jpg"
+  },
+  "Luci della Ribalta Aria f1000 plus Fesnel": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 5.6,
+    "photo": "./images/0686cf36746294ba.jpg",
+    "originalPhoto": "https://www.ldr.it/wp-content/uploads/2025/04/Aria-f1000-plus.jpg"
+  },
+  "Strand Harmony F Fresnel": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 5.9,
+    "photo": "./images/1e078fe0ec433f1d.webp",
+    "originalPhoto": "https://i.ebayimg.com/images/g/PvYAAOSw-0dkFFPS/s-l1600.webp"
+  },
+  "CCT Starlette 1000 Fresnel": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 6.8,
+    "photo": "./images/917f38795724f856.jpg",
+    "originalPhoto": "https://pro-occasions.nl/wp-content/uploads/2020/12/721.00009-01-1536x1536.jpg"
+  },
+  "Chauvet DJ Swarm 5 FX": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 4.5,
+    "photo": "./images/e7276006067760c7.jpg",
+    "originalPhoto": "https://www.chauvetdj.com/wp-content/uploads/2015/12/Swarm-5-FX-RIGHT.jpg"
+  },
+  "Chauvet DJ Mini Kinta IRC": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 1.6,
+    "photo": "./images/22ea0832bd62511a.jpg",
+    "originalPhoto": "https://www.chauvetdj.com/wp-content/uploads/2015/12/Mini-Kinta-IRC-RIGHT.jpg"
+  },
+  "Showtec LED Par 64 Short": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 3,
+    "photo": "./images/932dbfe54b9911ba.jpg",
+    "originalPhoto": "https://www.showtec.co.uk/onlineshop/image/cache/catalog/highlite/42000/42468_detail2-800x800.jpg"
+  },
+  "CCT Minuette Fresnel": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 2.2,
+    "photo": "./images/ea15eb6c5287d5b4.webp",
+    "originalPhoto": "https://firstnetwork.com/wp-content/uploads/2024/11/CCT-Minuette-Fresnel_5.webp"
+  },
+  "Pulse 320 LED Batten": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 1.9,
+    "photo": "./images/032e6ac997d9bc44.jpg",
+    "originalPhoto": "https://www.pulse-audio.co.uk/wp-content/uploads/LEDBAR_320_A.jpg"
+  },
+  "LEDJ Performer 18 Quad": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 2.5,
+    "photo": "./images/0a825bd618207d0b.jpg",
+    "originalPhoto": "https://www.simplysoundandlighting.co.uk/cdn/shop/files/2ecd1e6c-90da-44f5-a91a-fcd588320bac.jpg?v=1698804226"
+  },
+  "Eurolite Stage Panel 16 HCL LED": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 5.35,
+    "photo": "./images/d69eeecc54073e03.jpg",
+    "originalPhoto": "https://r2.gear4music.com/media/59/599264/600/preview.jpg"
+  },
+  "Luci della Ribalta Tempo f650 plus": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 4,
+    "photo": "./images/7954fcddec0a2470.jpg",
+    "originalPhoto": "https://www.ldr.it/wp-content/uploads/2025/01/Tempo-f650-plus.jpg"
+  },
+  "Cameo Thunder Wash 600 RGBW": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 4.1,
+    "photo": "./images/5dc0b34ab678b75a.jpg",
+    "originalPhoto": "https://cpc.farnell.com/productimages/standard/en_GB/DP38728-40.jpg"
+  },
+  "CCT Freedom 15°/32° Profile": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 11,
+    "photo": "./images/b27da0a75a1697f2.jpg",
+    "originalPhoto": "https://chinnicks.com/wp-content/uploads/2019/11/Freedom-28-58.jpg"
+  },
+  "Chauvet Intimidator Spot 375ZX": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 12.4,
+    "photo": "./images/7f7fce200bfed972.jpg",
+    "originalPhoto": "https://www.thedjshop.co.uk/media/catalog/product/cache/acf8f62092022bd10d5e9740368d716e/c/h/chauvet-dj-intimidator-spot-375zx-angled-right.jpg"
+  },
+  "Acclaim Zoomspot RGBL LED Profile": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 8,
+    "photo": "./images/a2354088d607813a.jpg",
+    "originalPhoto": "https://stagedepot.co.uk/sites/default/files/styles/product_display/public/productimages/acclaim-led-zoomspot_black_left_main.jpg?itok=bDyqhuPr"
+  },
+  "Acclaim Axial 18-34 Zoom Profile": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 5.6,
+    "photo": "./images/7bbc8ccc9454d89c.png",
+    "originalPhoto": "https://123hire.co.uk/cdn/shop/products/AcclaimAxialZoomspot18-34_695x695.png?v=1674046432"
+  },
+  "EM Acoustics R12": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 45,
+    "photo": "./images/bb98953baac4d619.png",
+    "originalPhoto": "https://emacoustics.co.uk/wp-content/uploads/wpfd/337/650307e05b4b9.png"
+  },
+  "EM Acoustics R8": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 23,
+    "photo": "./images/42681f5416395d50.png",
+    "originalPhoto": "https://emacoustics.co.uk/wp-content/uploads/wpfd/331/65030532e3c91.png"
+  },
+  "Strand Prelude F Fresnel Spot": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 3.5,
+    "photo": "./images/14cdc186c9e77897.jpg",
+    "originalPhoto": "https://ultralightsound.co.uk/wp-content/uploads/2019/11/prelude-400x400.jpg"
+  },
+  "ADB DW  105 Zoom Profile 15-38": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 14,
+    "photo": "./images/a9431093b0e2b476.jpg",
+    "originalPhoto": "https://www.radek-lsp.nl/.cm4all/mediadb/licht/adb-profielspot-dw105.jpg"
+  },
+  "Martin Mania SCX 600": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 12.3,
+    "photo": "./images/8944ea50558d8df9.jpg",
+    "originalPhoto": "https://mixersl.com/images/noleggio/LUCI/MARTIN_0020_maniascx600.jpg"
+  },
+  "Chauvet Rogue R1 FX-B": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 11,
+    "photo": "./images/94ea4bee34b7b701.jpg",
+    "originalPhoto": "https://static.wixstatic.com/media/e3149b_8673f57087924f07997ee2f531201ec8~mv2.jpg/v1/fill/w_600,h_787,al_c,q_85,enc_avif,quality_auto/prod_rogue_r1_fxb_left.jpg"
+  },
+  "Chauvet Rogue R2 Spot": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 21.2,
+    "photo": "./images/5a6b12be873dda6a.webp",
+    "originalPhoto": "https://tse3.mm.bing.net/th/id/OIP.O8jWURn_ezvKluGzdl-ToQHaJ4?rs=1&pid=ImgDetMain&o=7&rm=3"
+  },
+  "ETC Colorsource PAR V Zoom": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 3.8,
+    "photo": "./images/53e0d2e3df171b71.jpg",
+    "originalPhoto": "https://media.musson.com/catalog/product/cache/c248e41d31a912538205f459f5093f92/c/o/colorsource_parvzoom_blk_right_warmwht.jpg"
+  },
+  "Martin MAC Quantum Profile": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 23.2,
+    "photo": "./images/12794f71e1b964e7.jpg",
+    "originalPhoto": "https://adn.harmanpro.com/product_attachments/product_attachments/4808_1728940618/MACQuantumProfile_large.jpg"
+  },
+  "Clay Paky A.LEDA B-Eye K10": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 15,
+    "photo": "https://rentall.eu/images/fotos%20apparatuur/beyek10.jpg"
+  },
+  "Ayrton Diablo Profile": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 22,
+    "photo": "./images/975e9d806bfe131b.png",
+    "originalPhoto": "https://www.yeseventshire.co.uk/wp-content/uploads/2023/08/AYRTON-DIABLO-PROFILE.png"
+  },
+  "Chauvet Rogue R1 Wash": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 5.9,
+    "photo": "./images/d00cb69ed6a52a70.jpg",
+    "originalPhoto": "https://www.chauvetprofessional.com/wp-content/uploads/2015/06/prod_rogue_r1wash_right.jpg"
+  },
+  "Robe Spiider": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 13.3,
+    "photo": "./images/076051bc4e42a759.jpg",
+    "originalPhoto": "https://hirewl.com/wp-content/uploads/2020/01/Robe_Spiider_7.jpg"
+  },
+  "ROBE Robin DL4s Profile": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 22.7,
+    "photo": "./images/4b74cff96fd404a3.jpg",
+    "originalPhoto": "https://cdn.aws.robe.cz/v1/image/resize/c23fab84660954f3087fbd027b52d27e50f68a56?width=1920&height=1920&fit=cover&withoutEnlargement=true&format=jpeg"
+  },
+  "ROBE Robin LEDwash 300": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 8.2,
+    "photo": "./images/8c0dfc268159d803.webp",
+    "originalPhoto": "https://cdn.aws.robe.cz/v1/image/resize/03a8550efee31feac02a46950ddcde07b3317425?width=904&height=904&fit=cover&withoutEnlargement=false"
+  },
+  "Strand Cantata Fresnel": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 5.8,
+    "photo": "./images/d0b5081d8472fe8c.jpg",
+    "originalPhoto": "https://ultralightsound.co.uk/wp-content/uploads/2019/10/IMG_6094-1-720x720.jpg"
+  },
+  "Strand Cantata PC": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 7.2,
+    "photo": "./images/3b5494929cd9c7d8.jpg",
+    "originalPhoto": "https://www.solarisnetwork.com/product_database/model/3205/3205_large.jpg"
+  },
+  "ROBE Robin DL4F Wash": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 21.5,
+    "photo": "./images/8e42a003fadf40b0.jpg",
+    "originalPhoto": "https://cdn.aws.robe.cz/v1/image/resize/676c8c20a8d1961f7bb98fac19ed726ba8b9516f?width=1920&height=1920&fit=cover&withoutEnlargement=true&format=jpeg"
+  },
+  "ROBE ParFect 150": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 5,
+    "photo": "./images/8b58ac0e63f2eadc.webp",
+    "originalPhoto": "https://cdn.aws.robe.cz/v1/image/resize/8102532905972009d8120bf31d7eeb118a82fc5b?width=904&height=904&fit=cover&withoutEnlargement=false"
+  },
+  "Selecon RAMA 150 Fresnel": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 5.3,
+    "photo": "./images/f56aa50dc3c51c10.jpg",
+    "source": "https://www.vari-lite.com/b-dam/vari-lite/products/rama-150-fresnel/datasheet/Rama_150_Fresnel-SpecSheet.pdf",
+    "notes": "Published net weight. Existing weight verified.",
+    "brand": "Selecon",
+    "category": "lighting",
+    "checked": "2026-11-05",
+    "originalPhoto": "https://ultralightsound.co.uk/wp-content/uploads/2020/10/IMG_9733-1-720x720.jpg"
+  },
+  "Selecon LUI Cyc/Flood": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 4.1,
+    "photo": "./images/8870cb3c96387dbc.jpg",
+    "originalPhoto": "https://www.theatrelightingworkshops.com/wp-content/uploads/2019/12/selecon_lui_flood_01-600x600-1.jpg"
+  },
+  "Chauvet Rogue R2X Wash": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 10.3,
+    "photo": "./images/b9c982e3a695ef5a.jpg",
+    "originalPhoto": "https://stagedepot.co.uk/sites/default/files/styles/product_display/public/productimages/ROGUE_R2X_WASH-RIGHT-6.png?itok=OJrfimCq"
+  },
+  "Chauvet Rogue R2X Spot": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 21.7,
+    "photo": "./images/790432743c67f065.jpg",
+    "originalPhoto": "https://leisuretec.co.uk/cdn/shop/files/CHARR2XSPOT_CHAUVET_Professional_ROGUER2XSPOT_Image_1.jpg?v=1743457669&width=750"
+  },
+  "Selecon Pacific": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 9.9,
+    "photo": "./images/97b480511576e273.jpg",
+    "originalPhoto": "https://i0.wp.com/staticlightcompany.com/wp-content/uploads/2024/03/seleconpacificzoom.jpg?fit=800%2C800&ssl=1"
+  },
+  "Vari-Lite VL600 Acclaim Fresnel": {
+    "cats": [
+      "equipment"
+    ],
+    "weight": 6,
+    "photo": "./images/be0fbd2136fe8321.jpg",
+    "originalPhoto": "https://geartechs.com/cdn/shop/files/vari-lite-acclaim-led-fresnel_black_left.jpg?v=1712335911&width=1000"
+  },
+  "Universal Suspension Clamp": {
+    "cats": [
+      "equipment",
+      "hardware"
+    ],
+    "weight": 0.42,
+    "photo": "./images/2e178f1e1c019cfb.jpg",
+    "originalPhoto": "https://files.ekmcdn.com/ctsesite/images/universal-clamp-48mm-for-m12--colour-black-6459-p.jpg?w=660&h=9999&v=3D25CEF6-7C90-4B00-9B49-5237B5FFFDA9?v=3D25CEF6-7C90-4B00-9B49-5237B5FFFDA9"
+  },
+  "Pipe to Wall Bracket 100mm": {
+    "cats": [
+      "equipment",
+      "hardware"
+    ],
+    "weight": 0.83,
+    "photo": "./images/471df4621da196d1.jpg",
+    "originalPhoto": "https://files.ekmcdn.com/ctsesite/images/pipe-to-wall-bracket-small-100mm-stand-off--6611-p.jpg?w=660&h=9999&v=E6C8A62E-BD25-4CE3-8B33-3C874E7BA0FB"
+  },
+  "Pipe to Wall Bracket 300mm": {
+    "cats": [
+      "equipment",
+      "hardware"
+    ],
+    "weight": 1.48,
+    "photo": "./images/ceb61f76f7702276.jpg",
+    "originalPhoto": "https://files.ekmcdn.com/ctsesite/images/pipe-to-wall-bracket-large-300mm-stand-off-6610-p.jpg?w=660&h=9999&v=2CC90119-30AD-44CF-AB5E-43A4CDC1B87A"
+  },
+  "Pipe to Pipe Coupler (48mm)": {
+    "cats": [
+      "equipment",
+      "hardware"
+    ],
+    "weight": 1,
+    "photo": "./images/47bc4cda1436032a.jpg",
+    "originalPhoto": "https://files.ekmcdn.com/ctsesite/images/pipe-to-pipe-coupler-48mm-1412-p.jpg?w=660&h=9999&v=E1C04E95-6989-4061-ABD6-5C83293428A0"
+  },
+  "Ceiling Saddle": {
+    "cats": [
+      "equipment",
+      "hardware"
+    ],
+    "weight": 0.3,
+    "photo": "./images/7abce648d8e853e7.jpg",
+    "originalPhoto": "https://files.ekmcdn.com/ctsesite/images/ceiling-saddle-2620-p.jpg?w=660&h=9999&v=DC78A5A2-4C4A-4323-88E3-0535BE82FA49"
+  },
+  "Stud Hanger": {
+    "cats": [
+      "equipment",
+      "hardware"
+    ],
+    "weight": 0.53,
+    "photo": "./images/0a468bf34920c337.jpg",
+    "originalPhoto": "https://files.ekmcdn.com/ctsesite/images/stud-hanger-12mm-for-48mm-bar-1414-p.jpg?w=660&h=9999&v=86020F0F-196D-4A6E-A307-51969EA4070F"
+  },
+  "External Sleeve Coupler 48mm": {
+    "cats": [
+      "equipment",
+      "hardware"
+    ],
+    "weight": 1.31,
+    "photo": "./images/1db3222d3e8ccd20.jpg",
+    "originalPhoto": "https://files.ekmcdn.com/ctsesite/images/scaffold-solid-tube-joiner-48mm--colour-black-6503-p.jpg?w=660&h=9999&v=2C8EF99C-3AE8-4DD1-862C-CBC106C92198?v=2C8EF99C-3AE8-4DD1-862C-CBC106C92198"
+  },
+  "Boom Arm 500mm": {
+    "cats": [
+      "equipment",
+      "hardware"
+    ],
+    "weight": 0.84,
+    "photo": "./images/741386e158a854e0.jpg",
+    "originalPhoto": "https://files.ekmcdn.com/ctsesite/images/doughty-boom-arm-5187-p.jpg?w=660&h=9999&v=221c2ded-88f3-42c9-93a9-f6fcae27025c?v=221c2ded-88f3-42c9-93a9-f6fcae27025c"
+  },
+  "Twisted Boom Arm 48mm": {
+    "cats": [
+      "equipment",
+      "hardware"
+    ],
+    "weight": 0.83,
+    "photo": "./images/14220139a0aa5996.jpg",
+    "originalPhoto": "https://files.ekmcdn.com/ctsesite/images/doughty-standard-boom-arm-3931-p.jpg?w=660&h=9999&v=DC6CB5A4-AC89-4FF4-B1BB-8188506D2047"
+  },
+  "Straight Boom Arm 48mm": {
+    "cats": [
+      "equipment",
+      "hardware"
+    ],
+    "weight": 0.83,
+    "photo": "./images/09400b2d2d342ce8.jpg",
+    "originalPhoto": "https://res.cloudinary.com/ecomsilver/image/upload/w_570,h_570,c_pad,f_auto,q_auto/StageElectrics/product-images/21000-fe28fea2-bf64-4076-9261-46abc38683b6-.jpg"
+  },
+  "Prolyte H30D Triangular Corner Truss": {
+    "cats": [
+      "equipment",
+      "hardware"
+    ],
+    "weight": 4.3,
+    "photo": "./images/e61cc00144061526.jpg",
+    "originalPhoto": "https://www.prolyte.com/Prolyte/media/static-media/3a1d8962-2fb0-4921-8be9-a959070eefcb@product-list.jpg"
+  },
+  "Prolyte H30V Box Corner Truss": {
+    "cats": [
+      "equipment",
+      "hardware"
+    ],
+    "weight": 5.3,
+    "photo": "./images/400ea3dbacd4225a.jpg",
+    "originalPhoto": "https://www.prolyte.com/Prolyte/media/static-media/fcb9624d-f408-401c-bc89-d0bbde80143e@product-list.jpg"
+  },
+  "Truss Adaptor": {
+    "cats": [
+      "equipment",
+      "hardware"
+    ],
+    "weight": 3.5,
+    "photo": "./images/1fe3c89c1b3d9f30.jpg",
+    "originalPhoto": "https://res.cloudinary.com/ecomsilver/image/upload/w_570,h_570,c_pad,f_auto,q_auto/StageElectrics/product-images/25902.jpg"
+  },
+  "Pipe Hanging Clamp": {
+    "cats": [
+      "equipment",
+      "hardware"
+    ],
+    "weight": 0.86,
+    "photo": "./images/b3403acbc2601264.jpg",
+    "originalPhoto": "https://res.cloudinary.com/ecomsilver/image/upload/w_570,h_570,c_pad,f_auto,q_auto/StageElectrics/product-images/21001-28fc17aa-56dd-40c8-9f15-98701dc769e5-.jpg"
+  },
+  "Doughty Adjustable Girder Clamp": {
+    "cats": [
+      "equipment",
+      "hardware"
+    ],
+    "weight": 2,
+    "photo": "./images/787146d21201ec32.jpg",
+    "originalPhoto": "https://res.cloudinary.com/ecomsilver/image/upload/q_auto,f_auto/StageElectrics/product-images/9987.jpg"
+  },
+  "Double Ended Hook Clamp 150mm": {
+    "cats": [
+      "equipment",
+      "hardware"
+    ],
+    "weight": 0.5,
+    "photo": "./images/8089bb7daad8d515.jpg",
+    "originalPhoto": "https://res.cloudinary.com/ecomsilver/image/upload/w_570,h_570,c_pad,f_auto,q_auto/StageElectrics/product-images/9928.jpg"
+  },
+  "Double Ended Hook Clamp 300mm": {
+    "cats": [
+      "equipment",
+      "hardware"
+    ],
+    "weight": 0.67,
+    "photo": "./images/8089bb7daad8d515.jpg",
+    "originalPhoto": "https://res.cloudinary.com/ecomsilver/image/upload/w_570,h_570,c_pad,f_auto,q_auto/StageElectrics/product-images/9928.jpg"
+  },
+  "Double Ended Hook Clamp 450mm": {
+    "cats": [
+      "equipment",
+      "hardware"
+    ],
+    "weight": 0.89,
+    "photo": "./images/8089bb7daad8d515.jpg",
+    "originalPhoto": "https://res.cloudinary.com/ecomsilver/image/upload/w_570,h_570,c_pad,f_auto,q_auto/StageElectrics/product-images/9928.jpg"
+  },
+  "Double Ended Hook Clamp 600mm": {
+    "cats": [
+      "equipment",
+      "hardware"
+    ],
+    "weight": 1.09,
+    "photo": "./images/8089bb7daad8d515.jpg",
+    "originalPhoto": "https://res.cloudinary.com/ecomsilver/image/upload/w_570,h_570,c_pad,f_auto,q_auto/StageElectrics/product-images/9928.jpg"
+  },
+  "Doughty Fifty Clamp": {
+    "cats": [
+      "equipment",
+      "hardware"
+    ],
+    "weight": 0.35,
+    "photo": "./images/e44ba525227ac483.jpg",
+    "originalPhoto": "https://res.cloudinary.com/ecomsilver/image/upload/w_570,h_570,c_pad,f_auto,q_auto/StageElectrics/product-images/21135-1ecdbd84-72af-47cb-90fa-1191ac2ddf22-.jpg"
+  },
+  "Admiral Selflock Clamp": {
+    "cats": [
+      "equipment",
+      "hardware"
+    ],
+    "weight": 0.5,
+    "photo": "./images/ceb03a27a450dd0c.jpg",
+    "originalPhoto": "https://res.cloudinary.com/ecomsilver/image/upload/w_570,h_570,c_pad,f_auto,q_auto/StageElectrics/product-images/21289-11addb5a-0809-4619-b3f1-66da1144cf51-.jpg"
+  },
+  "Doughty Slimline Clamp": {
+    "cats": [
+      "equipment",
+      "hardware"
+    ],
+    "weight": 0.24,
+    "photo": "./images/953edcb2a213fe4b.jpg",
+    "originalPhoto": "https://res.cloudinary.com/ecomsilver/image/upload/w_570,h_570,c_pad,f_auto,q_auto/StageElectrics/product-images/21465-5f18756f-b78e-4c9b-b831-f6e2fb10a768-.jpg"
+  },
+  "Doughty Hook Clamp": {
+    "cats": [
+      "equipment",
+      "hardware"
+    ],
+    "weight": 0.33,
+    "photo": "./images/e8e5234f9b279ae7.jpg",
+    "originalPhoto": "https://terrytew.co.uk/wp-content/uploads/2024/07/Doughty_Standard_Hook_Clamp.jpg"
+  },
+  "Doughty Safety Bond": {
+    "cats": [
+      "equipment",
+      "hardware"
+    ],
+    "weight": 0.33,
+    "photo": "./images/178149cb9d6e1230.jpg",
+    "originalPhoto": "https://res.cloudinary.com/ecomsilver/image/upload/w_570,h_570,c_pad,f_auto,q_auto/StageElectrics/product-images/21749-95a958bc-15d0-41ee-bfd7-d47fd2061155-.jpg"
+  },
+  "Doughty Half Coupler Clamp": {
+    "cats": [
+      "equipment",
+      "hardware"
+    ],
+    "weight": 0.71,
+    "photo": "./images/8fe1414746a7c6ec.jpg",
+    "originalPhoto": "https://res.cloudinary.com/ecomsilver/image/upload/w_570,h_570,c_pad,f_auto,q_auto/StageElectrics/product-images/23105-fa6d4dc0-72be-463a-ab2a-04b368c92726-.jpg"
+  },
+  "Doughty Universal Joint": {
+    "cats": [
+      "equipment",
+      "hardware"
+    ],
+    "weight": 0.38,
+    "photo": "./images/145f994852762f29.jpg",
+    "originalPhoto": "https://doughty-engineering.co.uk/wp-content/uploads/Product-Images/T30410Universal-Joint-1-700x700-c-default.jpg"
+  },
+  "Aluminium Bar 48mm": {
+    "cats": [
+      "equipment_linear",
+      "rigging_bar"
+    ],
+    "wpm": 1.53,
+    "photo": "./images/f369cdba8e4554c0.jpg",
+    "originalPhoto": "https://res.cloudinary.com/ecomsilver/image/upload/w_570,h_570,c_pad,f_auto,q_auto/StageElectrics/product-images/27991.jpg"
+  },
+  "Steel Bar 48mm": {
+    "cats": [
+      "equipment_linear",
+      "rigging_bar"
+    ],
+    "wpm": 4.4,
+    "photo": "./images/fa27fdae1a20370d.jpg",
+    "originalPhoto": "https://cdn.netzshopping.de/productimages/Z/Z/1/B083V381ZZ.jpg"
+  },
+  "Prolyte H30L Ladder Truss": {
+    "cats": [
+      "equipment_linear",
+      "rigging_bar"
+    ],
+    "wpm": 3.1,
+    "photo": "./images/a4419969f96327b0.png",
+    "originalPhoto": "https://res.cloudinary.com/ecomsilver/image/upload/w_570,h_570,c_pad,f_auto,q_auto/StageElectrics/product-images/24440-a52e2dfc-8fa2-4ca3-92cd-b7d4c1b368e3-.png"
+  },
+  "Prolyte H30D Triangular Truss": {
+    "cats": [
+      "equipment_linear",
+      "rigging_bar"
+    ],
+    "wpm": 5.1,
+    "photo": "./images/cdd57a305f1bb2a2.jpg",
+    "originalPhoto": "https://res.cloudinary.com/ecomsilver/image/upload/w_570,h_570,c_pad,f_auto,q_auto/StageElectrics/product-images/19554.jpg"
+  },
+  "Internally Wired Bar": {
+    "cats": [
+      "equipment_linear",
+      "rigging_bar"
+    ],
+    "wpm": 3,
+    "photo": "./images/e0f227939d4b734a.jpg",
+    "originalPhoto": "https://res.cloudinary.com/ecomsilver/image/upload/w_290,h_290,c_pad,f_auto,q_auto/StageElectrics/product-images/24090-430d91d2-6d2b-44cd-8d5f-b8e030a7c6e8-.jpg"
+  },
+  "Prolyte H30V Box Truss": {
+    "cats": [
+      "equipment_linear",
+      "rigging_bar"
+    ],
+    "wpm": 7,
+    "photo": "./images/036a6c581f75117e.jpg",
+    "originalPhoto": "https://res.cloudinary.com/ecomsilver/image/upload/w_570,h_570,c_pad,f_auto,q_auto/StageElectrics/product-images/27942.jpg"
+  },
+  "Triple E 2-way Curtain Track": {
+    "cats": [
+      "equipment_linear"
+    ],
+    "wpm": 1.17,
+    "photo": "./images/cd031645ff0391cf.png",
+    "brand": "Triple E",
+    "notes": "Track only. 2W0101 black / 2W0201 silver.",
+    "source": "https://triplee.ltd/products/download-documents/general-documents/products-weight-list/",
+    "originalPhoto": "https://triplee.ltd/sites/3-eee/assets/Image/png%202way.png"
+  },
+  "Triple E E-Rail Curtain Track": {
+    "cats": [
+      "equipment_linear"
+    ],
+    "wpm": 0.816,
+    "photo": "./images/8d7eca93e9bcc17c.png",
+    "brand": "Triple E",
+    "notes": "ERL0101. Track only.",
+    "source": "https://triplee.ltd/products/download-documents/general-documents/products-weight-list/",
+    "originalPhoto": "https://triplee.ltd/sites/3-eee/assets/Image/erail%20png.png"
+  },
+  "Triple E Unibeam Curtain Track": {
+    "cats": [
+      "equipment_linear"
+    ],
+    "wpm": 3.441,
+    "photo": "./images/9d13f7c87f3ca2d9.png",
+    "brand": "Triple E",
+    "notes": "UBM0101. Track only.",
+    "source": "https://triplee.ltd/products/download-documents/general-documents/products-weight-list/",
+    "originalPhoto": "https://triplee.ltd/sites/3-eee/assets/Image/unibeam%20png.png"
+  },
+  "Hall Stage T400 Curtain Track": {
+    "cats": [
+      "equipment_linear"
+    ],
+    "wpm": 1.14,
+    "photo": "https://stage-shop.com/media/catalog/product/cache/f22fcc78f4ad49bc20d1e92600c90c10/t/4/t400straightsection_10.jpg"
+  },
+  "Hall Stage T70 Curtain Track": {
+    "cats": [
+      "equipment_linear"
+    ],
+    "wpm": 7,
+    "photo": "https://stage-shop.com/media/catalog/product/cache/f22fcc78f4ad49bc20d1e92600c90c10/t/7/t70straittrack_3.jpg"
+  },
+  "Hall Stage T60 Curtain Track": {
+    "cats": [
+      "equipment_linear"
+    ],
+    "wpm": 2.5,
+    "photo": "https://stage-shop.com/media/catalog/product/cache/f22fcc78f4ad49bc20d1e92600c90c10/t/6/t60straighttrack_10.jpg"
+  },
+  "8mm Threaded Bar": {
+    "cats": [
+      "equipment_linear",
+      "rigging_susp"
+    ],
+    "wpm": 0.4,
+    "photo": "./images/444d91ea0d062862.webp",
+    "originalPhoto": "https://assets.cef.co.uk/images/pdg/tamlex_tf022/512x512/tamlex_tf022.webp"
+  },
+  "10mm Threaded Bar": {
+    "cats": [
+      "equipment_linear",
+      "rigging_susp"
+    ],
+    "wpm": 0.62,
+    "photo": "./images/5579c82f7a4f8cc3.webp",
+    "originalPhoto": "https://assets.cef.co.uk/images/pdg/tamlex_tf023/512x512/tamlex_tf023.webp"
+  },
+  "12mm Threaded Bar": {
+    "cats": [
+      "equipment_linear",
+      "rigging_susp"
+    ],
+    "wpm": 0.89,
+    "photo": "./images/5579c82f7a4f8cc3.webp",
+    "originalPhoto": "https://assets.cef.co.uk/images/pdg/tamlex_tf023/512x512/tamlex_tf023.webp"
+  },
+  "6mm Wire Rope": {
+    "cats": [
+      "equipment_linear",
+      "rigging_susp"
+    ],
+    "wpm": 0.16,
+    "photo": "./images/d351bc5d960c43b2.jpg",
+    "originalPhoto": "https://www.wireropeshop.co.uk/media/catalog/product/cache/e5f6e45e88bdb2c34f25ef9a339299b3/w/i/wire-rope-small-reel_1.jpg"
+  },
+  "8mm Wire Rope": {
+    "cats": [
+      "equipment_linear",
+      "rigging_susp"
+    ],
+    "wpm": 0.24,
+    "photo": "./images/d351bc5d960c43b2.jpg",
+    "originalPhoto": "https://www.wireropeshop.co.uk/media/catalog/product/cache/e5f6e45e88bdb2c34f25ef9a339299b3/w/i/wire-rope-small-reel_1.jpg"
+  },
+  "9.5mm Wire Rope": {
+    "cats": [
+      "equipment_linear",
+      "rigging_susp"
+    ],
+    "wpm": 0.36,
+    "photo": "./images/d351bc5d960c43b2.jpg",
+    "originalPhoto": "https://www.wireropeshop.co.uk/media/catalog/product/cache/e5f6e45e88bdb2c34f25ef9a339299b3/w/i/wire-rope-small-reel_1.jpg"
+  },
+  "ROBE LEDBeam 150": {
+    "weight": 5.7,
+    "source": "https://www.robe.cz/res/downloads/catalogues/ROBE_Product_Guide_2021_online_version.pdf",
+    "notes": "2021 manufacturer guide. Omega adaptor supplied; inclusion in stated weight not explicit. Add external clamp and bond.",
+    "brand": "ROBE",
+    "category": "lighting",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "ROBE MegaPointe": {
+    "weight": 22,
+    "source": "https://www.robe.cz/res/downloads/catalogues/ROBE_Product_Guide_2021_online_version.pdf",
+    "notes": "2021 manufacturer guide. Two omega adaptors supplied; inclusion in weight not explicit. Clamp and bond optional.",
+    "brand": "ROBE",
+    "category": "lighting",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "ROBE T1 Profile": {
+    "weight": 24.3,
+    "source": "https://www.robe.cz/t1-profile",
+    "notes": "Standard T1 Profile, not FS version. Omega adaptors supplied; clamps and bond optional.",
+    "brand": "ROBE",
+    "category": "lighting",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "ROBE ESPRITE": {
+    "weight": 28.2,
+    "source": "https://www.robe.cz/esprite",
+    "notes": "Standard ESPRITE. Omega adaptors supplied; clamps and bond optional.",
+    "brand": "ROBE",
+    "category": "lighting",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "ROBE LEDBeam 350": {
+    "weight": 9.85,
+    "source": "https://www.robe.cz/res/downloads/catalogues/ROBE_LEDBeam_350_leaflet_online_version.pdf",
+    "notes": "Published fixture weight; hook clamps and separate safety bonds must be added. Manufacturer does not explicitly resolve inclusion of supplied accessories.",
+    "brand": "ROBE",
+    "category": "lighting",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "ROBE LEDBeam 350 FW": {
+    "weight": 9.9,
+    "source": "https://www.robe.cz/res/downloads/catalogues/ROBE_LEDBeam_350_leaflet_online_version.pdf",
+    "notes": "Published fixture weight; hook clamps and separate safety bonds must be added. Manufacturer does not explicitly resolve inclusion of supplied accessories.",
+    "brand": "ROBE",
+    "category": "lighting",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "ROBE ColorWash 1200E AT": {
+    "weight": 41,
+    "source": "https://www.robe.cz/colorwash-1200e-at",
+    "notes": "Exact 1200E AT model. Replaces erroneous generic baseline 1200E weight only after matching model plate.",
+    "brand": "ROBE",
+    "category": "lighting",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Martin MAC Aura XB": {
+    "weight": 6.5,
+    "source": "https://www.martin.com/en-US/products/mac-aura-xb.html",
+    "notes": "Published fixture weight; hook clamps and separate safety bonds must be added. Manufacturer does not explicitly resolve inclusion of supplied accessories.",
+    "brand": "Martin",
+    "category": "lighting",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Martin MAC Aura XIP": {
+    "weight": 8.95,
+    "source": "https://www.martin.com/vn/site_elements/mac-aura-xip-spec-sheet",
+    "notes": "Published fixture weight; hook clamps and separate safety bonds must be added. Manufacturer does not explicitly resolve inclusion of supplied accessories.",
+    "brand": "Martin",
+    "category": "lighting",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Martin ERA 300 Profile": {
+    "weight": 17,
+    "source": "https://www.martin.com/en-US/site_elements/era-300-spec-sheet",
+    "notes": "Published fixture weight; hook clamps and separate safety bonds must be added. Manufacturer does not explicitly resolve inclusion of supplied accessories.",
+    "brand": "Martin",
+    "category": "lighting",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Chauvet Rogue R3X Wash": {
+    "weight": 17.46,
+    "source": "https://chauvetprofessional.com/wp-content/uploads/pdf/en/ROGUER3XWASH.pdf",
+    "notes": "Product sheet 17.46 kg; manual rounds to 17.5 kg.",
+    "brand": "Chauvet",
+    "category": "lighting",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Chauvet Ovation F-915FC": {
+    "weight": 8.6,
+    "source": "https://www.chauvetprofessional.com/wp-content/uploads/2015/01/Ovation_F-915FC_UM_Rev8.pdf",
+    "notes": "Published fixture weight; hook clamps and separate safety bonds must be added. Manufacturer does not explicitly resolve inclusion of supplied accessories.",
+    "brand": "Chauvet",
+    "category": "lighting",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Chauvet Ovation CYC 1 FC": {
+    "weight": 4.2,
+    "source": "https://chauvetprofessional.com/product/ovation-cyc-1-fc/",
+    "notes": "Omega bracket supplied; inclusion in weight not explicit. Clamp and bond separate.",
+    "brand": "Chauvet",
+    "category": "lighting",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Chauvet Ovation E-910FC with 14° lens": {
+    "weight": 9.43,
+    "source": "https://chauvetprofessional.com/product/ovation-e-910fc/",
+    "notes": "Includes specified lens. Hook clamp and safety bond separate.",
+    "brand": "Chauvet",
+    "category": "lighting",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Chauvet Ovation E-910FC with 26° lens": {
+    "weight": 9,
+    "source": "https://chauvetprofessional.com/product/ovation-e-910fc/",
+    "notes": "Includes specified lens. Hook clamp and safety bond separate.",
+    "brand": "Chauvet",
+    "category": "lighting",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Chauvet Ovation E-910FC with 15–30° zoom lens": {
+    "weight": 13.3,
+    "source": "https://chauvetprofessional.com/product/ovation-e-910fc/",
+    "notes": "Includes specified lens. Hook clamp and safety bond separate.",
+    "brand": "Chauvet",
+    "category": "lighting",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Chauvet Ovation E-910FC with 25–50° zoom lens": {
+    "weight": 12.2,
+    "source": "https://chauvetprofessional.com/product/ovation-e-910fc/",
+    "notes": "Includes specified lens. Hook clamp and safety bond separate.",
+    "brand": "Chauvet",
+    "category": "lighting",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Chauvet Ovation E-910FC IP with 14° lens": {
+    "weight": 12.9,
+    "source": "https://chauvetprofessional.com/wp-content/uploads/pdf/en/OVATIONE910FCIP.pdf",
+    "notes": "IP model including specified lens. Hook clamp and safety bond separate.",
+    "brand": "Chauvet",
+    "category": "lighting",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Chauvet Ovation E-910FC IP with 26° lens": {
+    "weight": 12.4,
+    "source": "https://chauvetprofessional.com/wp-content/uploads/pdf/en/OVATIONE910FCIP.pdf",
+    "notes": "IP model including specified lens. Hook clamp and safety bond separate.",
+    "brand": "Chauvet",
+    "category": "lighting",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Chauvet Ovation E-910FC IP with 15–30° zoom lens": {
+    "weight": 16.2,
+    "source": "https://chauvetprofessional.com/wp-content/uploads/pdf/en/OVATIONE910FCIP.pdf",
+    "notes": "IP model including specified lens. Hook clamp and safety bond separate.",
+    "brand": "Chauvet",
+    "category": "lighting",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Chauvet Ovation E-910FC IP with 25–50° zoom lens": {
+    "weight": 14.8,
+    "source": "https://chauvetprofessional.com/wp-content/uploads/pdf/en/OVATIONE910FCIP.pdf",
+    "notes": "IP model including specified lens. Hook clamp and safety bond separate.",
+    "brand": "Chauvet",
+    "category": "lighting",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Showtec Performer 60 LED (33100)": {
+    "weight": 4.8,
+    "source": "https://www.highlite.com/media/attachments/MANUAL/33100_MANUAL_GB_V2.pdf",
+    "notes": "Legacy 33100. Barn door shown; inclusion in published weight not explicit.",
+    "brand": "Showtec",
+    "category": "lighting",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "LEDJ Spectra Flood Q6": {
+    "weight": 2.5,
+    "source": "https://www.prolight.co.uk/ftp-in/LEDJ286_Manual.pdf",
+    "notes": "Integral mounting brackets. Add external clamp and bond.",
+    "brand": "LEDJ",
+    "category": "lighting",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "LEDJ Spectra Flood Q15": {
+    "weight": 5.2,
+    "source": "https://www.prolight.co.uk/ftp-in/LEDJ286_Manual.pdf",
+    "notes": "Integral mounting brackets. Add external clamp and bond.",
+    "brand": "LEDJ",
+    "category": "lighting",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "LEDJ Spectra Batten Q16": {
+    "weight": 6.1,
+    "source": "https://www.prolight.co.uk/ftp-in/LEDJ286_Manual.pdf",
+    "notes": "Integral mounting brackets. Add external clamp and bond.",
+    "brand": "LEDJ",
+    "category": "lighting",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "LEDJ Exterior Spectra Batten RGB 1 m": {
+    "weight": 4.2,
+    "source": "https://www.prolight.co.uk/ftp-in/LEDJ76A_Manual.pdf",
+    "notes": "Exterior RGB version; do not confuse with indoor Spectra Batten.",
+    "brand": "LEDJ",
+    "category": "lighting",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "LEDJ Exterior Spectra Batten RGB 0.5 m": {
+    "weight": 2.7,
+    "source": "https://www.prolight.co.uk/ftp-in/LEDJ76A_Manual.pdf",
+    "notes": "Exterior RGB version.",
+    "brand": "LEDJ",
+    "category": "lighting",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "LEDJ Spectra Batten indoor (LEDJ75A)": {
+    "weight": 2.5,
+    "source": "https://www.prolight.co.uk/ftp-in/LEDJ75A_Manual.pdf",
+    "notes": "Indoor 252-LED RGB version, distinct from Exterior Spectra Batten.",
+    "brand": "LEDJ",
+    "category": "lighting",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Elumen8 1RE Beam": {
+    "weight": 9.2,
+    "source": "https://www.prolight.co.uk/Catalogue/Products/Discontinued/1RE-Beam-ELUM015",
+    "notes": "Discontinued ELUM015. Net fixture, not 11.5 kg packed weight.",
+    "brand": "Elumen8",
+    "category": "lighting",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Elumen8 MP60 LED Fresnel WW MKII": {
+    "weight": 3.8,
+    "source": "https://www.prolight.co.uk/Catalogue/Products/Lighting/Theatrical/ELUM104",
+    "notes": "ELUM104. Net fixture, not packed weight.",
+    "brand": "Elumen8",
+    "category": "lighting",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Elumen8 MP120 LED Fresnel WW": {
+    "weight": 8.6,
+    "source": "https://www.prolight.co.uk/ftp-in/ELUM107A_Manual.pdf",
+    "notes": "ELUM107/107A. Filter frame and barn doors included with product; inclusion in weight not explicit.",
+    "brand": "Elumen8",
+    "category": "lighting",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Elumen8 Virtuoso 700 House Light HEX": {
+    "weight": 8.3,
+    "source": "https://www.prolight.co.uk/Catalogue/Products/Lighting/Theatrical/ELUM139",
+    "notes": "ELUM139 RGBALC pendant, 30° lens fitted; supplied omega mount inclusion not explicit.",
+    "brand": "Elumen8",
+    "category": "lighting",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "ETC ColorSource Linear 1": {
+    "weight": 2.9,
+    "source": "https://www.etcconnect.com/Products/Entertainment-Fixtures/ColorSource-Linear/Tech-Specs.aspx",
+    "notes": "Manufacturer explicitly excludes mounting hardware. Add trunnions/mounting hardware, clamps and bonds.",
+    "brand": "ETC",
+    "category": "lighting",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "ETC ColorSource Linear 2": {
+    "weight": 9.12,
+    "source": "https://www.etcconnect.com/Products/Entertainment-Fixtures/ColorSource-Linear/Tech-Specs.aspx",
+    "notes": "Manufacturer explicitly excludes mounting hardware. Add trunnions/mounting hardware, clamps and bonds.",
+    "brand": "ETC",
+    "category": "lighting",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "ETC ColorSource Linear 4": {
+    "weight": 17.01,
+    "source": "https://www.etcconnect.com/Products/Entertainment-Fixtures/ColorSource-Linear/Tech-Specs.aspx",
+    "notes": "Manufacturer explicitly excludes mounting hardware. Add trunnions/mounting hardware, clamps and bonds.",
+    "brand": "ETC",
+    "category": "lighting",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Acclaim Fresnel (manufacturer net specification)": {
+    "weight": 3.36,
+    "source": "https://www.vari-lite.com/b-dam/vari-lite/products/acclaim-fresnel/datasheet/Acclaim_Fresnel_SpecSheet.pdf",
+    "notes": "Manufacturer sheet net weight. Baseline 3.1 kg differs; verify fixture version. Do not assume removable accessories included or excluded.",
+    "brand": "Acclaim",
+    "category": "lighting",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Acclaim PC (manufacturer net specification)": {
+    "weight": 3.51,
+    "source": "https://www.vari-lite.com/b-dam/vari-lite/products/acclaim-pc/datasheet/Acclaim_PC_SpecSheet.pdf",
+    "notes": "Manufacturer net specification; integrated safety wire may be part of assembly. Do not double count an integrated bond.",
+    "brand": "Acclaim",
+    "category": "lighting",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Strand 200F TV Fresnel LED manual-operated": {
+    "weight": 7.4,
+    "source": "https://vari-lite.s3.eu-west-1.amazonaws.com/manuals/200f-users.pdf",
+    "notes": "Manual-operated (M.O.) variant net weight.",
+    "brand": "Strand",
+    "category": "lighting",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Strand 200F TV Fresnel LED pole-operated": {
+    "weight": 7.9,
+    "source": "https://vari-lite.s3.eu-west-1.amazonaws.com/manuals/200f-users.pdf",
+    "notes": "Pole-operated (P.O.) variant net weight.",
+    "brand": "Strand",
+    "category": "lighting",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "LDR Suono 10/28 Plus": {
+    "weight": 7.5,
+    "source": "https://www.ldr.it/wp-content/uploads/2025/04/Suono-1028-plus-ita.pdf",
+    "notes": "Italian manufacturer sheet: net 7.5 kg, gross 9.3 kg. Colour frame standard; hook clamp additional.",
+    "brand": "Luci Della Ribalta",
+    "category": "lighting",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Vari-Lite VL2600 Profile": {
+    "weight": 32,
+    "source": "https://www.vari-lite.com/b-dam/vari-lite/products/vl2600-wash/guides-and-manuals/vl2600-series_user-manual.pdf",
+    "notes": "Original VL2600 Profile, not SE; manufacturer series manual.",
+    "brand": "Vari-Lite",
+    "category": "lighting",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Vari-Lite VL2600 Spot": {
+    "weight": 32,
+    "source": "https://www.vari-lite.com/b-dam/vari-lite/products/vl2600-wash/guides-and-manuals/vl2600-series_user-manual.pdf",
+    "notes": "Original VL2600 Spot; manufacturer series manual.",
+    "brand": "Vari-Lite",
+    "category": "lighting",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Vari-Lite VL1100 TS tungsten (without dimmer)": {
+    "weight": 32,
+    "source": "https://www.vari-lite.com/b-dam/vari-lite/products/vl1100-1100d-tungsten/guides-and-manuals/VariLite_VL1100_Luminaire_TSD_TID_TS_TI_Tungsten.pdf",
+    "notes": "Tungsten TS model, without optional dimmer. Clamps/bond separate.",
+    "brand": "Vari-Lite",
+    "category": "lighting",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Vari-Lite VL1100 TSD tungsten (with dimmer)": {
+    "weight": 32.65,
+    "source": "https://www.vari-lite.com/b-dam/vari-lite/products/vl1100-1100d-tungsten/guides-and-manuals/VariLite_VL1100_Luminaire_TSD_TID_TS_TI_Tungsten.pdf",
+    "notes": "Tungsten shutter model with dimmer included. Clamps/bond separate.",
+    "brand": "Vari-Lite",
+    "category": "lighting",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "RCF ART 910-A": {
+    "weight": 16.2,
+    "source": "https://www.rcf.it/en/products/product-detail/art-912-a?_it_dvel_rcf_products_frontend_web_portlet_ProductInformationsPortlet_productCode=STP1058&_it_dvel_rcf_products_frontend_web_portlet_ProductInformationsPortlet_profileId=307219&p_p_cacheability=cacheLevelPage&p_p_id=it_dvel_rcf_products_frontend_web_portlet_ProductInformationsPortlet&p_p_lifecycle=2&p_p_mode=view&p_p_resource_id=downloadProductFileEntry&p_p_state=normal",
+    "notes": "Current manual net mass; earlier catalogues differ. Confirm revision; external bracket separate.",
+    "brand": "RCF",
+    "category": "speakers",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "RCF ART 912-A": {
+    "weight": 19.5,
+    "source": "https://www.rcf.it/en/products/product-detail/art-912-a?_it_dvel_rcf_products_frontend_web_portlet_ProductInformationsPortlet_productCode=STP1058&_it_dvel_rcf_products_frontend_web_portlet_ProductInformationsPortlet_profileId=307219&p_p_cacheability=cacheLevelPage&p_p_id=it_dvel_rcf_products_frontend_web_portlet_ProductInformationsPortlet&p_p_lifecycle=2&p_p_mode=view&p_p_resource_id=downloadProductFileEntry&p_p_state=normal",
+    "notes": "Current manual net mass; earlier catalogues differ. Confirm revision; external bracket separate.",
+    "brand": "RCF",
+    "category": "speakers",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "RCF ART 932-A": {
+    "weight": 19.2,
+    "source": "https://www.rcf.it/en/products/product-detail/art-912-a?_it_dvel_rcf_products_frontend_web_portlet_ProductInformationsPortlet_productCode=STP1058&_it_dvel_rcf_products_frontend_web_portlet_ProductInformationsPortlet_profileId=307219&p_p_cacheability=cacheLevelPage&p_p_id=it_dvel_rcf_products_frontend_web_portlet_ProductInformationsPortlet&p_p_lifecycle=2&p_p_mode=view&p_p_resource_id=downloadProductFileEntry&p_p_state=normal",
+    "notes": "Current manual net mass; earlier catalogues differ. Confirm revision; external bracket separate.",
+    "brand": "RCF",
+    "category": "speakers",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "RCF ART 915-A": {
+    "weight": 22.4,
+    "source": "https://www.rcf.it/en/products/product-detail/art-912-a?_it_dvel_rcf_products_frontend_web_portlet_ProductInformationsPortlet_productCode=STP1058&_it_dvel_rcf_products_frontend_web_portlet_ProductInformationsPortlet_profileId=307219&p_p_cacheability=cacheLevelPage&p_p_id=it_dvel_rcf_products_frontend_web_portlet_ProductInformationsPortlet&p_p_lifecycle=2&p_p_mode=view&p_p_resource_id=downloadProductFileEntry&p_p_state=normal",
+    "notes": "Current manual net mass; earlier catalogues differ. Confirm revision; external bracket separate.",
+    "brand": "RCF",
+    "category": "speakers",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "RCF ART 935-A": {
+    "weight": 24.6,
+    "source": "https://www.rcf.it/en/products/product-detail/art-912-a?_it_dvel_rcf_products_frontend_web_portlet_ProductInformationsPortlet_productCode=STP1058&_it_dvel_rcf_products_frontend_web_portlet_ProductInformationsPortlet_profileId=307219&p_p_cacheability=cacheLevelPage&p_p_id=it_dvel_rcf_products_frontend_web_portlet_ProductInformationsPortlet&p_p_lifecycle=2&p_p_mode=view&p_p_resource_id=downloadProductFileEntry&p_p_state=normal",
+    "notes": "Current manual net mass; earlier catalogues differ. Confirm revision; external bracket separate.",
+    "brand": "RCF",
+    "category": "speakers",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "RCF ART 945-A": {
+    "weight": 22.4,
+    "source": "https://www.rcf.it/en/products/product-detail/art-912-a?_it_dvel_rcf_products_frontend_web_portlet_ProductInformationsPortlet_productCode=STP1058&_it_dvel_rcf_products_frontend_web_portlet_ProductInformationsPortlet_profileId=307219&p_p_cacheability=cacheLevelPage&p_p_id=it_dvel_rcf_products_frontend_web_portlet_ProductInformationsPortlet&p_p_lifecycle=2&p_p_mode=view&p_p_resource_id=downloadProductFileEntry&p_p_state=normal",
+    "notes": "Current manual net mass; earlier catalogues differ. Confirm revision; external bracket separate.",
+    "brand": "RCF",
+    "category": "speakers",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "RCF ART 912-AX": {
+    "weight": 18.7,
+    "source": "https://www.rcf.it/en/products/product-detail/art-912-ax",
+    "notes": "AX Bluetooth model, not 912-A. External bracket separate.",
+    "brand": "RCF",
+    "category": "speakers",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "RCF H-BR ART 910": {
+    "weight": 4.45,
+    "source": "https://www.rcf.it/en/products/product-detail/h-br-art-910",
+    "notes": "Bracket assembly; speaker separate.",
+    "brand": "RCF",
+    "category": "brackets",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment",
+      "hardware"
+    ],
+    "photo": ""
+  },
+  "RCF H-BR ART 912": {
+    "weight": 4.5,
+    "source": "https://www.rcf.it/it/products/product-detail/h-br-art-912",
+    "notes": "Bracket assembly; speaker separate.",
+    "brand": "RCF",
+    "category": "brackets",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment",
+      "hardware"
+    ],
+    "photo": ""
+  },
+  "RCF V-BR ART 912": {
+    "weight": 5.2,
+    "source": "https://www.rcf-usa.com/en/products/product-detail/v-br-art-912",
+    "notes": "Bracket assembly; speaker separate.",
+    "brand": "RCF",
+    "category": "brackets",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment",
+      "hardware"
+    ],
+    "photo": ""
+  },
+  "JBL Control 25-1": {
+    "weight": 3.4,
+    "source": "https://jblpro.com/en-US/products/control-25-1",
+    "notes": "Per speaker. InvisiBall supplied; net-weight bracket inclusion not explicit—confirm before adding bracket mass.",
+    "brand": "JBL",
+    "category": "speakers",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "JBL AC16": {
+    "weight": 7.2,
+    "source": "https://jblpro.com/en-US/products/AC16",
+    "notes": "Per speaker. Optional mounting bracket separate.",
+    "brand": "JBL",
+    "category": "speakers",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "JBL AC18/26": {
+    "weight": 12.8,
+    "source": "https://jblpro.com/en-US/products/ac18-26.html",
+    "notes": "Per speaker. Optional mounting bracket separate.",
+    "brand": "JBL",
+    "category": "speakers",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "JBL AC26": {
+    "weight": 11,
+    "source": "https://jblpro.com/ja/products/ac26/false",
+    "notes": "Per speaker. Optional mounting bracket separate.",
+    "brand": "JBL",
+    "category": "speakers",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Electro-Voice ZLX-12P": {
+    "weight": 15.6,
+    "source": "https://products.electrovoice.com/binary/ZLX-12P%20ZLX-15P%20EDS.pdf",
+    "notes": "Original powered model, not G2/BT. Net speaker weight; bracket separate.",
+    "brand": "EV",
+    "category": "speakers",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Electro-Voice ZLX-15P": {
+    "weight": 17.3,
+    "source": "https://products.electrovoice.com/binary/ZLX-12P%20ZLX-15P%20EDS.pdf",
+    "notes": "Original powered model, not G2/BT. Net speaker weight; bracket separate.",
+    "brand": "EV",
+    "category": "speakers",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "KEF Ventura 6": {
+    "weight": 3.8,
+    "source": "https://assets.kef.com/pdf_doc/ci/Ci_Group_Specification_Sheet.pdf",
+    "notes": "Published net mass; bracket inclusion unspecified. Do not assume bare speaker.",
+    "brand": "KEF",
+    "category": "speakers",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "KEF Ventura 5": {
+    "weight": 2.85,
+    "source": "https://assets.kef.com/pdf_doc/ci/Ci_Group_Specification_Sheet.pdf",
+    "notes": "Published net mass; bracket inclusion unspecified. Do not assume bare speaker.",
+    "brand": "KEF",
+    "category": "speakers",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Bose DesignMax DM6SE (speaker and grille)": {
+    "weight": 5.93,
+    "source": "https://assets.bose.com/content/dam/Bose_DAM/Web/pro/global/products/loudspeakers/designmax_dm6se/downloads/tds_designmax_dm6se_en.pdf",
+    "notes": "2020 data sheet: loudspeaker with grille. Bracket excluded; later installation guide gives 6.40 kg WITH bracket. Confirm revision.",
+    "brand": "Bose",
+    "category": "speakers",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Laney CXP-112": {
+    "weight": 13.4,
+    "source": "https://www.laney.co.uk/amps/live-sound/concept/cxp-112",
+    "notes": "Active stage monitor; manufacturer item mass. This entry does not imply suitability for suspension.",
+    "brand": "Laney",
+    "category": "speakers",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Behringer EUROLIVE B112D": {
+    "weight": 12.3,
+    "source": "https://mediadl.musictribe.com/media/PLM/data/docs/Eurolive/QSG_BE_0313-AEB_B115D-B112D_WW.pdf",
+    "notes": "Quick Start Guide net mass. Mounting suitability must be checked separately.",
+    "brand": "Behringer",
+    "category": "speakers",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Behringer EUROLIVE B115D": {
+    "weight": 17.5,
+    "source": "https://mediadl.musictribe.com/media/PLM/data/docs/Eurolive/QSG_BE_0313-AEB_B115D-B112D_WW.pdf",
+    "notes": "Quick Start Guide net mass. Mounting suitability must be checked separately.",
+    "brand": "Behringer",
+    "category": "speakers",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Citronic CUBA-8": {
+    "weight": 10,
+    "source": "https://www.avsl.com/product/178.709UK-cuba-full-range-wooden-pa-cabinets",
+    "notes": "178.709UK black passive model. U-bracket supplied; published weight does not specify bracket inclusion.",
+    "brand": "Citronic",
+    "category": "speakers",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Panasonic PT-VMZ71": {
+    "weight": 7,
+    "source": "https://connect.na.panasonic.com/ppnda/projectors/portable/pt-vmz71-wuxga-lcd-projector",
+    "notes": "Approximate weight with supplied lens; mounting bracket separate.",
+    "brand": "Panasonic",
+    "category": "projectors",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Panasonic PT-VMZ61": {
+    "weight": 6.9,
+    "source": "https://connect.na.panasonic.com/ppnda/projectors/portable/pt-vmz71-wuxga-lcd-projector",
+    "notes": "Approximate weight with supplied lens; mounting bracket separate.",
+    "brand": "Panasonic",
+    "category": "projectors",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Panasonic PT-VMZ51": {
+    "weight": 6.5,
+    "source": "https://connect.na.panasonic.com/ppnda/projectors/portable/pt-vmz71-wuxga-lcd-projector",
+    "notes": "Approximate weight with supplied lens; mounting bracket separate.",
+    "brand": "Panasonic",
+    "category": "projectors",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Panasonic PT-VMZ51S": {
+    "weight": 6.5,
+    "source": "https://connect.na.panasonic.com/ppnda/projectors/portable/pt-vmz71-wuxga-lcd-projector",
+    "notes": "Approximate weight with supplied lens; mounting bracket separate.",
+    "brand": "Panasonic",
+    "category": "projectors",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Epson PowerLite EB-L735U": {
+    "weight": 8.4,
+    "source": "https://files.support.epson.com/docid/cpd6/cpd61218/source/specifications/reference/plebl520u_735u/spex_dimensions_plebl520u_l735u.html",
+    "notes": "Approximate projector mass from model-family manual; external mount separate.",
+    "brand": "Epson",
+    "category": "projectors",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Epson PowerLite EB-L730U": {
+    "weight": 8.4,
+    "source": "https://files.support.epson.com/docid/cpd6/cpd61218/source/specifications/reference/plebl520u_735u/spex_dimensions_plebl520u_l735u.html",
+    "notes": "Approximate projector mass from model-family manual; external mount separate.",
+    "brand": "Epson",
+    "category": "projectors",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Epson PowerLite EB-L635SU": {
+    "weight": 8.4,
+    "source": "https://files.support.epson.com/docid/cpd6/cpd61218/source/specifications/reference/plebl520u_735u/spex_dimensions_plebl520u_l735u.html",
+    "notes": "Approximate projector mass from model-family manual; external mount separate.",
+    "brand": "Epson",
+    "category": "projectors",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Epson PowerLite EB-L630SU": {
+    "weight": 8.4,
+    "source": "https://files.support.epson.com/docid/cpd6/cpd61218/source/specifications/reference/plebl520u_735u/spex_dimensions_plebl520u_l735u.html",
+    "notes": "Approximate projector mass from model-family manual; external mount separate.",
+    "brand": "Epson",
+    "category": "projectors",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Epson PowerLite EB-L630U": {
+    "weight": 8.4,
+    "source": "https://files.support.epson.com/docid/cpd6/cpd61218/source/specifications/reference/plebl520u_735u/spex_dimensions_plebl520u_l735u.html",
+    "notes": "Approximate projector mass from model-family manual; external mount separate.",
+    "brand": "Epson",
+    "category": "projectors",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Epson PowerLite EB-L530U": {
+    "weight": 8.2,
+    "source": "https://files.support.epson.com/docid/cpd6/cpd61218/source/specifications/reference/plebl520u_735u/spex_dimensions_plebl520u_l735u.html",
+    "notes": "Approximate projector mass from model-family manual; external mount separate.",
+    "brand": "Epson",
+    "category": "projectors",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Epson PowerLite EB-L520U": {
+    "weight": 7.7,
+    "source": "https://files.support.epson.com/docid/cpd6/cpd61218/source/specifications/reference/plebl520u_735u/spex_dimensions_plebl520u_l735u.html",
+    "notes": "Approximate projector mass from model-family manual; external mount separate.",
+    "brand": "Epson",
+    "category": "projectors",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "BenQ LH730": {
+    "weight": 5.3,
+    "source": "https://www.benq.com/en-us/business/projector/lh730/specifications.html",
+    "notes": "Net mass ±0.1 kg; ceiling mount separate.",
+    "brand": "BenQ",
+    "category": "projectors",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "BenQ LU930": {
+    "weight": 6.3,
+    "source": "https://www.benq.eu/en-uk/business/projector/lu930/specifications.html",
+    "notes": "Projector net mass; optional ceiling mount separate.",
+    "brand": "BenQ",
+    "category": "projectors",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Sony VPL-PHZ61": {
+    "weight": 7,
+    "source": "https://helpguide.sony.net/vpl/phz51/v1/en/print.pdf",
+    "notes": "Approximate projector mass; external mount separate.",
+    "brand": "Sony",
+    "category": "projectors",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Sony VPL-PHZ51": {
+    "weight": 6.8,
+    "source": "https://helpguide.sony.net/vpl/phz51/v1/en/print.pdf",
+    "notes": "Approximate projector mass; external mount separate.",
+    "brand": "Sony",
+    "category": "projectors",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Optoma ZU506": {
+    "weight": 5.5,
+    "source": "https://www.optoma.de/ContentStorage/Documents/7c383a50-79b5-465b-8863-e1e350da47dd.pdf",
+    "notes": "Net mass; external mount separate.",
+    "brand": "Optoma",
+    "category": "projectors",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Optoma ZU606T": {
+    "weight": 5.5,
+    "source": "https://region-resource.optoma.com/products/import/Documents/051a9794-6c74-4cd8-9fde-b59050ad7317.pdf",
+    "notes": "2023 regional datasheet net mass; ZU606T-B differs. External mount separate.",
+    "brand": "Optoma",
+    "category": "projectors",
+    "checked": "2026-11-05",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Triple E UniTrack 0.25 m straight section (TRA0101)": {
+    "weight": 0.806,
+    "brand": "Triple E",
+    "source": "https://triplee.ltd/products/download-documents/general-documents/products-weight-list/",
+    "notes": "One complete section. Add fittings separately.",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Triple E UniTrack 0.5 m straight section (TRA0102)": {
+    "weight": 1.466,
+    "brand": "Triple E",
+    "source": "https://triplee.ltd/products/download-documents/general-documents/products-weight-list/",
+    "notes": "One complete section. Add fittings separately.",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Triple E UniTrack 1 m straight section (TRA0103)": {
+    "weight": 2.864,
+    "brand": "Triple E",
+    "source": "https://triplee.ltd/products/download-documents/general-documents/products-weight-list/",
+    "notes": "One complete section. Add fittings separately.",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Triple E UniTrack 2 m straight section (TRA0104)": {
+    "weight": 5.434,
+    "brand": "Triple E",
+    "source": "https://triplee.ltd/products/download-documents/general-documents/products-weight-list/",
+    "notes": "One complete section. Add fittings separately.",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Doughty SixTrack 0.25 m straight section (T63705)": {
+    "weight": 0.63,
+    "brand": "Doughty",
+    "source": "https://www.doughty-usa.com/wp-content/uploads/2023/01/T63705-T63715-Data-Sheet.pdf",
+    "notes": "One complete section. Add fittings separately.",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Doughty SixTrack 0.5 m straight section (T63706)": {
+    "weight": 1.19,
+    "brand": "Doughty",
+    "source": "https://www.doughty-usa.com/wp-content/uploads/2023/01/T63705-T63715-Data-Sheet.pdf",
+    "notes": "One complete section. Add fittings separately.",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Doughty SixTrack 0.75 m straight section (T63707)": {
+    "weight": 1.99,
+    "brand": "Doughty",
+    "source": "https://www.doughty-usa.com/wp-content/uploads/2023/01/T63705-T63715-Data-Sheet.pdf",
+    "notes": "One complete section. Add fittings separately.",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Doughty SixTrack 1 m straight section (T63708)": {
+    "weight": 2.69,
+    "brand": "Doughty",
+    "source": "https://www.doughty-usa.com/wp-content/uploads/2023/01/T63705-T63715-Data-Sheet.pdf",
+    "notes": "One complete section. Add fittings separately.",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Doughty SixTrack 2 m straight section (T63710)": {
+    "weight": 4.47,
+    "brand": "Doughty",
+    "source": "https://www.doughty-usa.com/wp-content/uploads/2023/01/T63705-T63715-Data-Sheet.pdf",
+    "notes": "One complete section. Add fittings separately.",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Doughty SixTrack 3 m straight section (T63715)": {
+    "weight": 6.71,
+    "brand": "Doughty",
+    "source": "https://www.doughty-usa.com/wp-content/uploads/2023/01/T63705-T63715-Data-Sheet.pdf",
+    "notes": "One complete section. Add fittings separately.",
+    "cats": [
+      "equipment"
+    ],
+    "photo": ""
+  },
+  "Triple E 2-way Curved Track (per metre)": {
+    "wpm": 1.17,
+    "brand": "Triple E",
+    "notes": "2W0102 / 2W0202. Excludes preformed curve assemblies.",
+    "source": "https://triplee.ltd/products/download-documents/general-documents/products-weight-list/",
+    "cats": [
+      "equipment_linear"
+    ],
+    "photo": ""
+  },
+  "Triple E E-Rail Curved Track (per metre)": {
+    "wpm": 0.816,
+    "brand": "Triple E",
+    "notes": "ERL0102. Track only.",
+    "source": "https://triplee.ltd/products/download-documents/general-documents/products-weight-list/",
+    "cats": [
+      "equipment_linear"
+    ],
+    "photo": ""
+  },
+  "Triple E Unibeam Curved Track (per metre)": {
+    "wpm": 3.441,
+    "brand": "Triple E",
+    "notes": "UBM0102. Track only.",
+    "source": "https://triplee.ltd/products/download-documents/general-documents/products-weight-list/",
+    "cats": [
+      "equipment_linear"
+    ],
+    "photo": ""
+  }
+};
+const FABRICS = [{"name":"ShowTex Velours Bellini","gsm":605,"brand":"ShowTex","source":"https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf","notes":"Fabric mass per square metre; finished curtain extras excluded."},{"name":"ShowTex Velours Verdi","gsm":525,"brand":"ShowTex","source":"https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf","notes":"Fabric mass per square metre; finished curtain extras excluded."},{"name":"ShowTex Velours Gaudi","gsm":575,"brand":"ShowTex","source":"https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf","notes":"Fabric mass per square metre; finished curtain extras excluded."},{"name":"ShowTex Velours Garnier CS","gsm":450,"brand":"ShowTex","source":"https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf","notes":"Fabric mass per square metre; finished curtain extras excluded."},{"name":"ShowTex Velours Zeus CS","gsm":620,"brand":"ShowTex","source":"https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf","notes":"Fabric mass per square metre; finished curtain extras excluded."},{"name":"ShowTex Velours Delta","gsm":460,"brand":"ShowTex","source":"https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf","notes":"Fabric mass per square metre; finished curtain extras excluded."},{"name":"ShowTex Velours Puccini","gsm":360,"brand":"ShowTex","source":"https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf","notes":"Fabric mass per square metre; finished curtain extras excluded."},{"name":"ShowTex Velours Paris CS","gsm":500,"brand":"ShowTex","source":"https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf","notes":"Fabric mass per square metre; finished curtain extras excluded."},{"name":"ShowTex Velours Helena CS","gsm":380,"brand":"ShowTex","source":"https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf","notes":"Fabric mass per square metre; finished curtain extras excluded."},{"name":"ShowTex Calmuc","gsm":500,"brand":"ShowTex","source":"https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf","notes":"Fabric mass per square metre; finished curtain extras excluded."},{"name":"ShowTex Wool Serge Panne 540","gsm":540,"brand":"ShowTex","source":"https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf","notes":"Fabric mass per square metre; finished curtain extras excluded."},{"name":"ShowTex Wool Serge Panne 1000","gsm":1000,"brand":"ShowTex","source":"https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf","notes":"Fabric mass per square metre; finished curtain extras excluded."},{"name":"ShowTex Molton CS","gsm":300,"brand":"ShowTex","source":"https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf","notes":"Fabric mass per square metre; finished curtain extras excluded."},{"name":"ShowTex SoundVelours","gsm":750,"brand":"ShowTex","source":"https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf","notes":"Fabric mass per square metre; finished curtain extras excluded."},{"name":"J&C Joel Wool Serge 1.8","gsm":500,"brand":"J&C Joel","source":"https://www.jcjoel.com/wp-content/uploads/2023/07/Wool-Serge-1.8-Datapack-1.pdf","notes":"Fabric mass per square metre; finished curtain extras excluded."},{"name":"J&C Joel Wool Serge 3.0","gsm":565,"brand":"J&C Joel","source":"https://www.jcjoel.com/product/wool-serge-3-0/","notes":"Fabric mass per square metre; finished curtain extras excluded."},{"name":"J&C Joel Cotton Cyclorama Canvas 8.0","gsm":200,"brand":"J&C Joel","source":"https://www.jcjoel.com/product/cotton-cyclorama-canvas-8-0/","notes":"Fabric mass per square metre; finished curtain extras excluded."},{"name":"ShowTex Cyclo 200","gsm":200,"brand":"ShowTex","source":"https://www.showtex.com/sites/default/files/attachments/3220-cyclo-200-tds-showtex.pdf","notes":"Fabric mass per square metre; finished curtain extras excluded."},{"name":"ShowTex Cyclo 270","gsm":270,"brand":"ShowTex","source":"https://www.showtex.com/en/products/soft-goods/masking-draping/acoustic-solutions/cyclo-270","notes":"Fabric mass per square metre; finished curtain extras excluded."},{"name":"ShowTex Molton","gsm":300,"brand":"ShowTex","source":"https://www.showtex.com/en/products/soft-goods/masking-draping/dim-blackout-fabric/molton","notes":"Fabric mass per square metre; finished curtain extras excluded."},{"name":"ShowTex Gobelintulle","gsm":85,"brand":"ShowTex","source":"https://www.showtex.com/sites/default/files/attachments/3420-gobelintulle-tds-showtex-en.pdf","notes":"Fabric mass per square metre; finished curtain extras excluded."}];
+
+    const cleanPhoto = (p) => (typeof p === "string" ? p.trim() : "");
+    const hasCat = (entry, cat) => Array.isArray(entry?.cats) && entry.cats.includes(cat);
+
+    function buildMapsFromCatalog(){
+      const EQUIPMENT = {};
+      const HARDWARE = {};
+      const EQUIPMENT_LINEAR = {};
+      const BARS = {};
+      const SUSPENSIONS = {};
+
+      for (const [name, entry] of Object.entries(CATALOG)){
+        const photo = cleanPhoto(entry.photo);
+
+        if (hasCat(entry, "equipment") && isFinite(Number(entry.weight))){
+          EQUIPMENT[name] = { weight: Number(entry.weight), photo };
+        }
+        if (hasCat(entry, "hardware") && isFinite(Number(entry.weight))){
+          HARDWARE[name] = { weight: Number(entry.weight), photo };
+        }
+        if (hasCat(entry, "equipment_linear") && isFinite(Number(entry.wpm))){
+          EQUIPMENT_LINEAR[name] = { wpm: Number(entry.wpm), photo };
+        }
+        if (hasCat(entry, "rigging_bar") && isFinite(Number(entry.wpm))){
+          BARS[name] = { wpm: Number(entry.wpm), photo };
+        }
+        if (hasCat(entry, "rigging_susp") && isFinite(Number(entry.wpm))){
+          SUSPENSIONS[name] = { wpm: Number(entry.wpm), photo };
+        }
+      }
+      return { EQUIPMENT, HARDWARE, EQUIPMENT_LINEAR, BARS, SUSPENSIONS };
+    }
+
+    const { EQUIPMENT, HARDWARE, EQUIPMENT_LINEAR, BARS, SUSPENSIONS } = buildMapsFromCatalog();
+
+    function fillDatalist(el, keys){
+      el.innerHTML = "";
+      keys.sort().forEach(name => {
+        const opt = document.createElement("option");
+        opt.value = name;
+        el.appendChild(opt);
+      });
+    }
+
+    // ELEMENTS
+    const barNameEl = document.getElementById("barName");
+    const topTotalEl = document.getElementById("topTotal");
+    const darkModeBtnEl = document.getElementById("darkModeBtn");
+
+    const riggingCardEl = document.getElementById("riggingCard");
+    const riggingToggleBtnEl = document.getElementById("riggingToggleBtn");
+    const riggingBodyEl = document.getElementById("riggingBody");
+
+    const saveBarBtnEl = document.getElementById("saveBarBtn");
+    const clearBarBtnEl = document.getElementById("clearBarBtn");
+    const clearAllBtnEl = document.getElementById("clearAllBtn");
+
+    const barTypeEl = document.getElementById("barType");
+    const barWpmEl  = document.getElementById("barWpm");
+    const barLenEl  = document.getElementById("barLen");
+    const addBarBtn = document.getElementById("addBarBtn");
+
+    const susTypeEl = document.getElementById("susType");
+    const susWpmEl  = document.getElementById("susWpm");
+    const susLenEl  = document.getElementById("susLen");
+    const addSusBtn = document.getElementById("addSusBtn");
+
+    const barPreviewRowEl = document.getElementById("barPreviewRow");
+    const barPreviewImgEl = document.getElementById("barPreviewImg");
+    const barPreviewMetaEl = document.getElementById("barPreviewMeta");
+
+    const susPreviewRowEl = document.getElementById("susPreviewRow");
+    const susPreviewImgEl = document.getElementById("susPreviewImg");
+    const susPreviewMetaEl = document.getElementById("susPreviewMeta");
+
+    const equipNameEl = document.getElementById("equipName");
+    const equipQtyEl  = document.getElementById("equipQty");
+    const equipPreviewRowEl = document.getElementById("equipPreviewRow");
+    const equipPreviewImgEl = document.getElementById("equipPreviewImg");
+    const equipPreviewMetaEl = document.getElementById("equipPreviewMeta");
+
+    const equipLinTypeEl = document.getElementById("equipLinType");
+    const equipLinWpmEl  = document.getElementById("equipLinWpm");
+    const equipLinLenEl  = document.getElementById("equipLinLen");
+    const addEquipLinBtn = document.getElementById("addEquipLinBtn");
+    const equipLinPreviewRowEl = document.getElementById("equipLinPreviewRow");
+    const equipLinPreviewImgEl = document.getElementById("equipLinPreviewImg");
+    const equipLinPreviewMetaEl = document.getElementById("equipLinPreviewMeta");
+
+    const hwNameEl = document.getElementById("hwName");
+    const hwQtyEl  = document.getElementById("hwQty");
+    const hwPreviewRowEl = document.getElementById("hwPreviewRow");
+    const hwPreviewImgEl = document.getElementById("hwPreviewImg");
+    const hwPreviewMetaEl = document.getElementById("hwPreviewMeta");
+
+    const addEquipBtn = document.getElementById("addEquipBtn");
+    const addHwBtn = document.getElementById("addHwBtn");
+    const copyBtn = document.getElementById("copyBtn");
+
+    const tableEl = document.getElementById("table");
+    const linesEl = document.getElementById("lines");
+    const toastEl = document.getElementById("toast");
+
+    const riggingTotalEl = document.getElementById("riggingTotal");
+    const equipmentTotalEl = document.getElementById("equipmentTotal");
+    const bottomTotalEl = document.getElementById("bottomTotal");
+
+    const copyJobBtnEl = document.getElementById("copyJobBtn");
+
+    const modalOverlayEl = document.getElementById("modalOverlay");
+    const modalImgEl = document.getElementById("modalImg");
+    const modalTitleEl = document.getElementById("modalTitle");
+    const modalCloseEl = document.getElementById("modalClose");
+
+    // fill lists
+    fillDatalist(document.getElementById("equipmentList"), Object.keys(EQUIPMENT));
+    fillDatalist(document.getElementById("hardwareList"), Object.keys(HARDWARE));
+    fillDatalist(document.getElementById("barTypeList"), Object.keys(BARS));
+    fillDatalist(document.getElementById("susTypeList"), Object.keys(SUSPENSIONS));
+    fillDatalist(document.getElementById("equipLinList"), Object.keys(EQUIPMENT_LINEAR));
+
+    // STATE
+    let lines = [];
+    let savedBars = []; // { name, totalKg }
+
+    // HELPERS
+    function showToast(msg){
+      toastEl.textContent = msg;
+      toastEl.style.display = "block";
+      setTimeout(() => toastEl.style.display = "none", 2200);
+    }
+
+    function escapeHtml(s) {
+      return String(s ?? "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    function setWpmBox(map, typeEl, wpmEl) {
+      const key = String(typeEl.value ?? "").trim();
+      const entry = map[key];
+      if (entry && isFinite(Number(entry.wpm))) wpmEl.value = Number(entry.wpm).toFixed(2);
+      else wpmEl.value = "";
+    }
+
+    function isEquipmentKind(kind){
+      return kind === "Equipment" || kind === "Equipment Linear";
+    }
+    function isLengthKind(kind){
+      return kind === "Bar" || kind === "Suspension" || kind === "Equipment Linear";
+    }
+
+    function calcTotals(){
+      let riggingTotal = 0;
+      let equipmentTotal = 0;
+
+      for (const l of lines) {
+        const lineTotal = l.qty * l.eachKg;
+        if (isEquipmentKind(l.kind)) equipmentTotal += lineTotal;
+        else riggingTotal += lineTotal;
+      }
+
+      const grandTotal = riggingTotal + equipmentTotal;
+
+      topTotalEl.value = grandTotal.toFixed(2) + " kg";
+      riggingTotalEl.textContent = riggingTotal.toFixed(2) + " kg";
+      equipmentTotalEl.textContent = equipmentTotal.toFixed(2) + " kg";
+      bottomTotalEl.textContent = grandTotal.toFixed(2) + " kg";
+
+      tableEl.style.display = lines.length ? "" : "none";
+      return { riggingTotal, equipmentTotal, grandTotal };
+    }
+
+    // MODAL
+    function openModal(photoUrl, titleText){
+      if (!photoUrl) return;
+      modalImgEl.src = photoUrl;
+      modalTitleEl.textContent = titleText || "Photo";
+      modalOverlayEl.style.display = "flex";
+      modalOverlayEl.setAttribute("aria-hidden", "false");
+    }
+    function closeModal(){
+      modalOverlayEl.style.display = "none";
+      modalOverlayEl.setAttribute("aria-hidden", "true");
+      modalImgEl.src = "";
+      modalTitleEl.textContent = "Photo";
+    }
+
+    // PREVIEWS
+    function setPreview(previewRow, imgEl, metaEl, entry){
+      if (entry && (entry.photo || typeof entry.weight === "number")) {
+        previewRow.style.display = "flex";
+        if (entry.photo) { imgEl.src = entry.photo; imgEl.style.display = "block"; }
+        else { imgEl.style.display = "none"; imgEl.src = ""; }
+        const w = Number(entry.weight);
+        metaEl.innerHTML = isFinite(w) ? `Weight: <b>${w.toFixed(2)}</b> kg` : "";
+      } else {
+        previewRow.style.display = "none";
+        imgEl.style.display = "none";
+        imgEl.src = "";
+        metaEl.textContent = "";
+      }
+    }
+
+    function setWpmPreview(previewRow, imgEl, metaEl, entry){
+      if (entry && (entry.photo || typeof entry.wpm === "number")) {
+        previewRow.style.display = "flex";
+        if (entry.photo) { imgEl.src = entry.photo; imgEl.style.display = "block"; }
+        else { imgEl.style.display = "none"; imgEl.src = ""; }
+        const wpm = Number(entry.wpm);
+        metaEl.innerHTML = isFinite(wpm) ? `kg/m: <b>${wpm.toFixed(2)}</b>` : "";
+      } else {
+        previewRow.style.display = "none";
+        imgEl.style.display = "none";
+        imgEl.src = "";
+        metaEl.textContent = "";
+      }
+    }
+
+    function updateEquipPreview(){ setPreview(equipPreviewRowEl, equipPreviewImgEl, equipPreviewMetaEl, EQUIPMENT[equipNameEl.value.trim()]); }
+    function updateHwPreview(){ setPreview(hwPreviewRowEl, hwPreviewImgEl, hwPreviewMetaEl, HARDWARE[hwNameEl.value.trim()]); }
+    function updateBarPreview(){ setWpmPreview(barPreviewRowEl, barPreviewImgEl, barPreviewMetaEl, BARS[barTypeEl.value.trim()]); }
+    function updateSusPreview(){ setWpmPreview(susPreviewRowEl, susPreviewImgEl, susPreviewMetaEl, SUSPENSIONS[susTypeEl.value.trim()]); }
+    function updateEquipLinPreview(){ setWpmPreview(equipLinPreviewRowEl, equipLinPreviewImgEl, equipLinPreviewMetaEl, EQUIPMENT_LINEAR[equipLinTypeEl.value.trim()]); }
+
+    // RENDER TABLE
+    let tableBound = false;
+    function bindTableInteractions(){
+      if(tableBound) return;
+      tableBound = true;
+      linesEl.addEventListener("click", (e) => {
+        const removeBtn = e.target.closest('[data-remove]');
+        if (removeBtn){
+          const i = Number(removeBtn.getAttribute('data-remove'));
+          if (i >= 0 && i < lines.length){
+            lines.splice(i, 1);
+            render();
+            calcTotals();
+          }
+          return;
+        }
+
+        const photoEl = e.target.closest('[data-photo]');
+        if (photoEl){
+          const photo = photoEl.getAttribute('data-photo');
+          const title = photoEl.getAttribute('data-title') || 'Photo';
+          openModal(photo, title);
+        }
+      });
+    }
+
+    function render(){
+      bindTableInteractions();
+      linesEl.innerHTML = "";
+
+      lines.forEach((l, idx) => {
+        const tr = document.createElement("tr");
+        const lineTotal = l.qty * l.eachKg;
+        const photoHtml = l.photo
+          ? `<img class="tablePhoto clickable-photo" data-photo="${escapeHtml(l.photo)}" data-title="${escapeHtml(l.name)}" src="${escapeHtml(l.photo)}" alt="">`
+          : "";
+
+        tr.innerHTML =
+          `<td>${photoHtml}</td>` +
+          `<td><span class="pill">${escapeHtml(l.kind)}</span></td>` +
+          `<td>${escapeHtml(l.name)}</td>` +
+          `<td class="right">${isLengthKind(l.kind) ? l.qty.toFixed(2) : l.qty}</td>` +
+          `<td class="right">${l.eachKg.toFixed(2)}</td>` +
+          `<td class="right"><b>${lineTotal.toFixed(2)}</b></td>` +
+          `<td class="right"><button class="btn-danger btn-small" data-remove="${idx}" style="width:auto; border-radius:10px;">Remove</button></td>`;
+
+        linesEl.appendChild(tr);
+      });
+
+      tableEl.style.display = lines.length ? "" : "none";
+    }
+
+    function renderSaved(){
+      const savedListEl = document.getElementById("savedList");
+      savedListEl.innerHTML = "";
+
+      savedBars.forEach((b, idx) => {
+        const total = Number(b.totalKg) || 0;
+
+        const div = document.createElement("div");
+        div.className = "savedItem";
+        div.innerHTML = `
+          <div class="savedItemLeft">
+            <div class="savedItemName">${escapeHtml(b.name || "(Unnamed bar)")}</div>
+            <div class="savedItemTotal">Saved bar total</div>
+          </div>
+
+          <div class="savedItemRight">
+            <div class="savedItemKg">${total.toFixed(2)} kg</div>
+            <button class="btn-danger btn-small" data-removesaved="${idx}" style="width:auto; border-radius:10px;">Remove</button>
+          </div>
+        `;
+        savedListEl.appendChild(div);
+      });
+
+      document.querySelectorAll("[data-removesaved]").forEach(btn => {
+        btn.addEventListener("click", (e) => {
+          const i = Number(e.currentTarget.getAttribute("data-removesaved"));
+          savedBars.splice(i, 1);
+          renderSaved();
+        });
+      });
+
+      savedListEl.style.display = savedBars.length ? "" : "none";
+    }
+
+    // ADD LINES
+    function addLine(kind){
+      const isEquip = kind === "Equipment";
+      const nameEl = isEquip ? equipNameEl : hwNameEl;
+      const qtyEl  = isEquip ? equipQtyEl  : hwQtyEl;
+      const map    = isEquip ? EQUIPMENT   : HARDWARE;
+
+      const name = nameEl.value.trim();
+      const qty = Number(qtyEl.value);
+
+      if (!map[name]) { alert(`Unknown ${kind.toLowerCase()} item.`); return; }
+      if (!Number.isFinite(qty) || !Number.isInteger(qty) || qty < 1) { alert("Please enter a quantity of 1 or more."); return; }
+
+      const entry = map[name];
+      const eachKg = Number(entry.weight);
+
+      if (!isFinite(eachKg) || eachKg <= 0){
+        alert(`That item does not have a valid 'weight' value.`);
+        return;
+      }
+
+      if(!Number.isFinite(qty * eachKg)){alert("Quantity is too large.");return;}
+      const existing = lines.find(l => l.kind === kind && l.name === name);
+      if (existing) {
+        if(!Number.isFinite((existing.qty+qty)*eachKg)){alert("Quantity is too large.");return;}
+        existing.qty += qty;
+        existing.eachKg = eachKg;
+        existing.photo = entry.photo || "";
+        showToast(`Updated: ${name} → Qty ${existing.qty}`);
+      } else {
+        lines.push({ kind, name, qty, eachKg, photo: entry.photo || "" });
+        showToast(`Added: ${name} (${qty})`);
+      }
+
+      nameEl.value = "";
+      qtyEl.value = 1;
+      nameEl.focus();
+
+      updateEquipPreview();
+      updateHwPreview();
+      render();
+      calcTotals();
+    }
+
+    function addRigging(kind){
+      const isBar = kind === "Bar";
+      const typeEl = isBar ? barTypeEl : susTypeEl;
+      const lenEl  = isBar ? barLenEl  : susLenEl;
+      const map    = isBar ? BARS      : SUSPENSIONS;
+
+      const type = typeEl.value.trim();
+      const len = Number(lenEl.value);
+
+      if (!map[type]) { alert(`Unknown ${kind.toLowerCase()} type.`); return; }
+      if (!isFinite(len) || len <= 0) { alert("Please enter a length greater than 0."); return; }
+
+      const entry = map[type];
+      const wpm = Number(entry.wpm);
+      const photo = entry.photo || "";
+      if(!Number.isFinite(len*wpm)){alert("Length is too large.");return;}
+
+      lines.push({
+        kind,
+        name: `${type} (${len.toFixed(2)} m)`,
+        qty: len,
+        eachKg: isFinite(wpm) ? wpm : 0,
+        photo
+      });
+
+      showToast(`Added: ${kind} — ${type}`);
+      render();
+      calcTotals();
+
+      typeEl.value = "";
+      lenEl.value = "";
+      if (isBar) barWpmEl.value = "";
+      else susWpmEl.value = "";
+      updateBarPreview();
+      updateSusPreview();
+    }
+
+    function addEquipmentLinear(){
+      const type = equipLinTypeEl.value.trim();
+      const len = Number(equipLinLenEl.value);
+
+      if (!EQUIPMENT_LINEAR[type]) { alert("Unknown linear item type. Choose one from the suggestions."); return; }
+      if (!isFinite(len) || len <= 0) { alert("Please enter a length greater than 0."); return; }
+
+      const entry = EQUIPMENT_LINEAR[type];
+      const wpm = Number(entry.wpm);
+      const photo = entry.photo || "";
+      if(!Number.isFinite(len*wpm)){alert("Length is too large.");return;}
+
+      lines.push({
+        kind: "Equipment Linear",
+        name: `${type} (${len.toFixed(2)} m)`,
+        qty: len,
+        eachKg: isFinite(wpm) ? wpm : 0,
+        photo
+      });
+
+      showToast(`Added: Equipment Linear — ${type}`);
+      render();
+      calcTotals();
+
+      equipLinTypeEl.value = "";
+      equipLinLenEl.value = "";
+      equipLinWpmEl.value = "";
+      updateEquipLinPreview();
+    }
+
+    // COPY
+    function formatCopyTextForCurrent(){
+      const header = barNameEl.value.trim() ? `OWL Generator — ${barNameEl.value.trim()}` : `OWL Generator`;
+      const out = [header, "—"];
+      const totals = calcTotals();
+
+      if (!lines.length) {
+        out.push("No items added.");
+        out.push(`Rigging total: ${totals.riggingTotal.toFixed(2)} kg`);
+        out.push(`Equipment total: ${totals.equipmentTotal.toFixed(2)} kg`);
+        out.push(`Grand total: ${totals.grandTotal.toFixed(2)} kg`);
+        return out.join("\n");
+      }
+
+      lines.forEach(l => {
+        const lineTotal = l.qty * l.eachKg;
+        const qtyText = isLengthKind(l.kind) ? `${l.qty.toFixed(2)} m` : `${l.qty}`;
+        out.push(`${l.kind}: ${qtyText} × ${l.name} @ ${l.eachKg.toFixed(2)} = ${lineTotal.toFixed(2)} kg`);
+      });
+
+      out.push("—");
+      out.push(`Rigging total: ${totals.riggingTotal.toFixed(2)} kg`);
+      out.push(`Equipment total: ${totals.equipmentTotal.toFixed(2)} kg`);
+      out.push(`Grand total: ${totals.grandTotal.toFixed(2)} kg`);
+      return out.join("\n");
+    }
+
+    function formatCopyTextForJob(){
+      const out = ["OWL Generator — Saved Bars", "—"];
+      if (!savedBars.length){
+        out.push("No saved bars.");
+        return out.join("\n");
+      }
+      let jobTotal = 0;
+      savedBars.forEach(b => {
+        const t = Number(b.totalKg) || 0;
+        jobTotal += t;
+        out.push(`${b.name || "(Unnamed bar)"}: ${t.toFixed(2)} kg`);
+      });
+      out.push("—");
+      out.push(`Job total: ${jobTotal.toFixed(2)} kg`);
+      return out.join("\n");
+    }
+
+    async function copyText(text){
+      try{
+        await navigator.clipboard.writeText(text);
+        showToast("Copied to clipboard ✅");
+      }catch(e){
+        window.prompt("Copy this text:", text);
+      }
+    }
+
+    // SAVE / CLEAR
+    function clearCurrentBar(){
+      lines = [];
+      render();
+
+      barTypeEl.value = "";
+      barWpmEl.value = "";
+      barLenEl.value = "";
+
+      susTypeEl.value = "";
+      susWpmEl.value = "";
+      susLenEl.value = "";
+
+      equipNameEl.value = "";
+      equipQtyEl.value = 1;
+
+      equipLinTypeEl.value = "";
+      equipLinWpmEl.value = "";
+      equipLinLenEl.value = "";
+
+      hwNameEl.value = "";
+      hwQtyEl.value = 1;
+
+      updateBarPreview();
+      updateSusPreview();
+      updateEquipPreview();
+      updateEquipLinPreview();
+      updateHwPreview();
+
+      equipNameEl.focus();
+      calcTotals();
+      showToast("Cleared current bar.");
+    }
+
+    function clearAll(){
+      savedBars = [];
+      renderSaved();
+      barNameEl.value = "";
+      clearCurrentBar();
+      showToast("Cleared everything.");
+    }
+
+    function saveBar(){
+      const totals = calcTotals();
+      const name = barNameEl.value.trim();
+      if (!name){
+        alert("Please enter a Bar name before saving.");
+        barNameEl.focus();
+        return;
+      }
+      savedBars.push({ name, totalKg: totals.grandTotal });
+      renderSaved();
+      showToast(`Saved: ${name} (${totals.grandTotal.toFixed(2)} kg)`);
+      barNameEl.value = "";
+      clearCurrentBar();
+    }
+
+    // DARK MODE
+    function setDarkMode(isDark){
+      document.body.classList.toggle("dark", !!isDark);
+      localStorage.setItem("owl_dark", isDark ? "1" : "0");
+      darkModeBtnEl.textContent = `Dark mode: ${isDark ? "On" : "Off"}`;
+    }
+    function toggleDarkMode(){ setDarkMode(!document.body.classList.contains("dark")); }
+
+    // RIGGING TOGGLE
+    function setRiggingOpen(open){
+      riggingBodyEl.classList.toggle("open", !!open);
+      riggingCardEl.classList.toggle("is-collapsed", !open);
+      riggingToggleBtnEl.textContent = `Rigging: ${open ? "Hide" : "Show"}`;
+      localStorage.setItem("owl_rig_open", open ? "1" : "0");
+    }
+
+    // ENTER TO ADD
+    function bindEnter(el, fn){
+      el.addEventListener("keydown", (e) => {
+        if (e.key === "Enter"){
+          e.preventDefault();
+          fn();
+        }
+      });
+    }
+
+    // EVENTS
+    addEquipBtn.addEventListener("click", () => addLine("Equipment"));
+    addHwBtn.addEventListener("click", () => addLine("Hardware"));
+    addBarBtn.addEventListener("click", () => addRigging("Bar"));
+    addSusBtn.addEventListener("click", () => addRigging("Suspension"));
+    addEquipLinBtn.addEventListener("click", addEquipmentLinear);
+
+    copyBtn.addEventListener("click", () => copyText(formatCopyTextForCurrent()));
+    copyJobBtnEl.addEventListener("click", () => copyText(formatCopyTextForJob()));
+
+    saveBarBtnEl.addEventListener("click", () => saveBar());
+    clearBarBtnEl.addEventListener("click", () => { if(!lines.length || confirm("Clear the current draft bar?")){clearCurrentBar();renderSaved();draftSave();} });
+    clearAllBtnEl.addEventListener("click", () => { if(confirm("Clear all bars in the current draft job? Saved jobs remain until you save over them.")){clearAll();draftSave();} });
+
+    equipNameEl.addEventListener("input", updateEquipPreview);
+    hwNameEl.addEventListener("input", updateHwPreview);
+
+    function riggingChanged(){
+      setWpmBox(BARS, barTypeEl, barWpmEl);
+      setWpmBox(SUSPENSIONS, susTypeEl, susWpmEl);
+      updateBarPreview();
+      updateSusPreview();
+    }
+    barTypeEl.addEventListener("input", riggingChanged);
+    susTypeEl.addEventListener("input", riggingChanged);
+
+    equipLinTypeEl.addEventListener("input", () => {
+      setWpmBox(EQUIPMENT_LINEAR, equipLinTypeEl, equipLinWpmEl);
+      updateEquipLinPreview();
+    });
+
+    // Enlarge preview photos
+    equipPreviewImgEl.addEventListener("click", () => {
+      const name = equipNameEl.value.trim();
+      const entry = EQUIPMENT[name];
+      if (entry && entry.photo) openModal(entry.photo, name);
+    });
+    hwPreviewImgEl.addEventListener("click", () => {
+      const name = hwNameEl.value.trim();
+      const entry = HARDWARE[name];
+      if (entry && entry.photo) openModal(entry.photo, name);
+    });
+    barPreviewImgEl.addEventListener("click", () => {
+      const name = barTypeEl.value.trim();
+      const entry = BARS[name];
+      if (entry && entry.photo) openModal(entry.photo, name);
+    });
+    susPreviewImgEl.addEventListener("click", () => {
+      const name = susTypeEl.value.trim();
+      const entry = SUSPENSIONS[name];
+      if (entry && entry.photo) openModal(entry.photo, name);
+    });
+    equipLinPreviewImgEl.addEventListener("click", () => {
+      const name = equipLinTypeEl.value.trim();
+      const entry = EQUIPMENT_LINEAR[name];
+      if (entry && entry.photo) openModal(entry.photo, name);
+    });
+
+    modalCloseEl.addEventListener("click", closeModal);
+    modalOverlayEl.addEventListener("click", (e) => { if (e.target === modalOverlayEl) closeModal(); });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeModal(); });
+
+    darkModeBtnEl.addEventListener("click", toggleDarkMode);
+
+    riggingToggleBtnEl.addEventListener("click", () => {
+      setRiggingOpen(!riggingBodyEl.classList.contains("open"));
+    });
+
+    // Enter-to-add bindings
+    bindEnter(equipNameEl, () => addLine("Equipment"));
+    bindEnter(equipQtyEl, () => addLine("Equipment"));
+    bindEnter(hwNameEl, () => addLine("Hardware"));
+    bindEnter(hwQtyEl, () => addLine("Hardware"));
+    bindEnter(equipLinTypeEl, addEquipmentLinear);
+    bindEnter(equipLinLenEl, addEquipmentLinear);
+    bindEnter(barTypeEl, () => addRigging("Bar"));
+    bindEnter(barLenEl, () => addRigging("Bar"));
+    bindEnter(susTypeEl, () => addRigging("Suspension"));
+    bindEnter(susLenEl, () => addRigging("Suspension"));
+
+    // init
+    setDarkMode(localStorage.getItem("owl_dark") === "1");
+    setRiggingOpen(localStorage.getItem("owl_rig_open") === "1");
+    renderSaved();
+    clearCurrentBar();
+  </script>
+<script>
+/* GALLERY v3 (isolated + no conflicts) */
+(() => {
+  const modal   = document.getElementById("galleryModal");
+  const panel   = document.querySelector("#galleryModal .galleryPanel");
+  const openBtn = document.getElementById("openGalleryBtn");
+  const closeBtn= document.getElementById("closeGalleryBtn");
+  const grid    = document.getElementById("galleryGrid");
+  const search  = document.getElementById("gallerySearch");
+  const filter  = document.getElementById("galleryFilter");
+  const addBtn  = document.getElementById("galleryAddBtn");
+  const picked  = document.getElementById("galleryPicked");
+
+  if (!modal || !panel || !openBtn || !closeBtn || !grid || !search || !filter || !addBtn || !picked) {
+    console.warn("Gallery: missing one or more elements");
+    return;
+  }
+
+  const DATA = (typeof CATALOG !== "undefined") ? CATALOG : null;
+  const imp = (el, prop, val) => el.style.setProperty(prop, val, "important");
+
+  let items = [];
+  let selected = null;
+
+  function applyLayout(){
+    // ensure grid scroll works even if other CSS fights it
+    imp(grid, "overflow-y", "auto");
+    imp(grid, "flex", "1 1 auto");
+    imp(grid, "min-height", "0");
+
+    const cols = window.innerWidth <= 800 ? 3 : 7;
+    imp(grid, "display", "grid");
+    imp(grid, "grid-template-columns", `repeat(${cols}, 1fr)`);
+    imp(grid, "gap", "10px");
+    imp(grid, "padding", "12px");
+  }
+
+  function setModal(open){
+    document.body.classList.toggle("gallery-open", open);
+    modal.classList.toggle("is-hidden", !open);
+    modal.setAttribute("aria-hidden", String(!open));
+
+    if(open){
+      picked.textContent = "Gallery active";
+      selected = null;
+      addBtn.disabled = true;
+      applyLayout();
+      renderGallery();
+      setTimeout(() => search.focus(), 0);
+    }
+  }
+
+  function buildItems(){
+    if(!DATA) return [];
+    return Object.entries(DATA)
+      .filter(([name, obj]) => obj && Array.isArray(obj.cats))
+      .filter(([name, obj]) =>
+        obj.cats.includes("equipment") ||
+        obj.cats.includes("hardware") ||
+        obj.cats.includes("equipment_linear") ||
+        obj.cats.includes("rigging_bar") ||
+        obj.cats.includes("rigging_susp")
+      )
+      .map(([name, obj]) => ({
+        name,
+        cats: obj.cats,
+        img: (obj.photo || "").trim()
+      }));
+  }
+
+  function matchesFilter(item){
+    const f = filter.value;
+    if (f === "all") return true;
+    return Array.isArray(item.cats) && item.cats.includes(f);
+  }
+
+  function matchesSearch(item){
+    const q = (search.value || "").trim().toLowerCase();
+    if(!q) return true;
+    return item.name.toLowerCase().includes(q);
+  }
+
+  function renderGallery(){
+    applyLayout();
+
+    const thumbH = window.innerWidth <= 800 ? 120 : 110;
+    const view = items.filter(matchesFilter).filter(matchesSearch);
+
+    grid.innerHTML = "";
+    view.forEach(item => {
+      const card = document.createElement("div");
+      card.className = "galleryCard" + ((selected && selected.name === item.name) ? " is-selected" : "");
+
+      // force tile sizing (prevents slits)
+      imp(card, "display", "grid");
+      imp(card, "grid-template-rows", `${thumbH}px auto`);
+      const cardH = thumbH + 72;
+      imp(card, "height", `${cardH}px`);
+      imp(card, "min-height", `${cardH}px`);
+
+      card.innerHTML = `
+        <img alt="${item.name}" loading="lazy">
+        <div class="galleryName">${item.name}</div>
+      `;
+
+      const img = card.querySelector("img");
+      imp(img, "width", "100%");
+      imp(img, "height", `${thumbH}px`);
+      imp(img, "object-fit", "cover");
+      imp(img, "display", "block");
+      imp(img, "position", "static");
+
+      if(item.img){
+        img.src = item.img;
+        img.onerror = () => { img.removeAttribute("src"); };
+      } else {
+        img.removeAttribute("src");
+      }
+
+      card.addEventListener("click", () => {
+        selected = item;
+        picked.textContent = "Selected: " + item.name;
+        addBtn.disabled = false;
+        renderGallery();
+      });
+
+      grid.appendChild(card);
+    });
+  }
+
+  function addSelected(){
+    if(!selected) return;
+
+    const cats = Array.isArray(selected.cats) ? selected.cats : [];
+    const goesToLinear = cats.includes("equipment_linear") || cats.includes("rigging_bar") || cats.includes("rigging_susp");
+
+    const targetId = goesToLinear ? "equipLinType" : "equipName";
+    const input = document.getElementById(targetId);
+    if(!input){
+      alert("Can't find target input: " + targetId);
+      return;
+    }
+
+    input.value = selected.name;
+    input.dispatchEvent(new Event("input", { bubbles: true }));
+    input.dispatchEvent(new Event("change", { bubbles: true }));
+
+    setModal(false);
+
+    // nudge user to the next field they typically edit
+    if (goesToLinear) document.getElementById("equipLinLen")?.focus();
+    else document.getElementById("equipQty")?.focus();
+  }
+
+  // init
+  items = buildItems();
+
+  openBtn.addEventListener("click", () => setModal(true));
+  closeBtn.addEventListener("click", () => setModal(false));
+  modal.addEventListener("click", (e) => { if(e.target === modal) setModal(false); });
+
+  search.addEventListener("input", () => { selected = null; addBtn.disabled = true; renderGallery(); });
+  filter.addEventListener("change", () => { selected = null; addBtn.disabled = true; renderGallery(); });
+  filter.addEventListener("input",  () => { selected = null; addBtn.disabled = true; renderGallery(); });
+
+  addBtn.addEventListener("click", addSelected);
+
+  document.addEventListener("keydown", (e) => { if(e.key === "Escape") setModal(false); });
+  window.addEventListener("resize", () => { if(!modal.classList.contains("is-hidden")) renderGallery(); });
+})();
+</script>
+<script>
+// OWL job storage and report layer. No network or AI is used for calculations.
+const $=id=>document.getElementById(id), esc=escapeHtml, clone=v=>structuredClone(v);
+const JOB_KEY='owl_jobs_v2', DRAFT_KEY='owl_draft_v3';
+let jobs=Object.create(null), activeJob='', editingIndex=null, storageBroken=false, dirty=false;
+const sum=rows=>rows.reduce((v,r)=>v+r.qty*r.eachKg,0);
+function positive(v){return typeof v==='number'&&Number.isFinite(v)&&v>0}
+function validLine(l){return l&&typeof l.name==='string'&&typeof l.kind==='string'&&positive(l.qty)&&typeof l.eachKg==='number'&&Number.isFinite(l.eachKg)&&l.eachKg>=0&&Number.isFinite(l.qty*l.eachKg)}
+function validateJobs(value){if(!value||typeof value!=='object'||Array.isArray(value))throw Error('Invalid jobs');for(const j of Object.values(value)){if(!j||!Array.isArray(j.bars)||!Array.isArray(j.draft)||!j.draft.every(validLine)||!j.bars.every(b=>b&&typeof b.name==='string'&&Array.isArray(b.lines)&&b.lines.every(validLine)&&(b.capacity==null||positive(b.capacity))))throw Error('Invalid job data')}return value}
+const jobCard=document.createElement('details');jobCard.className='card sectionCard';jobCard.open=true;
+jobCard.innerHTML=`<summary>Job and reports</summary><div class="owlTools"><label>Job / venue<input id="jobName" placeholder="Venue and inspection reference"></label><div class="row"><label>Inspector<input id="inspector" autocomplete="name"></label><label>Inspection date<input id="inspectionDate" type="date"></label></div><label>Job notes<textarea id="jobNotes" rows="2"></textarea></label><label>Saved jobs<select id="jobSelect"><option value="">Choose a job</option></select></label><div class="actionsRow"><button id="jobSave" class="btn-primary">Save job</button><button id="jobNew" class="btn-ghost">New job</button><button id="jobPrint" class="btn-ghost">Preview / print report</button></div><details><summary>Backup and restore</summary><p>Jobs stay in this browser on this device. Download a backup to keep a separate copy or transfer to another device.</p><button id="jobBackup">Download all jobs</button><label>Restore backup<input id="jobRestore" type="file" accept=".json,application/json"></label></details><p id="jobStatus" role="status"></p></div>`;
+document.querySelector('.stickyTop').after(jobCard);
+const capacityField=document.createElement('label');capacityField.innerHTML='Optional stated SWL/WLL (kg)<input id="capacity" type="number" min="0.01" step="any" placeholder="Unknown / not entered"><small id="capacityStatus"></small>'; $('barName').parentElement.append(capacityField);
+const curtain=document.createElement('details');curtain.className='card sectionCard';curtain.innerHTML=`<summary>Curtains and cyclorama cloths</summary><div class="owlTools"><label>Fabric<select id="fabricSelect"><option value="">Custom fabric / known specification</option></select></label><p id="fabricSource"></p><label>Curtain name<input id="fabricName" placeholder="e.g. Upstage black tabs"></label><div class="row"><label>Fabric weight (g/m²)<input id="fabricGsm" type="number" min="0.01" step="any"></label><label>Opening width (m)<input id="fabricWidth" type="number" min="0.01" step="any"></label><label>Drop (m)<input id="fabricDrop" type="number" min="0.01" step="any"></label><label>Fullness (%)<input id="fabricFullness" type="number" min="0" step="any" value="0"></label><label>Extra weight (kg)<input id="fabricExtra" type="number" min="0" step="any" value="0"></label></div><p>Use 0% fullness when entering the actual flat fabric width. Enter each curtain separately, or use the combined width of the pair. Extra weight covers hems, linings, chains and fittings; do not count them again elsewhere.</p><p id="fabricEstimate" aria-live="polite"></p><button id="fabricAdd" class="btn-primary">Add curtain estimate</button></div>`;
+jobCard.after(curtain);
+const custom=document.createElement('details');custom.className='card sectionCard';custom.innerHTML=`<summary>Add an item with a known weight</summary><div class="owlTools"><label>Name<input id="customName"></label><label>Weight each (kg)<input id="customKg" type="number" min="0.001" step="any"></label><label>Quantity<input id="customQty" type="number" min="1" step="1" value="1"></label><label>Weight source / measurement notes<input id="customSource" placeholder="Measured weight, label or specification"></label><button id="customAdd">Add item</button></div>`;curtain.after(custom);
+const catalogueNote=document.createElement('p');catalogueNote.id='catalogueNote';catalogueNote.className='sectionHint';$('equipName').parentElement.append(catalogueNote);
+const date=new Date();$('inspectionDate').value=[date.getFullYear(),String(date.getMonth()+1).padStart(2,'0'),String(date.getDate()).padStart(2,'0')].join('-');
+function status(text){$('jobStatus').textContent=text}
+function currentSnapshot(){return {bars:clone(savedBars),draft:clone(lines),barName:barNameEl.value,capacity:$('capacity').value,inspector:$('inspector').value,date:$('inspectionDate').value,notes:$('jobNotes').value,editingIndex,updated:new Date().toISOString()}}
+function refreshJobs(){const select=$('jobSelect');select.replaceChildren(new Option('Choose a job',''));Object.keys(jobs).sort().forEach(k=>select.add(new Option(k,k)));select.value=activeJob}
+function draftSave(){dirty=true;if(storageBroken)return;try{localStorage.setItem(DRAFT_KEY,JSON.stringify({jobName:$('jobName').value,activeJob,snapshot:currentSnapshot()}));status('Draft saved on this device. Use Save job to update the named job.')}catch{status('Device storage is unavailable or full. Download a backup now.')}}
+function persistJob(){const name=$('jobName').value.trim();if(!name){status('Enter a job / venue name to save.');return false}if(storageBroken){status('Existing stored data could not be read; saving is disabled to protect it. Download a backup.');return false}if(name!==activeJob&&Object.hasOwn(jobs,name)&&!confirm('Replace the saved job “'+name+'”?'))return false;const next={...jobs,[name]:currentSnapshot()};try{localStorage.setItem(JOB_KEY,JSON.stringify(next));jobs=next;activeJob=name;refreshJobs();draftSave();dirty=false;status('Job saved: '+name);return true}catch{status('Save failed. Download a backup now.');return false}}
+function loadSnapshot(j){savedBars=clone(j.bars);lines=clone(j.draft||[]);barNameEl.value=j.barName||'';$('capacity').value=j.capacity??'';$('inspector').value=j.inspector||'';$('inspectionDate').value=j.date||$('inspectionDate').value;$('jobNotes').value=j.notes||'';editingIndex=Number.isInteger(j.editingIndex)&&j.editingIndex>=0&&j.editingIndex<savedBars.length?j.editingIndex:null;render();calcTotals();renderSaved();updateCapacity();$('saveBarBtn').textContent=editingIndex===null?'Save Bar':'Update Bar'}
+function updateCapacity(){const total=sum(lines),c=$('capacity').value,cap=Number(c);$('capacityStatus').textContent=c===''?'No capacity comparison':!positive(cap)?'Enter a positive capacity':total>cap?'Exceeds stated capacity by '+(total-cap).toFixed(2)+' kg':(cap-total).toFixed(2)+' kg below stated capacity (weight comparison only)';$('capacityStatus').className=positive(cap)&&total>cap?'overCapacity':''}
+saveBar=function(){const name=barNameEl.value.trim(),raw=$('capacity').value,cap=raw===''?null:Number(raw);if(!name||!lines.length){alert('Enter a bar name and add an item.');return}if(!lines.every(validLine)||!Number.isFinite(sum(lines))||(cap!==null&&!positive(cap))){alert('Check item weights, quantities and capacity.');return}const b={name,totalKg:sum(lines),capacity:cap,lines:clone(lines)};if(editingIndex===null)savedBars.push(b);else savedBars[editingIndex]=b;editingIndex=null;barNameEl.value='';$('capacity').value='';clearCurrentBar();$('saveBarBtn').textContent='Save Bar';renderSaved();draftSave();if($('jobName').value.trim())persistJob()};
+renderSaved=function(){const box=$('savedList');box.replaceChildren();savedBars.forEach((b,i)=>{const row=document.createElement('div');row.className='savedItem';const title=document.createElement('span');title.textContent=b.name+' — '+sum(b.lines).toFixed(2)+' kg'+(editingIndex===i?' (editing)':'');row.append(title);const edit=document.createElement('button');edit.textContent='Edit';edit.onclick=()=>{if(lines.length&&!confirm('Replace the current draft bar? The saved bar will remain until you update it.'))return;lines=clone(b.lines);barNameEl.value=b.name;$('capacity').value=b.capacity??'';editingIndex=i;$('saveBarBtn').textContent='Update Bar';render();calcTotals();renderSaved();draftSave();barNameEl.focus()};const remove=document.createElement('button');remove.textContent='Remove';remove.onclick=()=>{if(!confirm('Remove '+b.name+'?'))return;savedBars.splice(i,1);if(editingIndex===i){editingIndex=null;$('saveBarBtn').textContent='Save Bar'}else if(editingIndex>i)editingIndex--;renderSaved();draftSave()};row.append(edit,remove);box.append(row)});box.style.display=savedBars.length?'':'none'};
+const originalCalc=calcTotals;calcTotals=function(){const r=originalCalc();updateCapacity();return r};
+const originalClear=clearCurrentBar;clearCurrentBar=function(){originalClear();editingIndex=null;barNameEl.value='';$('capacity').value='';$('saveBarBtn').textContent='Save Bar';updateCapacity()};
+function fabricValues(){const g=Number($('fabricGsm').value),w=Number($('fabricWidth').value),d=Number($('fabricDrop').value),f=Number($('fabricFullness').value),e=Number($('fabricExtra').value);if(![g,w,d].every(positive)||![f,e].every(v=>Number.isFinite(v)&&v>=0))return null;const kg=w*d*(1+f/100)*g/1000+e;return Number.isFinite(kg)?{g,w,d,f,e,kg}:null}
+function previewFabric(){const v=fabricValues();$('fabricEstimate').textContent=v?'Estimated total: '+v.kg.toFixed(2)+' kg (including '+v.e+' kg extras)':'Enter fabric weight, width and drop.'}
+for(const f of FABRICS)$('fabricSelect').add(new Option(f.name,f.name));
+$('fabricSelect').onchange=()=>{const f=FABRICS.find(f=>f.name===$('fabricSelect').value);$('fabricSource').replaceChildren();if(f){$('fabricGsm').value=f.gsm;$('fabricName').value=f.name;const a=document.createElement('a');a.href=f.source;a.textContent='Manufacturer specification';a.target='_blank';a.rel='noopener';$('fabricSource').append(a,document.createTextNode(' · '+(f.notes||'')))}previewFabric()};
+curtain.addEventListener('input',previewFabric);
+$('fabricAdd').onclick=()=>{const v=fabricValues(),name=$('fabricName').value.trim();if(!v||!name){alert('Enter a curtain name, fabric weight and valid dimensions.');return}const f=FABRICS.find(f=>f.name===$('fabricSelect').value);lines.push({kind:'Equipment',name:name+' (curtain estimate)',qty:1,eachKg:v.kg,photo:'',source:f&&f.gsm===v.g?f.source:'',weightStatus:'estimate',notes:v.w+' m width × '+v.d+' m drop; '+v.g+' g/m²; '+v.f+'% fullness; '+v.e+' kg extras'});render();calcTotals();draftSave()};
+$('customAdd').onclick=()=>{const name=$('customName').value.trim(),kg=Number($('customKg').value),qty=Number($('customQty').value);if(!name||!positive(kg)||!positive(qty)||!Number.isInteger(qty)||!Number.isFinite(qty*kg)){alert('Enter a name, positive weight and whole-number quantity.');return}lines.push({kind:'Equipment',name,qty,eachKg:kg,photo:'',weightStatus:'user-entered',notes:$('customSource').value});render();calcTotals();draftSave()};
+function metadata(name){const e=CATALOG[name];if(!e)return null;return {source:e.source||'',weightStatus:e.source?'published':'unverified legacy',notes:e.notes||'Original catalogue value; verify the exact model and included accessories.'}}
+function attachMeta(){for(const line of lines){if(line.weightStatus)continue;const name=line.name.replace(/ \([\d.]+ m\)$/,'');Object.assign(line,metadata(name)||{weightStatus:'unverified legacy',notes:'Verify weight and exact model.'})}}
+document.addEventListener('click',event=>{if(event.target.closest('#addEquipBtn,#addHwBtn,#addBarBtn,#addSusBtn,#addEquipLinBtn,[data-remove]')){attachMeta();draftSave()}});
+document.addEventListener('keydown',event=>{if(event.key==='Enter')setTimeout(()=>{attachMeta();draftSave()},0)});
+$('equipName').addEventListener('input',()=>{const m=metadata($('equipName').value.trim());$('catalogueNote').replaceChildren();if(m){$('catalogueNote').append(document.createTextNode(m.weightStatus+': '+m.notes+' '));if(m.source){const a=document.createElement('a');a.href=m.source;a.textContent='Weight source';a.target='_blank';a.rel='noopener';$('catalogueNote').append(a)}}});
+for(const id of ['jobName','inspector','inspectionDate','jobNotes','barName','capacity'])$(id).addEventListener('input',()=>{updateCapacity();draftSave()});
+$('jobSave').onclick=persistJob;
+$('jobSelect').onchange=()=>{const key=$('jobSelect').value;if(!key)return;if(dirty&&!confirm('Load this job and replace the current draft? Save your current job first if needed.')){refreshJobs();return}loadSnapshot(jobs[key]);activeJob=key;$('jobName').value=key;draftSave();dirty=false;status('Loaded: '+key)};
+$('jobNew').onclick=()=>{if(dirty&&!confirm('Start a new job? Save or back up your current job first.'))return;activeJob='';savedBars=[];clearCurrentBar();$('jobName').value='';$('jobNotes').value='';renderSaved();refreshJobs();draftSave()};
+function download(filename,text){const url=URL.createObjectURL(new Blob([text],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download=filename;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)}
+$('jobBackup').onclick=()=>{const backup={...jobs};if(lines.length||savedBars.length)backup[$('jobName').value.trim()||'Unsaved draft']=currentSnapshot();download('owl-jobs-'+new Date().toISOString().slice(0,10)+'.json',JSON.stringify({version:2,jobs:backup},null,2));status('Backup downloaded. Keep it in a safe location.')};
+$('jobRestore').onchange=async event=>{try{const file=event.target.files[0];if(!file)return;if(file.size>20000000)throw Error('Backup too large');const data=JSON.parse(await file.text());if(data.version!==2)throw Error('Unsupported backup version');validateJobs(data.jobs);if(!confirm('Merge this backup? Jobs with matching names will be replaced.'))return;const next={...jobs,...data.jobs};localStorage.setItem(JOB_KEY,JSON.stringify(next));jobs=next;storageBroken=false;refreshJobs();status('Backup restored. Choose a job to open.')}catch(e){alert('Restore failed: '+e.message)}event.target.value=''};
+const report=document.createElement('section');report.id='owlReport';document.body.append(report);
+function reportBars(){const bars=clone(savedBars);if(lines.length){const b={name:barNameEl.value||'Current unsaved bar',lines:clone(lines),capacity:$('capacity').value===''?null:Number($('capacity').value)};if(editingIndex===null)bars.push(b);else bars[editingIndex]=b}return bars}
+function reportHTML(){attachMeta();const bars=reportBars();if(!bars.length)throw Error('Add items before generating a report.');for(const b of bars)if(!b.lines.every(validLine)||(b.capacity!==null&&!positive(b.capacity)))throw Error('Check quantities, weights and entered capacity before printing.');let h='<div class="reportActions"><button id="printNow">Print / Save PDF</button><button id="closeReport">Back to calculator</button></div><h1>Observed Working Load report</h1><h2>'+esc($('jobName').value||'Unnamed job')+'</h2><p>Inspector: '+esc($('inspector').value||'Not entered')+' · Inspection date: '+esc($('inspectionDate').value||'Not entered')+'</p><p>'+esc($('jobNotes').value)+'</p>';for(const b of bars){const total=sum(b.lines),cap=b.capacity;h+='<section class="reportBar"><h2>'+esc(b.name)+'</h2><table><thead><tr><th>Item / weight basis</th><th>Qty / m</th><th>kg each / m</th><th>Total kg</th></tr></thead><tbody>'+b.lines.map(l=>{const m=l.weightStatus?l:metadata(l.name.replace(/ \([\d.]+ m\)$/,''))||{weightStatus:'unverified legacy'};return '<tr><td>'+esc(l.name)+'<small>'+esc(m.weightStatus||'unverified')+' — '+esc(m.notes||'')+(m.source?'<br><a href="'+esc(m.source)+'">'+esc(m.source)+'</a>':'')+'</small></td><td>'+l.qty+'</td><td>'+l.eachKg.toFixed(3)+'</td><td>'+(l.qty*l.eachKg).toFixed(2)+'</td></tr>'}).join('')+'</tbody></table><p><b>Calculated total: '+total.toFixed(2)+' kg</b></p><p>'+(cap===null?'Stated capacity not entered.':'Stated capacity: '+cap+' kg. '+(total>cap?'EXCEEDS stated capacity by '+(total-cap).toFixed(2)+' kg.':(cap-total).toFixed(2)+' kg below stated capacity.'))+'</p></section>'}h+='<p>Weight comparison only; not a structural capacity or installation assessment. Load distribution, support spacing, point loads and installation condition are not assessed. Curtain estimates depend on the entered dimensions, fabric weight and extra allowances. Clamps, safety bonds, brackets and other accessories must be included once where applicable. Published weights may include manufacturer-supplied parts; see each item’s notes. Legacy and user-entered values require confirmation.</p>';return h}
+$('jobPrint').onclick=()=>{try{report.innerHTML=reportHTML();document.body.classList.add('report-open');$('printNow').onclick=()=>window.print();$('closeReport').onclick=()=>document.body.classList.remove('report-open');window.scrollTo(0,0)}catch(e){alert(e.message)}};
+window.addEventListener('beforeprint',()=>{try{report.innerHTML=reportHTML()}catch(e){report.textContent=e.message}});
+try{const raw=localStorage.getItem(JOB_KEY);if(raw)jobs=validateJobs(JSON.parse(raw));const draft=localStorage.getItem(DRAFT_KEY);if(draft){const d=JSON.parse(draft);validateJobs({draft:d.snapshot});loadSnapshot(d.snapshot);activeJob=d.activeJob||'';$('jobName').value=d.jobName||'';status('Your last draft has been restored.')}refreshJobs();renderSaved()}catch(e){storageBroken=true;status('Stored data could not be read. It has been left untouched. Restore a valid backup before saving.')}
+if('serviceWorker' in navigator&&location.protocol!=='file:')navigator.serviceWorker.register('./sw.js').then(()=>{const note=document.createElement('p');note.className='sectionHint';note.textContent='Offline calculator available after the first successful load. Photos may require a connection until cached.';jobCard.append(note)}).catch(()=>{});
+window.addEventListener('beforeunload',()=>{if(!storageBroken)try{localStorage.setItem(DRAFT_KEY,JSON.stringify({jobName:$('jobName').value,activeJob,snapshot:currentSnapshot()}))}catch{}});
+
+</script></body>
+</html>

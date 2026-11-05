@@ -1,0 +1,2262 @@
+{
+  "checked": "2026-11-05",
+  "catalogue": {
+    "Strand Quartet F": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 3.1,
+      "photo": "./images/7a901a5f1fb8ed76.jpg",
+      "originalPhoto": "https://insightlighting.co.uk/media/Strand-Quartet-F_Strand-Quartet-F_aURcOca-600x.jpg"
+    },
+    "ETC Source Four Jr": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 4.5,
+      "photo": "./images/308b4f42d2dd6b8f.jpg",
+      "originalPhoto": "https://www.etcconnect.com/uploadedImages/Main_Site/Images/Products/Lighting_Fixtures/Source_Four/SourceFour_Jr_Zoom_side-547x400.jpg"
+    },
+    "Chauvet Ovation": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 4,
+      "photo": "./images/f524fcee4e6fd93c.jpg",
+      "originalPhoto": "https://stagedepot.co.uk/sites/default/files/styles/product_display/public/productimages/prod_p56ww_right.png?itok=wOSK-C29"
+    },
+    "Prelude 16/30": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 6.5,
+      "photo": "https://northeasttheatresupplies.co.uk/wp-content/uploads/2022/04/strandPreludeProfile16-30.jpeg"
+    },
+    "Strand T84": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 12.5,
+      "photo": "./images/e44d3ea7f16e0490.jpg",
+      "originalPhoto": "https://content.easyliveauction.com/auctions/images_lots/FDA57E4C5DB5DFDE650E583750725B7A_lag01/1100176538_PREVIEW.JPG"
+    },
+    "Par 64 Long Nose Parcan": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 1.91,
+      "photo": "./images/0f192fb0469af2c8.jpg",
+      "originalPhoto": "https://res.cloudinary.com/ecomsilver/image/upload/w_570,h_570,c_pad,f_auto,q_auto/StageElectrics/product-images/21910.jpg"
+    },
+    "Chauvet Rogue R2 Wash": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 9.25,
+      "photo": "./images/3afd5e39a9226577.jpg",
+      "originalPhoto": "https://hirefrequencies.co.uk/wp-content/uploads/2020/01/Chauvet-Pro-Rogue-R2-335-Watt-RGBW-LED-Moving-Head-Wash-Lighting-Moving-Heads.jpg"
+    },
+    "JBL AC28/26 Speaker": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 18.6,
+      "photo": "./images/55e959aa77e06860.jpg",
+      "originalPhoto": "https://adn.harmanpro.com/product_attachments/product_attachments/7478_1728932866/ac28_front02_z_vert_medium.jpg"
+    },
+    "Chauvet LX10 Effect Light": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 2.3,
+      "photo": "./images/2e685373fd684cfc.jpg",
+      "originalPhoto": "https://cf1.zzounds.com/media/productmedia/fit%2C600by600/quality%2C85/LX10-LEFT-81cafb27c5a58515b899b2ba5db9d46f.jpg"
+    },
+    "ETC ColorSource PAR": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 3.8,
+      "photo": "https://cdn11.bigcommerce.com/s-5ig7x53cx8/images/stencil/1280x1280/products/113/382/cs-par_black_deepblue__49153.1532534085.jpg?c=2",
+      "source": "https://www.etcconnect.com/products/entertainment-fixtures/colorsource-par/tech-specs.aspx",
+      "notes": "Manufacturer explicitly excludes mounting hardware. Existing weight verified.",
+      "brand": "ETC",
+      "category": "lighting",
+      "checked": "2026-11-05"
+    },
+    "Chauvet Colordash Batten": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 8,
+      "photo": "./images/df6238e4931ee469.jpg",
+      "originalPhoto": "https://stagedepot.co.uk/sites/default/files/styles/product_display/public/productimages/COLORDASH%20BATTEN%20H12XIP-RIGHT.jpg?itok=O1Z24kJV"
+    },
+    "Mirrorball 20cm": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 1.06,
+      "photo": "./images/ee367842daa4fd9f.jpg",
+      "originalPhoto": "https://stagedepot.co.uk/sites/default/files/styles/product_display/public/productimages/60404_22.png?itok=OIZBgsa2"
+    },
+    "Mirrorball 50cm": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 4.8,
+      "photo": "./images/637ed9e95431971d.jpg",
+      "originalPhoto": "https://stagedepot.co.uk/sites/default/files/styles/product_display/public/productimages/40cm_0.png?itok=Dv4QuOX3"
+    },
+    "Mirrorball 100cm": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 37.2,
+      "photo": "./images/9c615b82f8bec479.png",
+      "originalPhoto": "https://stagedepot.co.uk/sites/default/files/productimages/20cm_1.png"
+    },
+    "Mirrorball Motor up to 50cm": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 2.6,
+      "photo": "./images/0cb69e36f4f9a84b.jpg",
+      "originalPhoto": "https://stagedepot.co.uk/sites/default/files/styles/product_display/public/productimages/MIRR09_U01.png?itok=D9fJZWqm"
+    },
+    "Mirrorball Motor up to 100cm": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 5.8,
+      "photo": "./images/edd5f5455faa86f0.jpg",
+      "originalPhoto": "https://stagedepot.co.uk/sites/default/files/styles/product_display/public/productimages/60416_37.png?itok=GL3uAbBF"
+    },
+    "Selecon Hui Flood": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 4.1,
+      "photo": "./images/87abac37e42f0dc8.jpg",
+      "originalPhoto": "https://lightsandaudio.co.uk/wp-content/uploads/2021/02/Philips-Selecon-Flood1000.jpg"
+    },
+    "elumen8 MP180 LED Fresnel": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 8.7,
+      "photo": "./images/7ca6d553bc40ff56.webp",
+      "originalPhoto": "https://tse3.mm.bing.net/th/id/OIP.-bAPRc3pG1WoLOTswPhuQQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+    },
+    "Coda Audio G 715-Pro": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 24.3,
+      "photo": "./images/2c0b736e3b2cfd7f.jpg",
+      "originalPhoto": "https://codaaudio.com/wp-content/uploads/2018/01/G-715_3d-left-1200x900.jpg"
+    },
+    "RCF ART 910 Speaker Bracket": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 4.45,
+      "photo": "./images/0dfd27befcbf7ecb.jpg",
+      "originalPhoto": "https://res.cloudinary.com/ecomsilver/image/upload/w_570,h_570,c_pad,f_auto,q_auto/StageElectrics/product-images/24765-7561a148-bfe1-4cbb-accd-8f52d55ce31c-.jpg"
+    },
+    "Showtec Compact Par 18 MK II": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 3,
+      "photo": "./images/f35618a318b4b35b.jpg",
+      "originalPhoto": "https://images.musicstore.de/images/1280/showtec-compact-par-18-mkii-black-18-x-3w-rgb-in-1-led_1_LIG0010542-000.jpg"
+    },
+    "Showtec Performer Fresnel 2000 RGBAL": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 7.6,
+      "photo": "./images/6775e153e393152a.jpg",
+      "originalPhoto": "https://www.simplysoundandlighting.co.uk/cdn/shop/files/17364920-40d3-44ce-97d3-92a670f6401d.jpg?v=1688093149"
+    },
+    "Ledj Spectra Par 12HEX10": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 4.53,
+      "photo": "./images/93a18c3f5813cdac.webp",
+      "originalPhoto": "https://images.shopcdn.co.uk/50/1d/501de001583c8549779b10430aead0ac/1024x1024/webp/fit?force=true&quality=80&compression=80"
+    },
+    "Chauvet Hurricane 1200 Smoke Machine": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 2.9,
+      "photo": "./images/f2e8ad7957b4b878.jpg",
+      "originalPhoto": "https://res.cloudinary.com/ecomsilver/image/upload/w_570,h_570,c_pad,f_auto,q_auto/StageElectrics/product-images/27562.jpg"
+    },
+    "Jem ZR25 Smoke Machine": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 13.7,
+      "photo": "./images/8ef53761a0899d58.jpg",
+      "originalPhoto": "https://res.cloudinary.com/ecomsilver/image/upload/w_570,h_570,c_pad,f_auto,q_auto/StageElectrics/product-images/24260.jpg"
+    },
+    "Panasonic Projector PT-MZ680": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 17.6,
+      "photo": "https://cdn.ballicom.co.uk/?r=peyJpbWciOiJcL1wvaW1hZ2VzXC9jZG5cLzIyXC81NlwvMjI1NjdkMWYtNTBlYi00NDdlLWE4OTYtNTZiOTc1M2U3Y2IzLmpwZyIsInNpemUiOjg1MCwiZXh0ZW5zaW9uIjoid2VicCJ9b"
+    },
+    "LDR Suono 20/40 Plus Profile": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 7,
+      "photo": "./images/e8a09fbca50f722f.jpg",
+      "originalPhoto": "https://plcgd-prolight-gob2b.b-cdn.net/imagecache/694d573e-2834-47fd-a5a0-0a11500de237/LDR10604030-U01_800x800.jpg"
+    },
+    "Luci della Ribalta Nota 8/22 Profile Spotlight": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 14.8,
+      "photo": "./images/551f52b4cca76a1e.jpg",
+      "originalPhoto": "https://www.rvetec.com/210-large_default/projecteurs-nota-822.jpg"
+    },
+    "Luci della Ribalta Aria f1000 plus Fesnel": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 5.6,
+      "photo": "./images/0686cf36746294ba.jpg",
+      "originalPhoto": "https://www.ldr.it/wp-content/uploads/2025/04/Aria-f1000-plus.jpg"
+    },
+    "Strand Harmony F Fresnel": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 5.9,
+      "photo": "./images/1e078fe0ec433f1d.webp",
+      "originalPhoto": "https://i.ebayimg.com/images/g/PvYAAOSw-0dkFFPS/s-l1600.webp"
+    },
+    "CCT Starlette 1000 Fresnel": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 6.8,
+      "photo": "./images/917f38795724f856.jpg",
+      "originalPhoto": "https://pro-occasions.nl/wp-content/uploads/2020/12/721.00009-01-1536x1536.jpg"
+    },
+    "Chauvet DJ Swarm 5 FX": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 4.5,
+      "photo": "./images/e7276006067760c7.jpg",
+      "originalPhoto": "https://www.chauvetdj.com/wp-content/uploads/2015/12/Swarm-5-FX-RIGHT.jpg"
+    },
+    "Chauvet DJ Mini Kinta IRC": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 1.6,
+      "photo": "./images/22ea0832bd62511a.jpg",
+      "originalPhoto": "https://www.chauvetdj.com/wp-content/uploads/2015/12/Mini-Kinta-IRC-RIGHT.jpg"
+    },
+    "Showtec LED Par 64 Short": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 3,
+      "photo": "./images/932dbfe54b9911ba.jpg",
+      "originalPhoto": "https://www.showtec.co.uk/onlineshop/image/cache/catalog/highlite/42000/42468_detail2-800x800.jpg"
+    },
+    "CCT Minuette Fresnel": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 2.2,
+      "photo": "./images/ea15eb6c5287d5b4.webp",
+      "originalPhoto": "https://firstnetwork.com/wp-content/uploads/2024/11/CCT-Minuette-Fresnel_5.webp"
+    },
+    "Pulse 320 LED Batten": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 1.9,
+      "photo": "./images/032e6ac997d9bc44.jpg",
+      "originalPhoto": "https://www.pulse-audio.co.uk/wp-content/uploads/LEDBAR_320_A.jpg"
+    },
+    "LEDJ Performer 18 Quad": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 2.5,
+      "photo": "./images/0a825bd618207d0b.jpg",
+      "originalPhoto": "https://www.simplysoundandlighting.co.uk/cdn/shop/files/2ecd1e6c-90da-44f5-a91a-fcd588320bac.jpg?v=1698804226"
+    },
+    "Eurolite Stage Panel 16 HCL LED": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 5.35,
+      "photo": "./images/d69eeecc54073e03.jpg",
+      "originalPhoto": "https://r2.gear4music.com/media/59/599264/600/preview.jpg"
+    },
+    "Luci della Ribalta Tempo f650 plus": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 4,
+      "photo": "./images/7954fcddec0a2470.jpg",
+      "originalPhoto": "https://www.ldr.it/wp-content/uploads/2025/01/Tempo-f650-plus.jpg"
+    },
+    "Cameo Thunder Wash 600 RGBW": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 4.1,
+      "photo": "./images/5dc0b34ab678b75a.jpg",
+      "originalPhoto": "https://cpc.farnell.com/productimages/standard/en_GB/DP38728-40.jpg"
+    },
+    "CCT Freedom 15°/32° Profile": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 11,
+      "photo": "./images/b27da0a75a1697f2.jpg",
+      "originalPhoto": "https://chinnicks.com/wp-content/uploads/2019/11/Freedom-28-58.jpg"
+    },
+    "Chauvet Intimidator Spot 375ZX": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 12.4,
+      "photo": "./images/7f7fce200bfed972.jpg",
+      "originalPhoto": "https://www.thedjshop.co.uk/media/catalog/product/cache/acf8f62092022bd10d5e9740368d716e/c/h/chauvet-dj-intimidator-spot-375zx-angled-right.jpg"
+    },
+    "Acclaim Zoomspot RGBL LED Profile": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 8,
+      "photo": "./images/a2354088d607813a.jpg",
+      "originalPhoto": "https://stagedepot.co.uk/sites/default/files/styles/product_display/public/productimages/acclaim-led-zoomspot_black_left_main.jpg?itok=bDyqhuPr"
+    },
+    "Acclaim Axial 18-34 Zoom Profile": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 5.6,
+      "photo": "./images/7bbc8ccc9454d89c.png",
+      "originalPhoto": "https://123hire.co.uk/cdn/shop/products/AcclaimAxialZoomspot18-34_695x695.png?v=1674046432"
+    },
+    "EM Acoustics R12": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 45,
+      "photo": "./images/bb98953baac4d619.png",
+      "originalPhoto": "https://emacoustics.co.uk/wp-content/uploads/wpfd/337/650307e05b4b9.png"
+    },
+    "EM Acoustics R8": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 23,
+      "photo": "./images/42681f5416395d50.png",
+      "originalPhoto": "https://emacoustics.co.uk/wp-content/uploads/wpfd/331/65030532e3c91.png"
+    },
+    "Strand Prelude F Fresnel Spot": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 3.5,
+      "photo": "./images/14cdc186c9e77897.jpg",
+      "originalPhoto": "https://ultralightsound.co.uk/wp-content/uploads/2019/11/prelude-400x400.jpg"
+    },
+    "ADB DW  105 Zoom Profile 15-38": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 14,
+      "photo": "./images/a9431093b0e2b476.jpg",
+      "originalPhoto": "https://www.radek-lsp.nl/.cm4all/mediadb/licht/adb-profielspot-dw105.jpg"
+    },
+    "Martin Mania SCX 600": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 12.3,
+      "photo": "./images/8944ea50558d8df9.jpg",
+      "originalPhoto": "https://mixersl.com/images/noleggio/LUCI/MARTIN_0020_maniascx600.jpg"
+    },
+    "Chauvet Rogue R1 FX-B": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 11,
+      "photo": "./images/94ea4bee34b7b701.jpg",
+      "originalPhoto": "https://static.wixstatic.com/media/e3149b_8673f57087924f07997ee2f531201ec8~mv2.jpg/v1/fill/w_600,h_787,al_c,q_85,enc_avif,quality_auto/prod_rogue_r1_fxb_left.jpg"
+    },
+    "Chauvet Rogue R2 Spot": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 21.2,
+      "photo": "./images/5a6b12be873dda6a.webp",
+      "originalPhoto": "https://tse3.mm.bing.net/th/id/OIP.O8jWURn_ezvKluGzdl-ToQHaJ4?rs=1&pid=ImgDetMain&o=7&rm=3"
+    },
+    "ETC Colorsource PAR V Zoom": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 3.8,
+      "photo": "./images/53e0d2e3df171b71.jpg",
+      "originalPhoto": "https://media.musson.com/catalog/product/cache/c248e41d31a912538205f459f5093f92/c/o/colorsource_parvzoom_blk_right_warmwht.jpg"
+    },
+    "Martin MAC Quantum Profile": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 23.2,
+      "photo": "./images/12794f71e1b964e7.jpg",
+      "originalPhoto": "https://adn.harmanpro.com/product_attachments/product_attachments/4808_1728940618/MACQuantumProfile_large.jpg"
+    },
+    "Clay Paky A.LEDA B-Eye K10": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 15,
+      "photo": "https://rentall.eu/images/fotos%20apparatuur/beyek10.jpg"
+    },
+    "Ayrton Diablo Profile": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 22,
+      "photo": "./images/975e9d806bfe131b.png",
+      "originalPhoto": "https://www.yeseventshire.co.uk/wp-content/uploads/2023/08/AYRTON-DIABLO-PROFILE.png"
+    },
+    "Chauvet Rogue R1 Wash": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 5.9,
+      "photo": "./images/d00cb69ed6a52a70.jpg",
+      "originalPhoto": "https://www.chauvetprofessional.com/wp-content/uploads/2015/06/prod_rogue_r1wash_right.jpg"
+    },
+    "Robe Spiider": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 13.3,
+      "photo": "./images/076051bc4e42a759.jpg",
+      "originalPhoto": "https://hirewl.com/wp-content/uploads/2020/01/Robe_Spiider_7.jpg"
+    },
+    "ROBE Robin DL4s Profile": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 22.7,
+      "photo": "./images/4b74cff96fd404a3.jpg",
+      "originalPhoto": "https://cdn.aws.robe.cz/v1/image/resize/c23fab84660954f3087fbd027b52d27e50f68a56?width=1920&height=1920&fit=cover&withoutEnlargement=true&format=jpeg"
+    },
+    "ROBE Robin LEDwash 300": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 8.2,
+      "photo": "./images/8c0dfc268159d803.webp",
+      "originalPhoto": "https://cdn.aws.robe.cz/v1/image/resize/03a8550efee31feac02a46950ddcde07b3317425?width=904&height=904&fit=cover&withoutEnlargement=false"
+    },
+    "Strand Cantata Fresnel": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 5.8,
+      "photo": "./images/d0b5081d8472fe8c.jpg",
+      "originalPhoto": "https://ultralightsound.co.uk/wp-content/uploads/2019/10/IMG_6094-1-720x720.jpg"
+    },
+    "Strand Cantata PC": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 7.2,
+      "photo": "./images/3b5494929cd9c7d8.jpg",
+      "originalPhoto": "https://www.solarisnetwork.com/product_database/model/3205/3205_large.jpg"
+    },
+    "ROBE Robin DL4F Wash": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 21.5,
+      "photo": "./images/8e42a003fadf40b0.jpg",
+      "originalPhoto": "https://cdn.aws.robe.cz/v1/image/resize/676c8c20a8d1961f7bb98fac19ed726ba8b9516f?width=1920&height=1920&fit=cover&withoutEnlargement=true&format=jpeg"
+    },
+    "ROBE ParFect 150": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 5,
+      "photo": "./images/8b58ac0e63f2eadc.webp",
+      "originalPhoto": "https://cdn.aws.robe.cz/v1/image/resize/8102532905972009d8120bf31d7eeb118a82fc5b?width=904&height=904&fit=cover&withoutEnlargement=false"
+    },
+    "Selecon RAMA 150 Fresnel": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 5.3,
+      "photo": "./images/f56aa50dc3c51c10.jpg",
+      "source": "https://www.vari-lite.com/b-dam/vari-lite/products/rama-150-fresnel/datasheet/Rama_150_Fresnel-SpecSheet.pdf",
+      "notes": "Published net weight. Existing weight verified.",
+      "brand": "Selecon",
+      "category": "lighting",
+      "checked": "2026-11-05",
+      "originalPhoto": "https://ultralightsound.co.uk/wp-content/uploads/2020/10/IMG_9733-1-720x720.jpg"
+    },
+    "Selecon LUI Cyc/Flood": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 4.1,
+      "photo": "./images/8870cb3c96387dbc.jpg",
+      "originalPhoto": "https://www.theatrelightingworkshops.com/wp-content/uploads/2019/12/selecon_lui_flood_01-600x600-1.jpg"
+    },
+    "Chauvet Rogue R2X Wash": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 10.3,
+      "photo": "./images/b9c982e3a695ef5a.jpg",
+      "originalPhoto": "https://stagedepot.co.uk/sites/default/files/styles/product_display/public/productimages/ROGUE_R2X_WASH-RIGHT-6.png?itok=OJrfimCq"
+    },
+    "Chauvet Rogue R2X Spot": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 21.7,
+      "photo": "./images/790432743c67f065.jpg",
+      "originalPhoto": "https://leisuretec.co.uk/cdn/shop/files/CHARR2XSPOT_CHAUVET_Professional_ROGUER2XSPOT_Image_1.jpg?v=1743457669&width=750"
+    },
+    "Selecon Pacific": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 9.9,
+      "photo": "./images/97b480511576e273.jpg",
+      "originalPhoto": "https://i0.wp.com/staticlightcompany.com/wp-content/uploads/2024/03/seleconpacificzoom.jpg?fit=800%2C800&ssl=1"
+    },
+    "Vari-Lite VL600 Acclaim Fresnel": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 6,
+      "photo": "./images/be0fbd2136fe8321.jpg",
+      "originalPhoto": "https://geartechs.com/cdn/shop/files/vari-lite-acclaim-led-fresnel_black_left.jpg?v=1712335911&width=1000"
+    },
+    "Universal Suspension Clamp": {
+      "cats": [
+        "equipment",
+        "hardware"
+      ],
+      "weight": 0.42,
+      "photo": "./images/2e178f1e1c019cfb.jpg",
+      "originalPhoto": "https://files.ekmcdn.com/ctsesite/images/universal-clamp-48mm-for-m12--colour-black-6459-p.jpg?w=660&h=9999&v=3D25CEF6-7C90-4B00-9B49-5237B5FFFDA9?v=3D25CEF6-7C90-4B00-9B49-5237B5FFFDA9"
+    },
+    "Pipe to Wall Bracket 100mm": {
+      "cats": [
+        "equipment",
+        "hardware"
+      ],
+      "weight": 0.83,
+      "photo": "./images/471df4621da196d1.jpg",
+      "originalPhoto": "https://files.ekmcdn.com/ctsesite/images/pipe-to-wall-bracket-small-100mm-stand-off--6611-p.jpg?w=660&h=9999&v=E6C8A62E-BD25-4CE3-8B33-3C874E7BA0FB"
+    },
+    "Pipe to Wall Bracket 300mm": {
+      "cats": [
+        "equipment",
+        "hardware"
+      ],
+      "weight": 1.48,
+      "photo": "./images/ceb61f76f7702276.jpg",
+      "originalPhoto": "https://files.ekmcdn.com/ctsesite/images/pipe-to-wall-bracket-large-300mm-stand-off-6610-p.jpg?w=660&h=9999&v=2CC90119-30AD-44CF-AB5E-43A4CDC1B87A"
+    },
+    "Pipe to Pipe Coupler (48mm)": {
+      "cats": [
+        "equipment",
+        "hardware"
+      ],
+      "weight": 1,
+      "photo": "./images/47bc4cda1436032a.jpg",
+      "originalPhoto": "https://files.ekmcdn.com/ctsesite/images/pipe-to-pipe-coupler-48mm-1412-p.jpg?w=660&h=9999&v=E1C04E95-6989-4061-ABD6-5C83293428A0"
+    },
+    "Ceiling Saddle": {
+      "cats": [
+        "equipment",
+        "hardware"
+      ],
+      "weight": 0.3,
+      "photo": "./images/7abce648d8e853e7.jpg",
+      "originalPhoto": "https://files.ekmcdn.com/ctsesite/images/ceiling-saddle-2620-p.jpg?w=660&h=9999&v=DC78A5A2-4C4A-4323-88E3-0535BE82FA49"
+    },
+    "Stud Hanger": {
+      "cats": [
+        "equipment",
+        "hardware"
+      ],
+      "weight": 0.53,
+      "photo": "./images/0a468bf34920c337.jpg",
+      "originalPhoto": "https://files.ekmcdn.com/ctsesite/images/stud-hanger-12mm-for-48mm-bar-1414-p.jpg?w=660&h=9999&v=86020F0F-196D-4A6E-A307-51969EA4070F"
+    },
+    "External Sleeve Coupler 48mm": {
+      "cats": [
+        "equipment",
+        "hardware"
+      ],
+      "weight": 1.31,
+      "photo": "./images/1db3222d3e8ccd20.jpg",
+      "originalPhoto": "https://files.ekmcdn.com/ctsesite/images/scaffold-solid-tube-joiner-48mm--colour-black-6503-p.jpg?w=660&h=9999&v=2C8EF99C-3AE8-4DD1-862C-CBC106C92198?v=2C8EF99C-3AE8-4DD1-862C-CBC106C92198"
+    },
+    "Boom Arm 500mm": {
+      "cats": [
+        "equipment",
+        "hardware"
+      ],
+      "weight": 0.84,
+      "photo": "./images/741386e158a854e0.jpg",
+      "originalPhoto": "https://files.ekmcdn.com/ctsesite/images/doughty-boom-arm-5187-p.jpg?w=660&h=9999&v=221c2ded-88f3-42c9-93a9-f6fcae27025c?v=221c2ded-88f3-42c9-93a9-f6fcae27025c"
+    },
+    "Twisted Boom Arm 48mm": {
+      "cats": [
+        "equipment",
+        "hardware"
+      ],
+      "weight": 0.83,
+      "photo": "./images/14220139a0aa5996.jpg",
+      "originalPhoto": "https://files.ekmcdn.com/ctsesite/images/doughty-standard-boom-arm-3931-p.jpg?w=660&h=9999&v=DC6CB5A4-AC89-4FF4-B1BB-8188506D2047"
+    },
+    "Straight Boom Arm 48mm": {
+      "cats": [
+        "equipment",
+        "hardware"
+      ],
+      "weight": 0.83,
+      "photo": "./images/09400b2d2d342ce8.jpg",
+      "originalPhoto": "https://res.cloudinary.com/ecomsilver/image/upload/w_570,h_570,c_pad,f_auto,q_auto/StageElectrics/product-images/21000-fe28fea2-bf64-4076-9261-46abc38683b6-.jpg"
+    },
+    "Prolyte H30D Triangular Corner Truss": {
+      "cats": [
+        "equipment",
+        "hardware"
+      ],
+      "weight": 4.3,
+      "photo": "./images/e61cc00144061526.jpg",
+      "originalPhoto": "https://www.prolyte.com/Prolyte/media/static-media/3a1d8962-2fb0-4921-8be9-a959070eefcb@product-list.jpg"
+    },
+    "Prolyte H30V Box Corner Truss": {
+      "cats": [
+        "equipment",
+        "hardware"
+      ],
+      "weight": 5.3,
+      "photo": "./images/400ea3dbacd4225a.jpg",
+      "originalPhoto": "https://www.prolyte.com/Prolyte/media/static-media/fcb9624d-f408-401c-bc89-d0bbde80143e@product-list.jpg"
+    },
+    "Truss Adaptor": {
+      "cats": [
+        "equipment",
+        "hardware"
+      ],
+      "weight": 3.5,
+      "photo": "./images/1fe3c89c1b3d9f30.jpg",
+      "originalPhoto": "https://res.cloudinary.com/ecomsilver/image/upload/w_570,h_570,c_pad,f_auto,q_auto/StageElectrics/product-images/25902.jpg"
+    },
+    "Pipe Hanging Clamp": {
+      "cats": [
+        "equipment",
+        "hardware"
+      ],
+      "weight": 0.86,
+      "photo": "./images/b3403acbc2601264.jpg",
+      "originalPhoto": "https://res.cloudinary.com/ecomsilver/image/upload/w_570,h_570,c_pad,f_auto,q_auto/StageElectrics/product-images/21001-28fc17aa-56dd-40c8-9f15-98701dc769e5-.jpg"
+    },
+    "Doughty Adjustable Girder Clamp": {
+      "cats": [
+        "equipment",
+        "hardware"
+      ],
+      "weight": 2,
+      "photo": "./images/787146d21201ec32.jpg",
+      "originalPhoto": "https://res.cloudinary.com/ecomsilver/image/upload/q_auto,f_auto/StageElectrics/product-images/9987.jpg"
+    },
+    "Double Ended Hook Clamp 150mm": {
+      "cats": [
+        "equipment",
+        "hardware"
+      ],
+      "weight": 0.5,
+      "photo": "./images/8089bb7daad8d515.jpg",
+      "originalPhoto": "https://res.cloudinary.com/ecomsilver/image/upload/w_570,h_570,c_pad,f_auto,q_auto/StageElectrics/product-images/9928.jpg"
+    },
+    "Double Ended Hook Clamp 300mm": {
+      "cats": [
+        "equipment",
+        "hardware"
+      ],
+      "weight": 0.67,
+      "photo": "./images/8089bb7daad8d515.jpg",
+      "originalPhoto": "https://res.cloudinary.com/ecomsilver/image/upload/w_570,h_570,c_pad,f_auto,q_auto/StageElectrics/product-images/9928.jpg"
+    },
+    "Double Ended Hook Clamp 450mm": {
+      "cats": [
+        "equipment",
+        "hardware"
+      ],
+      "weight": 0.89,
+      "photo": "./images/8089bb7daad8d515.jpg",
+      "originalPhoto": "https://res.cloudinary.com/ecomsilver/image/upload/w_570,h_570,c_pad,f_auto,q_auto/StageElectrics/product-images/9928.jpg"
+    },
+    "Double Ended Hook Clamp 600mm": {
+      "cats": [
+        "equipment",
+        "hardware"
+      ],
+      "weight": 1.09,
+      "photo": "./images/8089bb7daad8d515.jpg",
+      "originalPhoto": "https://res.cloudinary.com/ecomsilver/image/upload/w_570,h_570,c_pad,f_auto,q_auto/StageElectrics/product-images/9928.jpg"
+    },
+    "Doughty Fifty Clamp": {
+      "cats": [
+        "equipment",
+        "hardware"
+      ],
+      "weight": 0.35,
+      "photo": "./images/e44ba525227ac483.jpg",
+      "originalPhoto": "https://res.cloudinary.com/ecomsilver/image/upload/w_570,h_570,c_pad,f_auto,q_auto/StageElectrics/product-images/21135-1ecdbd84-72af-47cb-90fa-1191ac2ddf22-.jpg"
+    },
+    "Admiral Selflock Clamp": {
+      "cats": [
+        "equipment",
+        "hardware"
+      ],
+      "weight": 0.5,
+      "photo": "./images/ceb03a27a450dd0c.jpg",
+      "originalPhoto": "https://res.cloudinary.com/ecomsilver/image/upload/w_570,h_570,c_pad,f_auto,q_auto/StageElectrics/product-images/21289-11addb5a-0809-4619-b3f1-66da1144cf51-.jpg"
+    },
+    "Doughty Slimline Clamp": {
+      "cats": [
+        "equipment",
+        "hardware"
+      ],
+      "weight": 0.24,
+      "photo": "./images/953edcb2a213fe4b.jpg",
+      "originalPhoto": "https://res.cloudinary.com/ecomsilver/image/upload/w_570,h_570,c_pad,f_auto,q_auto/StageElectrics/product-images/21465-5f18756f-b78e-4c9b-b831-f6e2fb10a768-.jpg"
+    },
+    "Doughty Hook Clamp": {
+      "cats": [
+        "equipment",
+        "hardware"
+      ],
+      "weight": 0.33,
+      "photo": "./images/e8e5234f9b279ae7.jpg",
+      "originalPhoto": "https://terrytew.co.uk/wp-content/uploads/2024/07/Doughty_Standard_Hook_Clamp.jpg"
+    },
+    "Doughty Safety Bond": {
+      "cats": [
+        "equipment",
+        "hardware"
+      ],
+      "weight": 0.33,
+      "photo": "./images/178149cb9d6e1230.jpg",
+      "originalPhoto": "https://res.cloudinary.com/ecomsilver/image/upload/w_570,h_570,c_pad,f_auto,q_auto/StageElectrics/product-images/21749-95a958bc-15d0-41ee-bfd7-d47fd2061155-.jpg"
+    },
+    "Doughty Half Coupler Clamp": {
+      "cats": [
+        "equipment",
+        "hardware"
+      ],
+      "weight": 0.71,
+      "photo": "./images/8fe1414746a7c6ec.jpg",
+      "originalPhoto": "https://res.cloudinary.com/ecomsilver/image/upload/w_570,h_570,c_pad,f_auto,q_auto/StageElectrics/product-images/23105-fa6d4dc0-72be-463a-ab2a-04b368c92726-.jpg"
+    },
+    "Doughty Universal Joint": {
+      "cats": [
+        "equipment",
+        "hardware"
+      ],
+      "weight": 0.38,
+      "photo": "./images/145f994852762f29.jpg",
+      "originalPhoto": "https://doughty-engineering.co.uk/wp-content/uploads/Product-Images/T30410Universal-Joint-1-700x700-c-default.jpg"
+    },
+    "Aluminium Bar 48mm": {
+      "cats": [
+        "equipment_linear",
+        "rigging_bar"
+      ],
+      "wpm": 1.53,
+      "photo": "./images/f369cdba8e4554c0.jpg",
+      "originalPhoto": "https://res.cloudinary.com/ecomsilver/image/upload/w_570,h_570,c_pad,f_auto,q_auto/StageElectrics/product-images/27991.jpg"
+    },
+    "Steel Bar 48mm": {
+      "cats": [
+        "equipment_linear",
+        "rigging_bar"
+      ],
+      "wpm": 4.4,
+      "photo": "./images/fa27fdae1a20370d.jpg",
+      "originalPhoto": "https://cdn.netzshopping.de/productimages/Z/Z/1/B083V381ZZ.jpg"
+    },
+    "Prolyte H30L Ladder Truss": {
+      "cats": [
+        "equipment_linear",
+        "rigging_bar"
+      ],
+      "wpm": 3.1,
+      "photo": "./images/a4419969f96327b0.png",
+      "originalPhoto": "https://res.cloudinary.com/ecomsilver/image/upload/w_570,h_570,c_pad,f_auto,q_auto/StageElectrics/product-images/24440-a52e2dfc-8fa2-4ca3-92cd-b7d4c1b368e3-.png"
+    },
+    "Prolyte H30D Triangular Truss": {
+      "cats": [
+        "equipment_linear",
+        "rigging_bar"
+      ],
+      "wpm": 5.1,
+      "photo": "./images/cdd57a305f1bb2a2.jpg",
+      "originalPhoto": "https://res.cloudinary.com/ecomsilver/image/upload/w_570,h_570,c_pad,f_auto,q_auto/StageElectrics/product-images/19554.jpg"
+    },
+    "Internally Wired Bar": {
+      "cats": [
+        "equipment_linear",
+        "rigging_bar"
+      ],
+      "wpm": 3,
+      "photo": "./images/e0f227939d4b734a.jpg",
+      "originalPhoto": "https://res.cloudinary.com/ecomsilver/image/upload/w_290,h_290,c_pad,f_auto,q_auto/StageElectrics/product-images/24090-430d91d2-6d2b-44cd-8d5f-b8e030a7c6e8-.jpg"
+    },
+    "Prolyte H30V Box Truss": {
+      "cats": [
+        "equipment_linear",
+        "rigging_bar"
+      ],
+      "wpm": 7,
+      "photo": "./images/036a6c581f75117e.jpg",
+      "originalPhoto": "https://res.cloudinary.com/ecomsilver/image/upload/w_570,h_570,c_pad,f_auto,q_auto/StageElectrics/product-images/27942.jpg"
+    },
+    "Triple E 2-way Curtain Track": {
+      "cats": [
+        "equipment_linear"
+      ],
+      "wpm": 1.17,
+      "photo": "./images/cd031645ff0391cf.png",
+      "brand": "Triple E",
+      "notes": "Track only. 2W0101 black / 2W0201 silver.",
+      "source": "https://triplee.ltd/products/download-documents/general-documents/products-weight-list/",
+      "originalPhoto": "https://triplee.ltd/sites/3-eee/assets/Image/png%202way.png"
+    },
+    "Triple E E-Rail Curtain Track": {
+      "cats": [
+        "equipment_linear"
+      ],
+      "wpm": 0.816,
+      "photo": "./images/8d7eca93e9bcc17c.png",
+      "brand": "Triple E",
+      "notes": "ERL0101. Track only.",
+      "source": "https://triplee.ltd/products/download-documents/general-documents/products-weight-list/",
+      "originalPhoto": "https://triplee.ltd/sites/3-eee/assets/Image/erail%20png.png"
+    },
+    "Triple E Unibeam Curtain Track": {
+      "cats": [
+        "equipment_linear"
+      ],
+      "wpm": 3.441,
+      "photo": "./images/9d13f7c87f3ca2d9.png",
+      "brand": "Triple E",
+      "notes": "UBM0101. Track only.",
+      "source": "https://triplee.ltd/products/download-documents/general-documents/products-weight-list/",
+      "originalPhoto": "https://triplee.ltd/sites/3-eee/assets/Image/unibeam%20png.png"
+    },
+    "Hall Stage T400 Curtain Track": {
+      "cats": [
+        "equipment_linear"
+      ],
+      "wpm": 1.14,
+      "photo": "https://stage-shop.com/media/catalog/product/cache/f22fcc78f4ad49bc20d1e92600c90c10/t/4/t400straightsection_10.jpg"
+    },
+    "Hall Stage T70 Curtain Track": {
+      "cats": [
+        "equipment_linear"
+      ],
+      "wpm": 7,
+      "photo": "https://stage-shop.com/media/catalog/product/cache/f22fcc78f4ad49bc20d1e92600c90c10/t/7/t70straittrack_3.jpg"
+    },
+    "Hall Stage T60 Curtain Track": {
+      "cats": [
+        "equipment_linear"
+      ],
+      "wpm": 2.5,
+      "photo": "https://stage-shop.com/media/catalog/product/cache/f22fcc78f4ad49bc20d1e92600c90c10/t/6/t60straighttrack_10.jpg"
+    },
+    "8mm Threaded Bar": {
+      "cats": [
+        "equipment_linear",
+        "rigging_susp"
+      ],
+      "wpm": 0.4,
+      "photo": "./images/444d91ea0d062862.webp",
+      "originalPhoto": "https://assets.cef.co.uk/images/pdg/tamlex_tf022/512x512/tamlex_tf022.webp"
+    },
+    "10mm Threaded Bar": {
+      "cats": [
+        "equipment_linear",
+        "rigging_susp"
+      ],
+      "wpm": 0.62,
+      "photo": "./images/5579c82f7a4f8cc3.webp",
+      "originalPhoto": "https://assets.cef.co.uk/images/pdg/tamlex_tf023/512x512/tamlex_tf023.webp"
+    },
+    "12mm Threaded Bar": {
+      "cats": [
+        "equipment_linear",
+        "rigging_susp"
+      ],
+      "wpm": 0.89,
+      "photo": "./images/5579c82f7a4f8cc3.webp",
+      "originalPhoto": "https://assets.cef.co.uk/images/pdg/tamlex_tf023/512x512/tamlex_tf023.webp"
+    },
+    "6mm Wire Rope": {
+      "cats": [
+        "equipment_linear",
+        "rigging_susp"
+      ],
+      "wpm": 0.16,
+      "photo": "./images/d351bc5d960c43b2.jpg",
+      "originalPhoto": "https://www.wireropeshop.co.uk/media/catalog/product/cache/e5f6e45e88bdb2c34f25ef9a339299b3/w/i/wire-rope-small-reel_1.jpg"
+    },
+    "8mm Wire Rope": {
+      "cats": [
+        "equipment_linear",
+        "rigging_susp"
+      ],
+      "wpm": 0.24,
+      "photo": "./images/d351bc5d960c43b2.jpg",
+      "originalPhoto": "https://www.wireropeshop.co.uk/media/catalog/product/cache/e5f6e45e88bdb2c34f25ef9a339299b3/w/i/wire-rope-small-reel_1.jpg"
+    },
+    "9.5mm Wire Rope": {
+      "cats": [
+        "equipment_linear",
+        "rigging_susp"
+      ],
+      "wpm": 0.36,
+      "photo": "./images/d351bc5d960c43b2.jpg",
+      "originalPhoto": "https://www.wireropeshop.co.uk/media/catalog/product/cache/e5f6e45e88bdb2c34f25ef9a339299b3/w/i/wire-rope-small-reel_1.jpg"
+    },
+    "ROBE LEDBeam 150": {
+      "weight": 5.7,
+      "source": "https://www.robe.cz/res/downloads/catalogues/ROBE_Product_Guide_2021_online_version.pdf",
+      "notes": "2021 manufacturer guide. Omega adaptor supplied; inclusion in stated weight not explicit. Add external clamp and bond.",
+      "brand": "ROBE",
+      "category": "lighting",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "ROBE MegaPointe": {
+      "weight": 22,
+      "source": "https://www.robe.cz/res/downloads/catalogues/ROBE_Product_Guide_2021_online_version.pdf",
+      "notes": "2021 manufacturer guide. Two omega adaptors supplied; inclusion in weight not explicit. Clamp and bond optional.",
+      "brand": "ROBE",
+      "category": "lighting",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "ROBE T1 Profile": {
+      "weight": 24.3,
+      "source": "https://www.robe.cz/t1-profile",
+      "notes": "Standard T1 Profile, not FS version. Omega adaptors supplied; clamps and bond optional.",
+      "brand": "ROBE",
+      "category": "lighting",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "ROBE ESPRITE": {
+      "weight": 28.2,
+      "source": "https://www.robe.cz/esprite",
+      "notes": "Standard ESPRITE. Omega adaptors supplied; clamps and bond optional.",
+      "brand": "ROBE",
+      "category": "lighting",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "ROBE LEDBeam 350": {
+      "weight": 9.85,
+      "source": "https://www.robe.cz/res/downloads/catalogues/ROBE_LEDBeam_350_leaflet_online_version.pdf",
+      "notes": "Published fixture weight; hook clamps and separate safety bonds must be added. Manufacturer does not explicitly resolve inclusion of supplied accessories.",
+      "brand": "ROBE",
+      "category": "lighting",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "ROBE LEDBeam 350 FW": {
+      "weight": 9.9,
+      "source": "https://www.robe.cz/res/downloads/catalogues/ROBE_LEDBeam_350_leaflet_online_version.pdf",
+      "notes": "Published fixture weight; hook clamps and separate safety bonds must be added. Manufacturer does not explicitly resolve inclusion of supplied accessories.",
+      "brand": "ROBE",
+      "category": "lighting",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "ROBE ColorWash 1200E AT": {
+      "weight": 41,
+      "source": "https://www.robe.cz/colorwash-1200e-at",
+      "notes": "Exact 1200E AT model. Replaces erroneous generic baseline 1200E weight only after matching model plate.",
+      "brand": "ROBE",
+      "category": "lighting",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Martin MAC Aura XB": {
+      "weight": 6.5,
+      "source": "https://www.martin.com/en-US/products/mac-aura-xb.html",
+      "notes": "Published fixture weight; hook clamps and separate safety bonds must be added. Manufacturer does not explicitly resolve inclusion of supplied accessories.",
+      "brand": "Martin",
+      "category": "lighting",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Martin MAC Aura XIP": {
+      "weight": 8.95,
+      "source": "https://www.martin.com/vn/site_elements/mac-aura-xip-spec-sheet",
+      "notes": "Published fixture weight; hook clamps and separate safety bonds must be added. Manufacturer does not explicitly resolve inclusion of supplied accessories.",
+      "brand": "Martin",
+      "category": "lighting",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Martin ERA 300 Profile": {
+      "weight": 17,
+      "source": "https://www.martin.com/en-US/site_elements/era-300-spec-sheet",
+      "notes": "Published fixture weight; hook clamps and separate safety bonds must be added. Manufacturer does not explicitly resolve inclusion of supplied accessories.",
+      "brand": "Martin",
+      "category": "lighting",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Chauvet Rogue R3X Wash": {
+      "weight": 17.46,
+      "source": "https://chauvetprofessional.com/wp-content/uploads/pdf/en/ROGUER3XWASH.pdf",
+      "notes": "Product sheet 17.46 kg; manual rounds to 17.5 kg.",
+      "brand": "Chauvet",
+      "category": "lighting",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Chauvet Ovation F-915FC": {
+      "weight": 8.6,
+      "source": "https://www.chauvetprofessional.com/wp-content/uploads/2015/01/Ovation_F-915FC_UM_Rev8.pdf",
+      "notes": "Published fixture weight; hook clamps and separate safety bonds must be added. Manufacturer does not explicitly resolve inclusion of supplied accessories.",
+      "brand": "Chauvet",
+      "category": "lighting",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Chauvet Ovation CYC 1 FC": {
+      "weight": 4.2,
+      "source": "https://chauvetprofessional.com/product/ovation-cyc-1-fc/",
+      "notes": "Omega bracket supplied; inclusion in weight not explicit. Clamp and bond separate.",
+      "brand": "Chauvet",
+      "category": "lighting",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Chauvet Ovation E-910FC with 14° lens": {
+      "weight": 9.43,
+      "source": "https://chauvetprofessional.com/product/ovation-e-910fc/",
+      "notes": "Includes specified lens. Hook clamp and safety bond separate.",
+      "brand": "Chauvet",
+      "category": "lighting",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Chauvet Ovation E-910FC with 26° lens": {
+      "weight": 9,
+      "source": "https://chauvetprofessional.com/product/ovation-e-910fc/",
+      "notes": "Includes specified lens. Hook clamp and safety bond separate.",
+      "brand": "Chauvet",
+      "category": "lighting",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Chauvet Ovation E-910FC with 15–30° zoom lens": {
+      "weight": 13.3,
+      "source": "https://chauvetprofessional.com/product/ovation-e-910fc/",
+      "notes": "Includes specified lens. Hook clamp and safety bond separate.",
+      "brand": "Chauvet",
+      "category": "lighting",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Chauvet Ovation E-910FC with 25–50° zoom lens": {
+      "weight": 12.2,
+      "source": "https://chauvetprofessional.com/product/ovation-e-910fc/",
+      "notes": "Includes specified lens. Hook clamp and safety bond separate.",
+      "brand": "Chauvet",
+      "category": "lighting",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Chauvet Ovation E-910FC IP with 14° lens": {
+      "weight": 12.9,
+      "source": "https://chauvetprofessional.com/wp-content/uploads/pdf/en/OVATIONE910FCIP.pdf",
+      "notes": "IP model including specified lens. Hook clamp and safety bond separate.",
+      "brand": "Chauvet",
+      "category": "lighting",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Chauvet Ovation E-910FC IP with 26° lens": {
+      "weight": 12.4,
+      "source": "https://chauvetprofessional.com/wp-content/uploads/pdf/en/OVATIONE910FCIP.pdf",
+      "notes": "IP model including specified lens. Hook clamp and safety bond separate.",
+      "brand": "Chauvet",
+      "category": "lighting",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Chauvet Ovation E-910FC IP with 15–30° zoom lens": {
+      "weight": 16.2,
+      "source": "https://chauvetprofessional.com/wp-content/uploads/pdf/en/OVATIONE910FCIP.pdf",
+      "notes": "IP model including specified lens. Hook clamp and safety bond separate.",
+      "brand": "Chauvet",
+      "category": "lighting",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Chauvet Ovation E-910FC IP with 25–50° zoom lens": {
+      "weight": 14.8,
+      "source": "https://chauvetprofessional.com/wp-content/uploads/pdf/en/OVATIONE910FCIP.pdf",
+      "notes": "IP model including specified lens. Hook clamp and safety bond separate.",
+      "brand": "Chauvet",
+      "category": "lighting",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Showtec Performer 60 LED (33100)": {
+      "weight": 4.8,
+      "source": "https://www.highlite.com/media/attachments/MANUAL/33100_MANUAL_GB_V2.pdf",
+      "notes": "Legacy 33100. Barn door shown; inclusion in published weight not explicit.",
+      "brand": "Showtec",
+      "category": "lighting",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "LEDJ Spectra Flood Q6": {
+      "weight": 2.5,
+      "source": "https://www.prolight.co.uk/ftp-in/LEDJ286_Manual.pdf",
+      "notes": "Integral mounting brackets. Add external clamp and bond.",
+      "brand": "LEDJ",
+      "category": "lighting",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "LEDJ Spectra Flood Q15": {
+      "weight": 5.2,
+      "source": "https://www.prolight.co.uk/ftp-in/LEDJ286_Manual.pdf",
+      "notes": "Integral mounting brackets. Add external clamp and bond.",
+      "brand": "LEDJ",
+      "category": "lighting",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "LEDJ Spectra Batten Q16": {
+      "weight": 6.1,
+      "source": "https://www.prolight.co.uk/ftp-in/LEDJ286_Manual.pdf",
+      "notes": "Integral mounting brackets. Add external clamp and bond.",
+      "brand": "LEDJ",
+      "category": "lighting",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "LEDJ Exterior Spectra Batten RGB 1 m": {
+      "weight": 4.2,
+      "source": "https://www.prolight.co.uk/ftp-in/LEDJ76A_Manual.pdf",
+      "notes": "Exterior RGB version; do not confuse with indoor Spectra Batten.",
+      "brand": "LEDJ",
+      "category": "lighting",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "LEDJ Exterior Spectra Batten RGB 0.5 m": {
+      "weight": 2.7,
+      "source": "https://www.prolight.co.uk/ftp-in/LEDJ76A_Manual.pdf",
+      "notes": "Exterior RGB version.",
+      "brand": "LEDJ",
+      "category": "lighting",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "LEDJ Spectra Batten indoor (LEDJ75A)": {
+      "weight": 2.5,
+      "source": "https://www.prolight.co.uk/ftp-in/LEDJ75A_Manual.pdf",
+      "notes": "Indoor 252-LED RGB version, distinct from Exterior Spectra Batten.",
+      "brand": "LEDJ",
+      "category": "lighting",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Elumen8 1RE Beam": {
+      "weight": 9.2,
+      "source": "https://www.prolight.co.uk/Catalogue/Products/Discontinued/1RE-Beam-ELUM015",
+      "notes": "Discontinued ELUM015. Net fixture, not 11.5 kg packed weight.",
+      "brand": "Elumen8",
+      "category": "lighting",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Elumen8 MP60 LED Fresnel WW MKII": {
+      "weight": 3.8,
+      "source": "https://www.prolight.co.uk/Catalogue/Products/Lighting/Theatrical/ELUM104",
+      "notes": "ELUM104. Net fixture, not packed weight.",
+      "brand": "Elumen8",
+      "category": "lighting",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Elumen8 MP120 LED Fresnel WW": {
+      "weight": 8.6,
+      "source": "https://www.prolight.co.uk/ftp-in/ELUM107A_Manual.pdf",
+      "notes": "ELUM107/107A. Filter frame and barn doors included with product; inclusion in weight not explicit.",
+      "brand": "Elumen8",
+      "category": "lighting",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Elumen8 Virtuoso 700 House Light HEX": {
+      "weight": 8.3,
+      "source": "https://www.prolight.co.uk/Catalogue/Products/Lighting/Theatrical/ELUM139",
+      "notes": "ELUM139 RGBALC pendant, 30° lens fitted; supplied omega mount inclusion not explicit.",
+      "brand": "Elumen8",
+      "category": "lighting",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "ETC ColorSource Linear 1": {
+      "weight": 2.9,
+      "source": "https://www.etcconnect.com/Products/Entertainment-Fixtures/ColorSource-Linear/Tech-Specs.aspx",
+      "notes": "Manufacturer explicitly excludes mounting hardware. Add trunnions/mounting hardware, clamps and bonds.",
+      "brand": "ETC",
+      "category": "lighting",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "ETC ColorSource Linear 2": {
+      "weight": 9.12,
+      "source": "https://www.etcconnect.com/Products/Entertainment-Fixtures/ColorSource-Linear/Tech-Specs.aspx",
+      "notes": "Manufacturer explicitly excludes mounting hardware. Add trunnions/mounting hardware, clamps and bonds.",
+      "brand": "ETC",
+      "category": "lighting",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "ETC ColorSource Linear 4": {
+      "weight": 17.01,
+      "source": "https://www.etcconnect.com/Products/Entertainment-Fixtures/ColorSource-Linear/Tech-Specs.aspx",
+      "notes": "Manufacturer explicitly excludes mounting hardware. Add trunnions/mounting hardware, clamps and bonds.",
+      "brand": "ETC",
+      "category": "lighting",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Acclaim Fresnel (manufacturer net specification)": {
+      "weight": 3.36,
+      "source": "https://www.vari-lite.com/b-dam/vari-lite/products/acclaim-fresnel/datasheet/Acclaim_Fresnel_SpecSheet.pdf",
+      "notes": "Manufacturer sheet net weight. Baseline 3.1 kg differs; verify fixture version. Do not assume removable accessories included or excluded.",
+      "brand": "Acclaim",
+      "category": "lighting",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Acclaim PC (manufacturer net specification)": {
+      "weight": 3.51,
+      "source": "https://www.vari-lite.com/b-dam/vari-lite/products/acclaim-pc/datasheet/Acclaim_PC_SpecSheet.pdf",
+      "notes": "Manufacturer net specification; integrated safety wire may be part of assembly. Do not double count an integrated bond.",
+      "brand": "Acclaim",
+      "category": "lighting",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Strand 200F TV Fresnel LED manual-operated": {
+      "weight": 7.4,
+      "source": "https://vari-lite.s3.eu-west-1.amazonaws.com/manuals/200f-users.pdf",
+      "notes": "Manual-operated (M.O.) variant net weight.",
+      "brand": "Strand",
+      "category": "lighting",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Strand 200F TV Fresnel LED pole-operated": {
+      "weight": 7.9,
+      "source": "https://vari-lite.s3.eu-west-1.amazonaws.com/manuals/200f-users.pdf",
+      "notes": "Pole-operated (P.O.) variant net weight.",
+      "brand": "Strand",
+      "category": "lighting",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "LDR Suono 10/28 Plus": {
+      "weight": 7.5,
+      "source": "https://www.ldr.it/wp-content/uploads/2025/04/Suono-1028-plus-ita.pdf",
+      "notes": "Italian manufacturer sheet: net 7.5 kg, gross 9.3 kg. Colour frame standard; hook clamp additional.",
+      "brand": "Luci Della Ribalta",
+      "category": "lighting",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Vari-Lite VL2600 Profile": {
+      "weight": 32,
+      "source": "https://www.vari-lite.com/b-dam/vari-lite/products/vl2600-wash/guides-and-manuals/vl2600-series_user-manual.pdf",
+      "notes": "Original VL2600 Profile, not SE; manufacturer series manual.",
+      "brand": "Vari-Lite",
+      "category": "lighting",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Vari-Lite VL2600 Spot": {
+      "weight": 32,
+      "source": "https://www.vari-lite.com/b-dam/vari-lite/products/vl2600-wash/guides-and-manuals/vl2600-series_user-manual.pdf",
+      "notes": "Original VL2600 Spot; manufacturer series manual.",
+      "brand": "Vari-Lite",
+      "category": "lighting",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Vari-Lite VL1100 TS tungsten (without dimmer)": {
+      "weight": 32,
+      "source": "https://www.vari-lite.com/b-dam/vari-lite/products/vl1100-1100d-tungsten/guides-and-manuals/VariLite_VL1100_Luminaire_TSD_TID_TS_TI_Tungsten.pdf",
+      "notes": "Tungsten TS model, without optional dimmer. Clamps/bond separate.",
+      "brand": "Vari-Lite",
+      "category": "lighting",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Vari-Lite VL1100 TSD tungsten (with dimmer)": {
+      "weight": 32.65,
+      "source": "https://www.vari-lite.com/b-dam/vari-lite/products/vl1100-1100d-tungsten/guides-and-manuals/VariLite_VL1100_Luminaire_TSD_TID_TS_TI_Tungsten.pdf",
+      "notes": "Tungsten shutter model with dimmer included. Clamps/bond separate.",
+      "brand": "Vari-Lite",
+      "category": "lighting",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "RCF ART 910-A": {
+      "weight": 16.2,
+      "source": "https://www.rcf.it/en/products/product-detail/art-912-a?_it_dvel_rcf_products_frontend_web_portlet_ProductInformationsPortlet_productCode=STP1058&_it_dvel_rcf_products_frontend_web_portlet_ProductInformationsPortlet_profileId=307219&p_p_cacheability=cacheLevelPage&p_p_id=it_dvel_rcf_products_frontend_web_portlet_ProductInformationsPortlet&p_p_lifecycle=2&p_p_mode=view&p_p_resource_id=downloadProductFileEntry&p_p_state=normal",
+      "notes": "Current manual net mass; earlier catalogues differ. Confirm revision; external bracket separate.",
+      "brand": "RCF",
+      "category": "speakers",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "RCF ART 912-A": {
+      "weight": 19.5,
+      "source": "https://www.rcf.it/en/products/product-detail/art-912-a?_it_dvel_rcf_products_frontend_web_portlet_ProductInformationsPortlet_productCode=STP1058&_it_dvel_rcf_products_frontend_web_portlet_ProductInformationsPortlet_profileId=307219&p_p_cacheability=cacheLevelPage&p_p_id=it_dvel_rcf_products_frontend_web_portlet_ProductInformationsPortlet&p_p_lifecycle=2&p_p_mode=view&p_p_resource_id=downloadProductFileEntry&p_p_state=normal",
+      "notes": "Current manual net mass; earlier catalogues differ. Confirm revision; external bracket separate.",
+      "brand": "RCF",
+      "category": "speakers",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "RCF ART 932-A": {
+      "weight": 19.2,
+      "source": "https://www.rcf.it/en/products/product-detail/art-912-a?_it_dvel_rcf_products_frontend_web_portlet_ProductInformationsPortlet_productCode=STP1058&_it_dvel_rcf_products_frontend_web_portlet_ProductInformationsPortlet_profileId=307219&p_p_cacheability=cacheLevelPage&p_p_id=it_dvel_rcf_products_frontend_web_portlet_ProductInformationsPortlet&p_p_lifecycle=2&p_p_mode=view&p_p_resource_id=downloadProductFileEntry&p_p_state=normal",
+      "notes": "Current manual net mass; earlier catalogues differ. Confirm revision; external bracket separate.",
+      "brand": "RCF",
+      "category": "speakers",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "RCF ART 915-A": {
+      "weight": 22.4,
+      "source": "https://www.rcf.it/en/products/product-detail/art-912-a?_it_dvel_rcf_products_frontend_web_portlet_ProductInformationsPortlet_productCode=STP1058&_it_dvel_rcf_products_frontend_web_portlet_ProductInformationsPortlet_profileId=307219&p_p_cacheability=cacheLevelPage&p_p_id=it_dvel_rcf_products_frontend_web_portlet_ProductInformationsPortlet&p_p_lifecycle=2&p_p_mode=view&p_p_resource_id=downloadProductFileEntry&p_p_state=normal",
+      "notes": "Current manual net mass; earlier catalogues differ. Confirm revision; external bracket separate.",
+      "brand": "RCF",
+      "category": "speakers",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "RCF ART 935-A": {
+      "weight": 24.6,
+      "source": "https://www.rcf.it/en/products/product-detail/art-912-a?_it_dvel_rcf_products_frontend_web_portlet_ProductInformationsPortlet_productCode=STP1058&_it_dvel_rcf_products_frontend_web_portlet_ProductInformationsPortlet_profileId=307219&p_p_cacheability=cacheLevelPage&p_p_id=it_dvel_rcf_products_frontend_web_portlet_ProductInformationsPortlet&p_p_lifecycle=2&p_p_mode=view&p_p_resource_id=downloadProductFileEntry&p_p_state=normal",
+      "notes": "Current manual net mass; earlier catalogues differ. Confirm revision; external bracket separate.",
+      "brand": "RCF",
+      "category": "speakers",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "RCF ART 945-A": {
+      "weight": 22.4,
+      "source": "https://www.rcf.it/en/products/product-detail/art-912-a?_it_dvel_rcf_products_frontend_web_portlet_ProductInformationsPortlet_productCode=STP1058&_it_dvel_rcf_products_frontend_web_portlet_ProductInformationsPortlet_profileId=307219&p_p_cacheability=cacheLevelPage&p_p_id=it_dvel_rcf_products_frontend_web_portlet_ProductInformationsPortlet&p_p_lifecycle=2&p_p_mode=view&p_p_resource_id=downloadProductFileEntry&p_p_state=normal",
+      "notes": "Current manual net mass; earlier catalogues differ. Confirm revision; external bracket separate.",
+      "brand": "RCF",
+      "category": "speakers",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "RCF ART 912-AX": {
+      "weight": 18.7,
+      "source": "https://www.rcf.it/en/products/product-detail/art-912-ax",
+      "notes": "AX Bluetooth model, not 912-A. External bracket separate.",
+      "brand": "RCF",
+      "category": "speakers",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "RCF H-BR ART 910": {
+      "weight": 4.45,
+      "source": "https://www.rcf.it/en/products/product-detail/h-br-art-910",
+      "notes": "Bracket assembly; speaker separate.",
+      "brand": "RCF",
+      "category": "brackets",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment",
+        "hardware"
+      ],
+      "photo": ""
+    },
+    "RCF H-BR ART 912": {
+      "weight": 4.5,
+      "source": "https://www.rcf.it/it/products/product-detail/h-br-art-912",
+      "notes": "Bracket assembly; speaker separate.",
+      "brand": "RCF",
+      "category": "brackets",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment",
+        "hardware"
+      ],
+      "photo": ""
+    },
+    "RCF V-BR ART 912": {
+      "weight": 5.2,
+      "source": "https://www.rcf-usa.com/en/products/product-detail/v-br-art-912",
+      "notes": "Bracket assembly; speaker separate.",
+      "brand": "RCF",
+      "category": "brackets",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment",
+        "hardware"
+      ],
+      "photo": ""
+    },
+    "JBL Control 25-1": {
+      "weight": 3.4,
+      "source": "https://jblpro.com/en-US/products/control-25-1",
+      "notes": "Per speaker. InvisiBall supplied; net-weight bracket inclusion not explicit—confirm before adding bracket mass.",
+      "brand": "JBL",
+      "category": "speakers",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "JBL AC16": {
+      "weight": 7.2,
+      "source": "https://jblpro.com/en-US/products/AC16",
+      "notes": "Per speaker. Optional mounting bracket separate.",
+      "brand": "JBL",
+      "category": "speakers",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "JBL AC18/26": {
+      "weight": 12.8,
+      "source": "https://jblpro.com/en-US/products/ac18-26.html",
+      "notes": "Per speaker. Optional mounting bracket separate.",
+      "brand": "JBL",
+      "category": "speakers",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "JBL AC26": {
+      "weight": 11,
+      "source": "https://jblpro.com/ja/products/ac26/false",
+      "notes": "Per speaker. Optional mounting bracket separate.",
+      "brand": "JBL",
+      "category": "speakers",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Electro-Voice ZLX-12P": {
+      "weight": 15.6,
+      "source": "https://products.electrovoice.com/binary/ZLX-12P%20ZLX-15P%20EDS.pdf",
+      "notes": "Original powered model, not G2/BT. Net speaker weight; bracket separate.",
+      "brand": "EV",
+      "category": "speakers",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Electro-Voice ZLX-15P": {
+      "weight": 17.3,
+      "source": "https://products.electrovoice.com/binary/ZLX-12P%20ZLX-15P%20EDS.pdf",
+      "notes": "Original powered model, not G2/BT. Net speaker weight; bracket separate.",
+      "brand": "EV",
+      "category": "speakers",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "KEF Ventura 6": {
+      "weight": 3.8,
+      "source": "https://assets.kef.com/pdf_doc/ci/Ci_Group_Specification_Sheet.pdf",
+      "notes": "Published net mass; bracket inclusion unspecified. Do not assume bare speaker.",
+      "brand": "KEF",
+      "category": "speakers",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "KEF Ventura 5": {
+      "weight": 2.85,
+      "source": "https://assets.kef.com/pdf_doc/ci/Ci_Group_Specification_Sheet.pdf",
+      "notes": "Published net mass; bracket inclusion unspecified. Do not assume bare speaker.",
+      "brand": "KEF",
+      "category": "speakers",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Bose DesignMax DM6SE (speaker and grille)": {
+      "weight": 5.93,
+      "source": "https://assets.bose.com/content/dam/Bose_DAM/Web/pro/global/products/loudspeakers/designmax_dm6se/downloads/tds_designmax_dm6se_en.pdf",
+      "notes": "2020 data sheet: loudspeaker with grille. Bracket excluded; later installation guide gives 6.40 kg WITH bracket. Confirm revision.",
+      "brand": "Bose",
+      "category": "speakers",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Laney CXP-112": {
+      "weight": 13.4,
+      "source": "https://www.laney.co.uk/amps/live-sound/concept/cxp-112",
+      "notes": "Active stage monitor; manufacturer item mass. This entry does not imply suitability for suspension.",
+      "brand": "Laney",
+      "category": "speakers",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Behringer EUROLIVE B112D": {
+      "weight": 12.3,
+      "source": "https://mediadl.musictribe.com/media/PLM/data/docs/Eurolive/QSG_BE_0313-AEB_B115D-B112D_WW.pdf",
+      "notes": "Quick Start Guide net mass. Mounting suitability must be checked separately.",
+      "brand": "Behringer",
+      "category": "speakers",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Behringer EUROLIVE B115D": {
+      "weight": 17.5,
+      "source": "https://mediadl.musictribe.com/media/PLM/data/docs/Eurolive/QSG_BE_0313-AEB_B115D-B112D_WW.pdf",
+      "notes": "Quick Start Guide net mass. Mounting suitability must be checked separately.",
+      "brand": "Behringer",
+      "category": "speakers",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Citronic CUBA-8": {
+      "weight": 10,
+      "source": "https://www.avsl.com/product/178.709UK-cuba-full-range-wooden-pa-cabinets",
+      "notes": "178.709UK black passive model. U-bracket supplied; published weight does not specify bracket inclusion.",
+      "brand": "Citronic",
+      "category": "speakers",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Panasonic PT-VMZ71": {
+      "weight": 7,
+      "source": "https://connect.na.panasonic.com/ppnda/projectors/portable/pt-vmz71-wuxga-lcd-projector",
+      "notes": "Approximate weight with supplied lens; mounting bracket separate.",
+      "brand": "Panasonic",
+      "category": "projectors",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Panasonic PT-VMZ61": {
+      "weight": 6.9,
+      "source": "https://connect.na.panasonic.com/ppnda/projectors/portable/pt-vmz71-wuxga-lcd-projector",
+      "notes": "Approximate weight with supplied lens; mounting bracket separate.",
+      "brand": "Panasonic",
+      "category": "projectors",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Panasonic PT-VMZ51": {
+      "weight": 6.5,
+      "source": "https://connect.na.panasonic.com/ppnda/projectors/portable/pt-vmz71-wuxga-lcd-projector",
+      "notes": "Approximate weight with supplied lens; mounting bracket separate.",
+      "brand": "Panasonic",
+      "category": "projectors",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Panasonic PT-VMZ51S": {
+      "weight": 6.5,
+      "source": "https://connect.na.panasonic.com/ppnda/projectors/portable/pt-vmz71-wuxga-lcd-projector",
+      "notes": "Approximate weight with supplied lens; mounting bracket separate.",
+      "brand": "Panasonic",
+      "category": "projectors",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Epson PowerLite EB-L735U": {
+      "weight": 8.4,
+      "source": "https://files.support.epson.com/docid/cpd6/cpd61218/source/specifications/reference/plebl520u_735u/spex_dimensions_plebl520u_l735u.html",
+      "notes": "Approximate projector mass from model-family manual; external mount separate.",
+      "brand": "Epson",
+      "category": "projectors",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Epson PowerLite EB-L730U": {
+      "weight": 8.4,
+      "source": "https://files.support.epson.com/docid/cpd6/cpd61218/source/specifications/reference/plebl520u_735u/spex_dimensions_plebl520u_l735u.html",
+      "notes": "Approximate projector mass from model-family manual; external mount separate.",
+      "brand": "Epson",
+      "category": "projectors",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Epson PowerLite EB-L635SU": {
+      "weight": 8.4,
+      "source": "https://files.support.epson.com/docid/cpd6/cpd61218/source/specifications/reference/plebl520u_735u/spex_dimensions_plebl520u_l735u.html",
+      "notes": "Approximate projector mass from model-family manual; external mount separate.",
+      "brand": "Epson",
+      "category": "projectors",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Epson PowerLite EB-L630SU": {
+      "weight": 8.4,
+      "source": "https://files.support.epson.com/docid/cpd6/cpd61218/source/specifications/reference/plebl520u_735u/spex_dimensions_plebl520u_l735u.html",
+      "notes": "Approximate projector mass from model-family manual; external mount separate.",
+      "brand": "Epson",
+      "category": "projectors",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Epson PowerLite EB-L630U": {
+      "weight": 8.4,
+      "source": "https://files.support.epson.com/docid/cpd6/cpd61218/source/specifications/reference/plebl520u_735u/spex_dimensions_plebl520u_l735u.html",
+      "notes": "Approximate projector mass from model-family manual; external mount separate.",
+      "brand": "Epson",
+      "category": "projectors",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Epson PowerLite EB-L530U": {
+      "weight": 8.2,
+      "source": "https://files.support.epson.com/docid/cpd6/cpd61218/source/specifications/reference/plebl520u_735u/spex_dimensions_plebl520u_l735u.html",
+      "notes": "Approximate projector mass from model-family manual; external mount separate.",
+      "brand": "Epson",
+      "category": "projectors",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Epson PowerLite EB-L520U": {
+      "weight": 7.7,
+      "source": "https://files.support.epson.com/docid/cpd6/cpd61218/source/specifications/reference/plebl520u_735u/spex_dimensions_plebl520u_l735u.html",
+      "notes": "Approximate projector mass from model-family manual; external mount separate.",
+      "brand": "Epson",
+      "category": "projectors",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "BenQ LH730": {
+      "weight": 5.3,
+      "source": "https://www.benq.com/en-us/business/projector/lh730/specifications.html",
+      "notes": "Net mass ±0.1 kg; ceiling mount separate.",
+      "brand": "BenQ",
+      "category": "projectors",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "BenQ LU930": {
+      "weight": 6.3,
+      "source": "https://www.benq.eu/en-uk/business/projector/lu930/specifications.html",
+      "notes": "Projector net mass; optional ceiling mount separate.",
+      "brand": "BenQ",
+      "category": "projectors",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Sony VPL-PHZ61": {
+      "weight": 7,
+      "source": "https://helpguide.sony.net/vpl/phz51/v1/en/print.pdf",
+      "notes": "Approximate projector mass; external mount separate.",
+      "brand": "Sony",
+      "category": "projectors",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Sony VPL-PHZ51": {
+      "weight": 6.8,
+      "source": "https://helpguide.sony.net/vpl/phz51/v1/en/print.pdf",
+      "notes": "Approximate projector mass; external mount separate.",
+      "brand": "Sony",
+      "category": "projectors",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Optoma ZU506": {
+      "weight": 5.5,
+      "source": "https://www.optoma.de/ContentStorage/Documents/7c383a50-79b5-465b-8863-e1e350da47dd.pdf",
+      "notes": "Net mass; external mount separate.",
+      "brand": "Optoma",
+      "category": "projectors",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Optoma ZU606T": {
+      "weight": 5.5,
+      "source": "https://region-resource.optoma.com/products/import/Documents/051a9794-6c74-4cd8-9fde-b59050ad7317.pdf",
+      "notes": "2023 regional datasheet net mass; ZU606T-B differs. External mount separate.",
+      "brand": "Optoma",
+      "category": "projectors",
+      "checked": "2026-11-05",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Triple E UniTrack 0.25 m straight section (TRA0101)": {
+      "weight": 0.806,
+      "brand": "Triple E",
+      "source": "https://triplee.ltd/products/download-documents/general-documents/products-weight-list/",
+      "notes": "One complete section. Add fittings separately.",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Triple E UniTrack 0.5 m straight section (TRA0102)": {
+      "weight": 1.466,
+      "brand": "Triple E",
+      "source": "https://triplee.ltd/products/download-documents/general-documents/products-weight-list/",
+      "notes": "One complete section. Add fittings separately.",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Triple E UniTrack 1 m straight section (TRA0103)": {
+      "weight": 2.864,
+      "brand": "Triple E",
+      "source": "https://triplee.ltd/products/download-documents/general-documents/products-weight-list/",
+      "notes": "One complete section. Add fittings separately.",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Triple E UniTrack 2 m straight section (TRA0104)": {
+      "weight": 5.434,
+      "brand": "Triple E",
+      "source": "https://triplee.ltd/products/download-documents/general-documents/products-weight-list/",
+      "notes": "One complete section. Add fittings separately.",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Doughty SixTrack 0.25 m straight section (T63705)": {
+      "weight": 0.63,
+      "brand": "Doughty",
+      "source": "https://www.doughty-usa.com/wp-content/uploads/2023/01/T63705-T63715-Data-Sheet.pdf",
+      "notes": "One complete section. Add fittings separately.",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Doughty SixTrack 0.5 m straight section (T63706)": {
+      "weight": 1.19,
+      "brand": "Doughty",
+      "source": "https://www.doughty-usa.com/wp-content/uploads/2023/01/T63705-T63715-Data-Sheet.pdf",
+      "notes": "One complete section. Add fittings separately.",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Doughty SixTrack 0.75 m straight section (T63707)": {
+      "weight": 1.99,
+      "brand": "Doughty",
+      "source": "https://www.doughty-usa.com/wp-content/uploads/2023/01/T63705-T63715-Data-Sheet.pdf",
+      "notes": "One complete section. Add fittings separately.",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Doughty SixTrack 1 m straight section (T63708)": {
+      "weight": 2.69,
+      "brand": "Doughty",
+      "source": "https://www.doughty-usa.com/wp-content/uploads/2023/01/T63705-T63715-Data-Sheet.pdf",
+      "notes": "One complete section. Add fittings separately.",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Doughty SixTrack 2 m straight section (T63710)": {
+      "weight": 4.47,
+      "brand": "Doughty",
+      "source": "https://www.doughty-usa.com/wp-content/uploads/2023/01/T63705-T63715-Data-Sheet.pdf",
+      "notes": "One complete section. Add fittings separately.",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Doughty SixTrack 3 m straight section (T63715)": {
+      "weight": 6.71,
+      "brand": "Doughty",
+      "source": "https://www.doughty-usa.com/wp-content/uploads/2023/01/T63705-T63715-Data-Sheet.pdf",
+      "notes": "One complete section. Add fittings separately.",
+      "cats": [
+        "equipment"
+      ],
+      "photo": ""
+    },
+    "Triple E 2-way Curved Track (per metre)": {
+      "wpm": 1.17,
+      "brand": "Triple E",
+      "notes": "2W0102 / 2W0202. Excludes preformed curve assemblies.",
+      "source": "https://triplee.ltd/products/download-documents/general-documents/products-weight-list/",
+      "cats": [
+        "equipment_linear"
+      ],
+      "photo": ""
+    },
+    "Triple E E-Rail Curved Track (per metre)": {
+      "wpm": 0.816,
+      "brand": "Triple E",
+      "notes": "ERL0102. Track only.",
+      "source": "https://triplee.ltd/products/download-documents/general-documents/products-weight-list/",
+      "cats": [
+        "equipment_linear"
+      ],
+      "photo": ""
+    },
+    "Triple E Unibeam Curved Track (per metre)": {
+      "wpm": 3.441,
+      "brand": "Triple E",
+      "notes": "UBM0102. Track only.",
+      "source": "https://triplee.ltd/products/download-documents/general-documents/products-weight-list/",
+      "cats": [
+        "equipment_linear"
+      ],
+      "photo": ""
+    }
+  },
+  "fabrics": [
+    {
+      "name": "ShowTex Velours Bellini",
+      "gsm": 605,
+      "brand": "ShowTex",
+      "source": "https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf",
+      "notes": "Fabric mass per square metre; finished curtain extras excluded."
+    },
+    {
+      "name": "ShowTex Velours Verdi",
+      "gsm": 525,
+      "brand": "ShowTex",
+      "source": "https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf",
+      "notes": "Fabric mass per square metre; finished curtain extras excluded."
+    },
+    {
+      "name": "ShowTex Velours Gaudi",
+      "gsm": 575,
+      "brand": "ShowTex",
+      "source": "https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf",
+      "notes": "Fabric mass per square metre; finished curtain extras excluded."
+    },
+    {
+      "name": "ShowTex Velours Garnier CS",
+      "gsm": 450,
+      "brand": "ShowTex",
+      "source": "https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf",
+      "notes": "Fabric mass per square metre; finished curtain extras excluded."
+    },
+    {
+      "name": "ShowTex Velours Zeus CS",
+      "gsm": 620,
+      "brand": "ShowTex",
+      "source": "https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf",
+      "notes": "Fabric mass per square metre; finished curtain extras excluded."
+    },
+    {
+      "name": "ShowTex Velours Delta",
+      "gsm": 460,
+      "brand": "ShowTex",
+      "source": "https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf",
+      "notes": "Fabric mass per square metre; finished curtain extras excluded."
+    },
+    {
+      "name": "ShowTex Velours Puccini",
+      "gsm": 360,
+      "brand": "ShowTex",
+      "source": "https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf",
+      "notes": "Fabric mass per square metre; finished curtain extras excluded."
+    },
+    {
+      "name": "ShowTex Velours Paris CS",
+      "gsm": 500,
+      "brand": "ShowTex",
+      "source": "https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf",
+      "notes": "Fabric mass per square metre; finished curtain extras excluded."
+    },
+    {
+      "name": "ShowTex Velours Helena CS",
+      "gsm": 380,
+      "brand": "ShowTex",
+      "source": "https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf",
+      "notes": "Fabric mass per square metre; finished curtain extras excluded."
+    },
+    {
+      "name": "ShowTex Calmuc",
+      "gsm": 500,
+      "brand": "ShowTex",
+      "source": "https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf",
+      "notes": "Fabric mass per square metre; finished curtain extras excluded."
+    },
+    {
+      "name": "ShowTex Wool Serge Panne 540",
+      "gsm": 540,
+      "brand": "ShowTex",
+      "source": "https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf",
+      "notes": "Fabric mass per square metre; finished curtain extras excluded."
+    },
+    {
+      "name": "ShowTex Wool Serge Panne 1000",
+      "gsm": 1000,
+      "brand": "ShowTex",
+      "source": "https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf",
+      "notes": "Fabric mass per square metre; finished curtain extras excluded."
+    },
+    {
+      "name": "ShowTex Molton CS",
+      "gsm": 300,
+      "brand": "ShowTex",
+      "source": "https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf",
+      "notes": "Fabric mass per square metre; finished curtain extras excluded."
+    },
+    {
+      "name": "ShowTex SoundVelours",
+      "gsm": 750,
+      "brand": "ShowTex",
+      "source": "https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf",
+      "notes": "Fabric mass per square metre; finished curtain extras excluded."
+    },
+    {
+      "name": "J&C Joel Wool Serge 1.8",
+      "gsm": 500,
+      "brand": "J&C Joel",
+      "source": "https://www.jcjoel.com/wp-content/uploads/2023/07/Wool-Serge-1.8-Datapack-1.pdf",
+      "notes": "Fabric mass per square metre; finished curtain extras excluded."
+    },
+    {
+      "name": "J&C Joel Wool Serge 3.0",
+      "gsm": 565,
+      "brand": "J&C Joel",
+      "source": "https://www.jcjoel.com/product/wool-serge-3-0/",
+      "notes": "Fabric mass per square metre; finished curtain extras excluded."
+    },
+    {
+      "name": "J&C Joel Cotton Cyclorama Canvas 8.0",
+      "gsm": 200,
+      "brand": "J&C Joel",
+      "source": "https://www.jcjoel.com/product/cotton-cyclorama-canvas-8-0/",
+      "notes": "Fabric mass per square metre; finished curtain extras excluded."
+    },
+    {
+      "name": "ShowTex Cyclo 200",
+      "gsm": 200,
+      "brand": "ShowTex",
+      "source": "https://www.showtex.com/sites/default/files/attachments/3220-cyclo-200-tds-showtex.pdf",
+      "notes": "Fabric mass per square metre; finished curtain extras excluded."
+    },
+    {
+      "name": "ShowTex Cyclo 270",
+      "gsm": 270,
+      "brand": "ShowTex",
+      "source": "https://www.showtex.com/en/products/soft-goods/masking-draping/acoustic-solutions/cyclo-270",
+      "notes": "Fabric mass per square metre; finished curtain extras excluded."
+    },
+    {
+      "name": "ShowTex Molton",
+      "gsm": 300,
+      "brand": "ShowTex",
+      "source": "https://www.showtex.com/en/products/soft-goods/masking-draping/dim-blackout-fabric/molton",
+      "notes": "Fabric mass per square metre; finished curtain extras excluded."
+    },
+    {
+      "name": "ShowTex Gobelintulle",
+      "gsm": 85,
+      "brand": "ShowTex",
+      "source": "https://www.showtex.com/sites/default/files/attachments/3420-gobelintulle-tds-showtex-en.pdf",
+      "notes": "Fabric mass per square metre; finished curtain extras excluded."
+    }
+  ],
+  "retiredEntries": [
+    "Triple E Unitrack Curtain Track",
+    "Doughty Six Curtain Track",
+    "ROBE ColorWash 1200E",
+    "Chauvet Ovation E910 F",
+    "RCF ART 910-A Speaker",
+    "Acclaim Fresnel"
+  ],
+  "limitations": [
+    "Hall Stage T400/T60/T70 self weights remain unverified: manufacturer downloads located but image-only tables could not be read reliably. Do not mark original values as verified.",
+    "Fabric GSM covers material only; finished curtain extras and fullness must be separately calculated.",
+    "Track self weight excludes carriers, brackets, drive units and other fittings."
+  ]
+}
