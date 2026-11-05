@@ -577,7 +577,7 @@ body.gallery-open{ overflow: hidden; }
 </style>
 
 <style>
-details.sectionCard{background:#DDEBFF}body.dark details.sectionCard{background:var(--card)}details.sectionCard>summary{color:#111}body.dark details.sectionCard>summary{color:var(--text)}#riggingCard{padding:12px 16px!important}#galleryModal .galleryCard img,.modalImg,.previewRow img,img.tablePhoto,.fabricSwatch img{background:#fff!important;object-fit:contain!important}.fabricSwatch{width:auto;max-width:280px;padding:10px;background:white;color:#111}.fabricSwatch[hidden]{display:none}.fabricSwatch img{display:block;width:100%;height:130px}.fabricSwatch span{display:block;font-size:12px;margin-top:6px}
+#curtainLinear h3{margin:6px 0}#curtainLinear p{margin:6px 0}#curtainLinNote:empty{display:none}details.sectionCard{background:#DDEBFF}body.dark details.sectionCard{background:var(--card)}details.sectionCard>summary{color:#111}body.dark details.sectionCard>summary{color:var(--text)}#riggingCard{padding:12px 16px!important}#galleryModal .galleryCard img,.modalImg,.previewRow img,img.tablePhoto,.fabricSwatch img{background:#fff!important;object-fit:contain!important}.fabricSwatch{width:auto;max-width:280px;padding:10px;background:white;color:#111}.fabricSwatch[hidden]{display:none}.fabricSwatch img{display:block;width:100%;height:130px}.fabricSwatch span{display:block;font-size:12px;margin-top:6px}
 #galleryModal .galleryGrid{align-content:start;grid-auto-rows:max-content}#galleryModal .gallerySelect{width:auto;flex:0 0 auto}#galleryModal .gallerySearch{width:0;min-width:0;flex:1 1 auto}#galleryModal .galleryName{overflow-wrap:anywhere}#galleryModal .galleryName small{font-size:11px}#closeGalleryBtn{width:auto} @media(max-width:800px){#galleryModal .gallerySelect,#galleryModal .gallerySearch{width:100%;box-sizing:border-box}}
 summary{font-weight:800;cursor:pointer;min-height:32px;padding:6px 0}select,textarea{width:100%;font:inherit;padding:12px;border-radius:10px;border:1px solid var(--border);background:var(--card);color:var(--text);box-sizing:border-box}small{display:block;margin-top:6px;line-height:1.4}a{color:#1565a7}body.dark a{color:#8bc8ff}.owlTools{display:grid;gap:6px}.owlTools>.row>label{flex:1 1 150px}.owlTools p{font-size:13px;color:var(--muted);line-height:1.5}.overCapacity{color:#b00020;font-weight:800}.savedItem{flex-wrap:wrap}.savedItem button{width:auto;min-width:72px}.savedItem span{flex:1 1 180px}.reportActions{display:flex;gap:12px}.reportActions button{width:auto}#owlReport{display:none;background:white;color:black;max-width:980px;margin:auto;padding:24px}#owlReport small{font-size:11px;overflow-wrap:anywhere}#owlReport td{vertical-align:top}body.report-open>.wrap{display:none}body.report-open #owlReport{display:block}#owlReport table{display:table;white-space:normal;font-size:13px}#owlReport p{line-height:1.5}#capacityStatus{font-size:12px}.stickyTop{position:sticky;top:0}button{min-height:44px}details.sectionCard{padding:12px 16px}body.dark .overCapacity{color:#ff8a9d}
 @media(max-width:520px){.topTitle{font-size:17px}.owlTools>.row{flex-direction:row;gap:8px}.owlTools>.row>label{flex:1 1 130px}.galleryPanel{height:90vh!important}#owlReport{padding:10px}#owlReport th,#owlReport td{padding:6px;font-size:11px}}
@@ -3699,7 +3699,9 @@ const FABRICS = [{"name":"ShowTex Velours Bellini","gsm":605,"brand":"ShowTex","
       updateSusPreview();
     }
 
-    function addEquipmentLinear(){
+    function addEquipmentLinear(prefix){
+      prefix=typeof prefix === "string" ? prefix : "equipLin";
+      const equipLinTypeEl=document.getElementById(prefix+"Type"),equipLinLenEl=document.getElementById(prefix+"Len"),equipLinWpmEl=document.getElementById(prefix+"Wpm");
       const type = equipLinTypeEl.value.trim();
       const len = Number(equipLinLenEl.value);
 
@@ -4091,7 +4093,8 @@ const FABRICS = [{"name":"ShowTex Velours Bellini","gsm":605,"brand":"ShowTex","
     const cats = Array.isArray(selected.cats) ? selected.cats : [];
     const goesToLinear = cats.includes("equipment_linear") || cats.includes("rigging_bar") || cats.includes("rigging_susp");
 
-    const targetId = goesToLinear ? "equipLinType" : "equipName";
+    const linearPrefix=modal.dataset.linearTarget||"equipLin";
+    const targetId = goesToLinear ? linearPrefix+"Type" : "equipName";
     const input = document.getElementById(targetId);
     if(!input){
       alert("Can't find target input: " + targetId);
@@ -4105,14 +4108,15 @@ const FABRICS = [{"name":"ShowTex Velours Bellini","gsm":605,"brand":"ShowTex","
     setModal(false);
 
     // nudge user to the next field they typically edit
-    if (goesToLinear) document.getElementById("equipLinLen")?.focus();
+    if (goesToLinear) document.getElementById(linearPrefix+"Len")?.focus();
     else document.getElementById("equipQty")?.focus();
   }
 
   // init
   items = buildItems();
 
-  openBtn.addEventListener("click", () => setModal(true));
+  openBtn.addEventListener("click", () => {modal.dataset.linearTarget="equipLin";filter.disabled=false;filter.value="all";setModal(true)});
+  document.addEventListener("owl-open-linear-gallery",()=>{modal.dataset.linearTarget="curtainLin";filter.value="equipment_linear";filter.disabled=true;search.value="";setModal(true)});
   closeBtn.addEventListener("click", () => setModal(false));
   modal.addEventListener("click", (e) => { if(e.target === modal) setModal(false); });
 
@@ -4155,6 +4159,14 @@ const catalogueNote=document.createElement('p');catalogueNote.id='catalogueNote'
 const linearNote=document.createElement('p');linearNote.id='linearWeightNote';linearNote.className='sectionHint';$('equipLinType').parentElement.append(linearNote);
 function showLinearBasis(){const e=CATALOG[$('equipLinType').value.trim()];$('equipLinWpm').readOnly=e?.weightStatus!=='estimate';if(e?.weightStatus==='estimate'){$('equipLinWpm').value=e.wpm;$('equipLinWpm').step='any';}linearNote.textContent=e?.weightStatus==='estimate'?'Estimated kg/m: '+e.notes+' You can replace the rate with a confirmed value.':'';}
 $('equipLinType').addEventListener('input',showLinearBasis);
+const curtainLinear=document.createElement('section');curtainLinear.id='curtainLinear';curtainLinear.className='owlTools';curtainLinear.innerHTML=`<div class="divider"></div><h3>Linear items</h3><p>Tracks and other linear items (kg/m) by length.</p><label>Linear item type<input id="curtainLinType" list="equipLinList" placeholder="Start typing a track or linear item"></label><button id="curtainLinGallery" type="button">Linear items gallery</button><div id="curtainLinPreview" hidden><button id="curtainLinPhoto" type="button" class="fabricSwatch"><img alt="Selected linear item"><span>Tap to enlarge</span></button></div><p id="curtainLinNote"></p><div class="row"><label>kg/m<input id="curtainLinWpm" type="number" step="any" readonly></label><label>Length (m)<input id="curtainLinLen" type="number" min="0" step="any"></label></div><button id="curtainLinAdd" class="btn-primary" type="button">Add Linear Item</button>`;curtain.append(curtainLinear);
+function updateCurtainLinear(){const e=EQUIPMENT_LINEAR[$('curtainLinType').value.trim()];$('curtainLinWpm').value=e?.wpm??'';$('curtainLinWpm').readOnly=e?.weightStatus!=='estimate';$('curtainLinNote').textContent=e?(e.weightStatus==='estimate'?'Estimated kg/m: ':'')+(e.notes||'Verify weight and included accessories.')+(e.weightStatus==='estimate'?' You can replace the rate with a confirmed value.':''):'';$('curtainLinPreview').hidden=!e?.photo;if(e?.photo)$('curtainLinPhoto').querySelector('img').src=e.photo;}
+$('curtainLinType').addEventListener('input',updateCurtainLinear);
+$('curtainLinGallery').onclick=()=>document.dispatchEvent(new Event('owl-open-linear-gallery'));
+$('curtainLinPhoto').onclick=()=>{const name=$('curtainLinType').value.trim(),e=EQUIPMENT_LINEAR[name];if(e?.photo)openModal(e.photo,name)};
+function addCurtainLinear(){addEquipmentLinear('curtainLin');updateCurtainLinear();attachMeta();draftSave();}
+$('curtainLinAdd').onclick=addCurtainLinear;
+for(const id of ['curtainLinType','curtainLinWpm','curtainLinLen'])$(id).addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();addCurtainLinear();}});
 const date=new Date();$('inspectionDate').value=[date.getFullYear(),String(date.getMonth()+1).padStart(2,'0'),String(date.getDate()).padStart(2,'0')].join('-');
 function status(text){$('jobStatus').textContent=text}
 function currentSnapshot(){return {bars:clone(savedBars),draft:clone(lines),barName:barNameEl.value,capacity:$('capacity').value,inspector:$('inspector').value,date:$('inspectionDate').value,notes:$('jobNotes').value,editingIndex,updated:new Date().toISOString()}}
