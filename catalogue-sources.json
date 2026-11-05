@@ -25,13 +25,6 @@
       "photo": "./images/f524fcee4e6fd93c.jpg",
       "originalPhoto": "https://stagedepot.co.uk/sites/default/files/styles/product_display/public/productimages/prod_p56ww_right.png?itok=wOSK-C29"
     },
-    "Prelude 16/30": {
-      "cats": [
-        "equipment"
-      ],
-      "weight": 6.5,
-      "photo": "https://northeasttheatresupplies.co.uk/wp-content/uploads/2022/04/strandPreludeProfile16-30.jpeg"
-    },
     "Strand T84": {
       "cats": [
         "equipment"
@@ -77,12 +70,14 @@
         "equipment"
       ],
       "weight": 3.8,
-      "photo": "https://cdn11.bigcommerce.com/s-5ig7x53cx8/images/stencil/1280x1280/products/113/382/cs-par_black_deepblue__49153.1532534085.jpg?c=2",
+      "photo": "./images/update-colorsource-par.jpg",
       "source": "https://www.etcconnect.com/products/entertainment-fixtures/colorsource-par/tech-specs.aspx",
       "notes": "Manufacturer explicitly excludes mounting hardware. Existing weight verified.",
       "brand": "ETC",
       "category": "lighting",
-      "checked": "2026-11-05"
+      "checked": "2026-11-05",
+      "imageSource": "https://goknight.com/etc-cspar-colorsource-par/",
+      "imageNote": "Product photograph from specialist ETC supplier."
     },
     "Chauvet Colordash Batten": {
       "cats": [
@@ -428,11 +423,17 @@
       "originalPhoto": "https://adn.harmanpro.com/product_attachments/product_attachments/4808_1728940618/MACQuantumProfile_large.jpg"
     },
     "Clay Paky A.LEDA B-Eye K10": {
+      "brand": "Claypaky",
+      "weight": 15,
+      "source": "https://www.claypaky.it/wp-content/uploads/2022/10/Clay_Paky_Aleda_B-EYE_Brochure_EN.pdf",
+      "notes": "Original B-EYE K10 C61419, with rotating front lens. Manufacturer fixture specification. Add external hook clamps and safety bond separately. Supplied omega adapters listed; their inclusion in stated mass is not separately specified.",
+      "photo": "./images/claypaky-beye-k10.jpg",
+      "imageSource": "https://www.claypaky.it/en/news/a_leda_b_eye_versatile_and_spectacular_first_international_preview_for_b_eye_k10_and_b_eye_k10_cc/",
+      "imageNote": "Manufacturer original K10 product photograph, not K10 Easy or K10 CC.",
+      "originalPhoto": "https://www.claypaky.it/wp-content/uploads/2022/11/a_leda_b_eye_versatile_and_spectacular_02_L.jpg",
       "cats": [
         "equipment"
-      ],
-      "weight": 15,
-      "photo": "https://rentall.eu/images/fotos%20apparatuur/beyek10.jpg"
+      ]
     },
     "Ayrton Diablo Profile": {
       "cats": [
@@ -891,21 +892,27 @@
         "equipment_linear"
       ],
       "wpm": 1.14,
-      "photo": "https://stage-shop.com/media/catalog/product/cache/f22fcc78f4ad49bc20d1e92600c90c10/t/4/t400straightsection_10.jpg"
+      "photo": "./images/update-t400.png",
+      "imageSource": "https://camstage.com/themes/camstage/pdf/Camstage%20T400%20PDF.pdf",
+      "imageNote": "Representative T400 system illustration from specialist supplier data sheet. Pictured pulleys, fixings and accessories must be counted separately."
     },
     "Hall Stage T70 Curtain Track": {
       "cats": [
         "equipment_linear"
       ],
       "wpm": 7,
-      "photo": "https://stage-shop.com/media/catalog/product/cache/f22fcc78f4ad49bc20d1e92600c90c10/t/7/t70straittrack_3.jpg"
+      "photo": "./images/update-t70.png",
+      "imageSource": "https://hallstage.com/wp-content/uploads/T70-Curtain-Track.pdf",
+      "imageNote": "Representative profile photograph extracted from manufacturer T70 data sheet; pictured section lengths vary."
     },
     "Hall Stage T60 Curtain Track": {
       "cats": [
         "equipment_linear"
       ],
       "wpm": 2.5,
-      "photo": "https://stage-shop.com/media/catalog/product/cache/f22fcc78f4ad49bc20d1e92600c90c10/t/6/t60straighttrack_10.jpg"
+      "photo": "./images/update-t60.png",
+      "imageSource": "https://hallstage.com/wp-content/uploads/T60-Curtain-Track.pdf",
+      "imageNote": "Representative profile photograph extracted from manufacturer T60 data sheet; pictured section lengths vary."
     },
     "8mm Threaded Bar": {
       "cats": [
@@ -2140,161 +2147,274 @@
       "imageSource": "https://www.optomausa.com/product/ZU606T-B",
       "imageNote": "Manufacturer ZU606T-B black-finish photograph. Representative colour variant of ZU606T; verify the individual projector variant and mass."
     },
-    "Triple E UniTrack 0.25 m straight section (TRA0101)": {
-      "weight": 0.806,
+    "Claypaky Sharpy": {
+      "weight": 19,
+      "brand": "Claypaky",
+      "source": "https://www.claypaky.it/products/sharpy-legacy/",
+      "notes": "Manufacturer fixture specification. Add external hook clamps and safety bond separately. Supplied omega adapters are listed; their inclusion in the stated mass is not separately specified, so confirm before adding adapter weight. Current legacy page gives 19 kg; older documents differ, so verify the installed revision.",
+      "photo": "./images/claypaky-sharpy-legacy.jpg",
+      "imageSource": "https://www.claypaky.it/products/sharpy-legacy/",
+      "imageNote": "Manufacturer photograph from model product page.",
+      "originalPhoto": "https://www.claypaky.it/wp-content/uploads/2022/10/Claypaky_Sharpy.jpg",
+      "cats": [
+        "equipment"
+      ]
+    },
+    "Claypaky Sharpy Plus": {
+      "weight": 23,
+      "brand": "Claypaky",
+      "source": "https://www.claypaky.it/products/sharpy-plus/",
+      "notes": "Manufacturer fixture specification. Add external hook clamps and safety bond separately. Supplied omega adapters are listed; their inclusion in the stated mass is not separately specified, so confirm before adding adapter weight.",
+      "photo": "./images/claypaky-sharpy-plus.jpg",
+      "imageSource": "https://www.claypaky.it/products/sharpy-plus/",
+      "imageNote": "Manufacturer photograph from model product page.",
+      "originalPhoto": "https://www.claypaky.it/wp-content/uploads/2022/10/Claypaky_SharpyPlus.jpg",
+      "cats": [
+        "equipment"
+      ]
+    },
+    "Claypaky Axcor Spot 400": {
+      "weight": 26,
+      "brand": "Claypaky",
+      "source": "https://www.claypaky.it/products/axcor-spot400/",
+      "notes": "Manufacturer fixture specification. Add external hook clamps and safety bond separately. Supplied omega adapters are listed; their inclusion in the stated mass is not separately specified, so confirm before adding adapter weight.",
+      "photo": "./images/claypaky-axcor-spot400.jpg",
+      "imageSource": "https://www.claypaky.it/products/axcor-spot400/",
+      "imageNote": "Manufacturer Axcor family image from exact model page; pictured housing configuration may differ.",
+      "originalPhoto": "https://www.claypaky.it/wp-content/uploads/2022/10/Claypaky_Axcor_400_Profile.jpg",
+      "cats": [
+        "equipment"
+      ]
+    },
+    "Claypaky Mini-B": {
+      "weight": 6.5,
+      "brand": "Claypaky",
+      "source": "https://www.claypaky.it/products/mini-b/",
+      "notes": "Manufacturer fixture specification. Add external hook clamps and safety bond separately. Supplied omega adapters are listed; their inclusion in the stated mass is not separately specified, so confirm before adding adapter weight.",
+      "photo": "./images/claypaky-mini-b.jpg",
+      "imageSource": "https://www.claypaky.it/products/mini-b/",
+      "imageNote": "Manufacturer photograph from model product page.",
+      "originalPhoto": "https://www.claypaky.it/wp-content/uploads/2022/10/Claypaky_Mini-B.jpg",
+      "cats": [
+        "equipment"
+      ]
+    },
+    "Claypaky Midi-B": {
+      "weight": 17,
+      "brand": "Claypaky",
+      "source": "https://www.claypaky.it/products/midib/",
+      "notes": "Manufacturer fixture specification. Add external hook clamps and safety bond separately. Supplied omega adapters are listed; their inclusion in the stated mass is not separately specified, so confirm before adding adapter weight.",
+      "photo": "./images/claypaky-midib.jpg",
+      "imageSource": "https://www.claypaky.it/products/midib/",
+      "imageNote": "Manufacturer photograph from model product page.",
+      "originalPhoto": "https://www.claypaky.it/wp-content/uploads/2022/10/Claypaky_Midi-B.jpg",
+      "cats": [
+        "equipment"
+      ]
+    },
+    "Claypaky A.LEDA B-Eye K20": {
+      "weight": 21,
+      "brand": "Claypaky",
+      "source": "https://www.claypaky.it/wp-content/uploads/2022/10/Clay_Paky_Aleda_B-EYE_Brochure_EN.pdf",
+      "notes": "Manufacturer fixture specification. Add external hook clamps and safety bond separately. Supplied omega adapters are listed; their inclusion in the stated mass is not separately specified, so confirm before adding adapter weight.",
+      "photo": "./images/claypaky-a-leda-b-eye-k20.jpg",
+      "imageSource": "https://www.claypaky.it/products/a-leda-b-eye-k20/",
+      "imageNote": "Manufacturer photograph from model product page.",
+      "originalPhoto": "https://www.claypaky.it/wp-content/uploads/2022/10/Claypaky_Aleda_B-EYE_K20.jpg",
+      "cats": [
+        "equipment"
+      ]
+    },
+    "Claypaky HY B-Eye K15": {
+      "weight": 20.7,
+      "brand": "Claypaky",
+      "source": "https://www.claypaky.it/products/hy-b-eye-k15/",
+      "notes": "Manufacturer fixture specification. Add external hook clamps and safety bond separately. Supplied omega adapters are listed; their inclusion in the stated mass is not separately specified, so confirm before adding adapter weight.",
+      "photo": "./images/claypaky-hy-b-eye-k15.jpg",
+      "imageSource": "https://www.claypaky.it/products/hy-b-eye-k15/",
+      "imageNote": "Manufacturer photograph from model product page.",
+      "originalPhoto": "https://www.claypaky.it/wp-content/uploads/2022/10/Claypaky_HY_B-EYE_K15.jpg",
+      "cats": [
+        "equipment"
+      ]
+    },
+    "Claypaky HY B-Eye K25": {
+      "weight": 27.5,
+      "brand": "Claypaky",
+      "source": "https://www.claypaky.it/products/hy-b-eye-k25/",
+      "notes": "Manufacturer fixture specification. Add external hook clamps and safety bond separately. Supplied omega adapters are listed; their inclusion in the stated mass is not separately specified, so confirm before adding adapter weight.",
+      "photo": "./images/claypaky-hy-b-eye-k25.jpg",
+      "imageSource": "https://www.claypaky.it/products/hy-b-eye-k25/",
+      "imageNote": "Manufacturer photograph from model product page.",
+      "originalPhoto": "https://www.claypaky.it/wp-content/uploads/2022/10/Claypaky_HY_B-EYE_K25.jpg",
+      "cats": [
+        "equipment"
+      ]
+    },
+    "Claypaky Arolla Profile HP": {
+      "weight": 44.7,
+      "brand": "Claypaky",
+      "source": "https://www.claypaky.it/products/arolla-profile-hp/",
+      "notes": "Manufacturer fixture specification. Add external hook clamps and safety bond separately. Supplied omega adapters are listed; their inclusion in the stated mass is not separately specified, so confirm before adding adapter weight.",
+      "photo": "./images/claypaky-arolla-profile-hp.jpg",
+      "imageSource": "https://www.claypaky.it/products/arolla-profile-hp/",
+      "imageNote": "Manufacturer photograph from model product page.",
+      "originalPhoto": "https://www.claypaky.it/wp-content/uploads/2022/10/Claypaky_Arolla_Profile_HP.jpg",
+      "cats": [
+        "equipment"
+      ]
+    },
+    "Claypaky Arolla Profile MP": {
+      "weight": 25,
+      "brand": "Claypaky",
+      "source": "https://www.claypaky.it/products/arolla-profile-mp/",
+      "notes": "Manufacturer fixture specification. Add external hook clamps and safety bond separately. Supplied omega adapters are listed; their inclusion in the stated mass is not separately specified, so confirm before adding adapter weight.",
+      "photo": "./images/claypaky-arolla-profile-mp.jpg",
+      "imageSource": "https://www.claypaky.it/products/arolla-profile-mp/",
+      "imageNote": "Manufacturer photograph from model product page.",
+      "originalPhoto": "https://www.claypaky.it/wp-content/uploads/2022/10/Claypaky_Arolla_Profile_MP.jpg",
+      "cats": [
+        "equipment"
+      ]
+    },
+    "Claypaky Sinfonya Profile 600": {
+      "weight": 36.8,
+      "brand": "Claypaky",
+      "source": "https://www.claypaky.it/products/sinfonya-profile-600/",
+      "notes": "Manufacturer fixture specification. Add external hook clamps and safety bond separately. Supplied omega adapters are listed; their inclusion in the stated mass is not separately specified, so confirm before adding adapter weight. Supplied top hat also listed; confirm inclusion.",
+      "photo": "./images/claypaky-sinfonya-profile-600.jpg",
+      "imageSource": "https://www.claypaky.it/products/sinfonya-profile-600/",
+      "imageNote": "Manufacturer photograph from model product page.",
+      "originalPhoto": "https://www.claypaky.it/wp-content/uploads/2023/04/Claypaky_SinfonyaProfile600.jpg",
+      "cats": [
+        "equipment"
+      ]
+    },
+    "Claypaky Ultimo Sharpy": {
+      "weight": 19.48,
+      "brand": "Claypaky",
+      "source": "https://www.claypaky.it/products/ultimo-sharpy/",
+      "notes": "Manufacturer fixture specification. Add external hook clamps and safety bond separately. Supplied omega adapters are listed; their inclusion in the stated mass is not separately specified, so confirm before adding adapter weight.",
+      "photo": "./images/claypaky-ultimo-sharpy.jpg",
+      "imageSource": "https://www.claypaky.it/products/ultimo-sharpy/",
+      "imageNote": "Manufacturer photograph from model product page.",
+      "originalPhoto": "https://www.claypaky.it/wp-content/uploads/2025/06/Claypaky_UltimoSharpy.jpg",
+      "cats": [
+        "equipment"
+      ]
+    },
+    "Claypaky B-Eye 7": {
+      "weight": 12,
+      "brand": "Claypaky",
+      "source": "https://www.claypaky.it/products/b-eye-7/",
+      "notes": "Manufacturer fixture specification. Add external hook clamps and safety bond separately. Supplied omega adapters are listed; their inclusion in the stated mass is not separately specified, so confirm before adding adapter weight.",
+      "photo": "./images/claypaky-b-eye-7.jpg",
+      "imageSource": "https://www.claypaky.it/products/b-eye-7/",
+      "imageNote": "Manufacturer photograph from model product page.",
+      "originalPhoto": "https://www.claypaky.it/wp-content/uploads/2026/08/Claypaky_B-Eye7.jpg",
+      "cats": [
+        "equipment"
+      ]
+    },
+    "Claypaky B-Eye 12": {
+      "weight": 18.5,
+      "brand": "Claypaky",
+      "source": "https://www.claypaky.it/products/b-eye-12/",
+      "notes": "Manufacturer fixture specification. Add external hook clamps and safety bond separately. Supplied omega adapters are listed; their inclusion in the stated mass is not separately specified, so confirm before adding adapter weight.",
+      "photo": "./images/claypaky-b-eye-12.jpg",
+      "imageSource": "https://www.claypaky.it/products/b-eye-12/",
+      "imageNote": "Manufacturer photograph from model product page.",
+      "originalPhoto": "https://www.claypaky.it/wp-content/uploads/2026/08/Claypaky_B-Eye12.jpg",
+      "cats": [
+        "equipment"
+      ]
+    },
+    "Strand Prelude 16/30": {
+      "cats": [
+        "equipment"
+      ],
+      "weight": 6.5,
+      "photo": "./images/update-prelude.jpg",
+      "imageSource": "https://www.scorpionproductiongroup.co.uk/hire/product/strand-prelude-16-30/",
+      "imageNote": "Exact-model hire-company photograph. Pictured hook clamp is separate from fixture weight."
+    },
+    "Triple E UniTrack Curtain Track": {
       "brand": "Triple E",
+      "wpm": 2.864,
       "source": "https://triplee.ltd/products/download-documents/general-documents/products-weight-list/",
-      "notes": "One complete section. Add fittings separately.",
-      "cats": [
-        "equipment"
+      "notes": "Estimated rate based on the published 2.864 kg mass of one 1 m straight section (TRA0103), not a universal manufacturer kg/m specification. Actual rate depends on the section lengths used; verify or edit kg/m for the installed track. Track only: add joint sets, runners, brackets, pulleys and other fittings separately.",
+      "weightStatus": "estimate",
+      "referenceSection": {
+        "part": "TRA0103",
+        "length": 1,
+        "weight": 2.864
+      },
+      "publishedSections": [
+        {
+          "length": 0.25,
+          "weight": 0.806
+        },
+        {
+          "length": 0.5,
+          "weight": 1.466
+        },
+        {
+          "length": 1,
+          "weight": 2.864
+        },
+        {
+          "length": 2,
+          "weight": 5.434
+        }
       ],
-      "photo": "./images/track-unitrack.png",
-      "imageSource": "https://triplee.ltd/products/unitrack/",
-      "imageNote": "Representative track profile illustration; pictured runner is excluded from track weight and must be added separately."
-    },
-    "Triple E UniTrack 0.5 m straight section (TRA0102)": {
-      "weight": 1.466,
-      "brand": "Triple E",
-      "source": "https://triplee.ltd/products/download-documents/general-documents/products-weight-list/",
-      "notes": "One complete section. Add fittings separately.",
-      "cats": [
-        "equipment"
-      ],
-      "photo": "./images/track-unitrack.png",
-      "imageSource": "https://triplee.ltd/products/unitrack/",
-      "imageNote": "Representative track profile illustration; pictured runner is excluded from track weight and must be added separately."
-    },
-    "Triple E UniTrack 1 m straight section (TRA0103)": {
-      "weight": 2.864,
-      "brand": "Triple E",
-      "source": "https://triplee.ltd/products/download-documents/general-documents/products-weight-list/",
-      "notes": "One complete section. Add fittings separately.",
-      "cats": [
-        "equipment"
-      ],
-      "photo": "./images/track-unitrack.png",
-      "imageSource": "https://triplee.ltd/products/unitrack/",
-      "imageNote": "Representative track profile illustration; pictured runner is excluded from track weight and must be added separately."
-    },
-    "Triple E UniTrack 2 m straight section (TRA0104)": {
-      "weight": 5.434,
-      "brand": "Triple E",
-      "source": "https://triplee.ltd/products/download-documents/general-documents/products-weight-list/",
-      "notes": "One complete section. Add fittings separately.",
-      "cats": [
-        "equipment"
-      ],
-      "photo": "./images/track-unitrack.png",
-      "imageSource": "https://triplee.ltd/products/unitrack/",
-      "imageNote": "Representative track profile illustration; pictured runner is excluded from track weight and must be added separately."
-    },
-    "Doughty SixTrack 0.25 m straight section (T63705)": {
-      "weight": 0.63,
-      "brand": "Doughty",
-      "source": "https://www.doughty-usa.com/wp-content/uploads/2023/01/T63705-T63715-Data-Sheet.pdf",
-      "notes": "One complete section. Add fittings separately.",
-      "cats": [
-        "equipment"
-      ],
-      "photo": "./images/track-sixtrack.jpg",
-      "imageSource": "https://doughty-engineering.co.uk/products/six-track-straight-sections/",
-      "imageNote": "Representative SixTrack straight section photograph; catalogue length is specified in the item name."
-    },
-    "Doughty SixTrack 0.5 m straight section (T63706)": {
-      "weight": 1.19,
-      "brand": "Doughty",
-      "source": "https://www.doughty-usa.com/wp-content/uploads/2023/01/T63705-T63715-Data-Sheet.pdf",
-      "notes": "One complete section. Add fittings separately.",
-      "cats": [
-        "equipment"
-      ],
-      "photo": "./images/track-sixtrack.jpg",
-      "imageSource": "https://doughty-engineering.co.uk/products/six-track-straight-sections/",
-      "imageNote": "Representative SixTrack straight section photograph; catalogue length is specified in the item name."
-    },
-    "Doughty SixTrack 0.75 m straight section (T63707)": {
-      "weight": 1.99,
-      "brand": "Doughty",
-      "source": "https://www.doughty-usa.com/wp-content/uploads/2023/01/T63705-T63715-Data-Sheet.pdf",
-      "notes": "One complete section. Add fittings separately.",
-      "cats": [
-        "equipment"
-      ],
-      "photo": "./images/track-sixtrack.jpg",
-      "imageSource": "https://doughty-engineering.co.uk/products/six-track-straight-sections/",
-      "imageNote": "Representative SixTrack straight section photograph; catalogue length is specified in the item name."
-    },
-    "Doughty SixTrack 1 m straight section (T63708)": {
-      "weight": 2.69,
-      "brand": "Doughty",
-      "source": "https://www.doughty-usa.com/wp-content/uploads/2023/01/T63705-T63715-Data-Sheet.pdf",
-      "notes": "One complete section. Add fittings separately.",
-      "cats": [
-        "equipment"
-      ],
-      "photo": "./images/track-sixtrack.jpg",
-      "imageSource": "https://doughty-engineering.co.uk/products/six-track-straight-sections/",
-      "imageNote": "Representative SixTrack straight section photograph; catalogue length is specified in the item name."
-    },
-    "Doughty SixTrack 2 m straight section (T63710)": {
-      "weight": 4.47,
-      "brand": "Doughty",
-      "source": "https://www.doughty-usa.com/wp-content/uploads/2023/01/T63705-T63715-Data-Sheet.pdf",
-      "notes": "One complete section. Add fittings separately.",
-      "cats": [
-        "equipment"
-      ],
-      "photo": "./images/track-sixtrack.jpg",
-      "imageSource": "https://doughty-engineering.co.uk/products/six-track-straight-sections/",
-      "imageNote": "Representative SixTrack straight section photograph; catalogue length is specified in the item name."
-    },
-    "Doughty SixTrack 3 m straight section (T63715)": {
-      "weight": 6.71,
-      "brand": "Doughty",
-      "source": "https://www.doughty-usa.com/wp-content/uploads/2023/01/T63705-T63715-Data-Sheet.pdf",
-      "notes": "One complete section. Add fittings separately.",
-      "cats": [
-        "equipment"
-      ],
-      "photo": "./images/track-sixtrack.jpg",
-      "imageSource": "https://doughty-engineering.co.uk/products/six-track-straight-sections/",
-      "imageNote": "Representative SixTrack straight section photograph; catalogue length is specified in the item name."
-    },
-    "Triple E 2-way Curved Track (per metre)": {
-      "wpm": 1.17,
-      "brand": "Triple E",
-      "notes": "2W0102 / 2W0202. Excludes preformed curve assemblies.",
-      "source": "https://triplee.ltd/products/download-documents/general-documents/products-weight-list/",
       "cats": [
         "equipment_linear"
       ],
-      "photo": "./images/track-twoway-curve.png",
-      "imageSource": "https://triplee.ltd/products/2way-medium-duty-walkalong-curtain-track/",
-      "imageNote": "Representative curved track photograph of this profile; illustrated radius and end lengths may differ. Weight is calculated from the entered track length."
+      "photo": "./images/track-unitrack.png",
+      "imageNote": "Representative track profile; section length and fittings may differ."
     },
-    "Triple E E-Rail Curved Track (per metre)": {
-      "wpm": 0.816,
-      "brand": "Triple E",
-      "notes": "ERL0102. Track only.",
-      "source": "https://triplee.ltd/products/download-documents/general-documents/products-weight-list/",
+    "Doughty SixTrack Curtain Track": {
+      "brand": "Doughty",
+      "wpm": 2.69,
+      "source": "https://doughty-engineering.co.uk/wp-content/uploads/2023/01/T63705-T63715-Data-Sheet.pdf",
+      "notes": "Estimated rate based on the published 2.69 kg mass of one 1 m straight section (T63708), not a universal manufacturer kg/m specification. Actual rate depends on the section lengths used; verify or edit kg/m for the installed track. Track only: add runners, support brackets, pulleys and other fittings separately.",
+      "weightStatus": "estimate",
+      "referenceSection": {
+        "part": "T63708",
+        "length": 1,
+        "weight": 2.69
+      },
+      "publishedSections": [
+        {
+          "length": 0.25,
+          "weight": 0.63
+        },
+        {
+          "length": 0.5,
+          "weight": 1.19
+        },
+        {
+          "length": 0.75,
+          "weight": 1.99
+        },
+        {
+          "length": 1,
+          "weight": 2.69
+        },
+        {
+          "length": 2,
+          "weight": 4.47
+        },
+        {
+          "length": 3,
+          "weight": 6.71
+        }
+      ],
       "cats": [
         "equipment_linear"
       ],
-      "photo": "./images/track-erail-curve.png",
-      "imageSource": "https://triplee.ltd/products/erail/",
-      "imageNote": "Representative curved track photograph of this profile; illustrated radius and end lengths may differ. Weight is calculated from the entered track length."
-    },
-    "Triple E Unibeam Curved Track (per metre)": {
-      "wpm": 3.441,
-      "brand": "Triple E",
-      "notes": "UBM0102. Track only.",
-      "source": "https://triplee.ltd/products/download-documents/general-documents/products-weight-list/",
-      "cats": [
-        "equipment_linear"
-      ],
-      "photo": "./images/track-unibeam-curve.png",
-      "imageSource": "https://triplee.ltd/products/unibeam/",
-      "imageNote": "Representative curved track photograph of this profile; illustrated radius and end lengths may differ. Weight is calculated from the entered track length."
+      "photo": "./images/track-sixtrack.jpg",
+      "imageNote": "Representative track profile; section length and fittings may differ."
     }
   },
   "fabrics": [
@@ -2303,147 +2423,210 @@
       "gsm": 605,
       "brand": "ShowTex",
       "source": "https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf",
-      "notes": "Fabric mass per square metre; finished curtain extras excluded."
+      "notes": "Fabric mass per square metre; finished curtain extras excluded.",
+      "photo": "./images/update-fabric-showtex-velours-bellini.jpg",
+      "imageSource": "https://www.showtex.com/en/products/soft-goods/masking-draping/dim-blackout-fabric/velours-bellini",
+      "imageNote": "Illustrative manufacturer fabric swatch. Colour, texture and finish may vary; select by material specification and g/m²."
     },
     {
       "name": "ShowTex Velours Verdi",
       "gsm": 525,
       "brand": "ShowTex",
       "source": "https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf",
-      "notes": "Fabric mass per square metre; finished curtain extras excluded."
+      "notes": "Fabric mass per square metre; finished curtain extras excluded.",
+      "photo": "./images/update-fabric-showtex-velours-bellini.jpg",
+      "imageSource": "https://www.showtex.com/en/products/soft-goods/masking-draping/dim-blackout-fabric/velours-bellini",
+      "imageNote": "Representative velvet texture only (ShowTex Velours Bellini shown), not an exact ShowTex Velours Verdi swatch. Material construction, backing, colour and texture may differ; select by specification."
     },
     {
       "name": "ShowTex Velours Gaudi",
       "gsm": 575,
       "brand": "ShowTex",
       "source": "https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf",
-      "notes": "Fabric mass per square metre; finished curtain extras excluded."
+      "notes": "Fabric mass per square metre; finished curtain extras excluded.",
+      "photo": "./images/update-fabric-gaudi.jpg",
+      "imageSource": "https://www.showtex.com/en/products/soft-goods/masking-draping/dim-blackout-fabric/velours-gaudi",
+      "imageNote": "Illustrative manufacturer photograph of this fabric. Colour and texture may vary."
     },
     {
       "name": "ShowTex Velours Garnier CS",
       "gsm": 450,
       "brand": "ShowTex",
       "source": "https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf",
-      "notes": "Fabric mass per square metre; finished curtain extras excluded."
+      "notes": "Fabric mass per square metre; finished curtain extras excluded.",
+      "photo": "./images/update-fabric-showtex-velours-garnier-cs.jpg",
+      "imageSource": "https://www.showtex.com/en/products/soft-goods/masking-draping/dim-blackout-fabric/velours-garnier-cs",
+      "imageNote": "Illustrative manufacturer fabric swatch. Colour, texture and finish may vary; select by material specification and g/m²."
     },
     {
       "name": "ShowTex Velours Zeus CS",
       "gsm": 620,
       "brand": "ShowTex",
       "source": "https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf",
-      "notes": "Fabric mass per square metre; finished curtain extras excluded."
+      "notes": "Fabric mass per square metre; finished curtain extras excluded.",
+      "photo": "./images/update-fabric-showtex-velours-zeus-cs.jpg",
+      "imageSource": "https://www.showtex.com/en/products/soft-goods/masking-draping/dim-blackout-fabric/velours-zeus-cs",
+      "imageNote": "Illustrative manufacturer fabric swatch. Colour, texture and finish may vary; select by material specification and g/m²."
     },
     {
       "name": "ShowTex Velours Delta",
       "gsm": 460,
       "brand": "ShowTex",
       "source": "https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf",
-      "notes": "Fabric mass per square metre; finished curtain extras excluded."
+      "notes": "Fabric mass per square metre; finished curtain extras excluded.",
+      "photo": "./images/update-fabric-showtex-velours-puccini.jpg",
+      "imageSource": "https://www.showtex.com/en/products/soft-goods/masking-draping/dim-blackout-fabric/velours-puccini",
+      "imageNote": "Representative velvet texture only (ShowTex Velours Puccini shown), not an exact ShowTex Velours Delta swatch. Material construction, backing, colour and texture may differ; select by specification."
     },
     {
       "name": "ShowTex Velours Puccini",
       "gsm": 360,
       "brand": "ShowTex",
       "source": "https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf",
-      "notes": "Fabric mass per square metre; finished curtain extras excluded."
+      "notes": "Fabric mass per square metre; finished curtain extras excluded.",
+      "photo": "./images/update-fabric-showtex-velours-puccini.jpg",
+      "imageSource": "https://www.showtex.com/en/products/soft-goods/masking-draping/dim-blackout-fabric/velours-puccini",
+      "imageNote": "Illustrative manufacturer fabric swatch. Colour, texture and finish may vary; select by material specification and g/m²."
     },
     {
       "name": "ShowTex Velours Paris CS",
       "gsm": 500,
       "brand": "ShowTex",
       "source": "https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf",
-      "notes": "Fabric mass per square metre; finished curtain extras excluded."
+      "notes": "Fabric mass per square metre; finished curtain extras excluded.",
+      "photo": "./images/update-fabric-showtex-velours-paris-cs.jpg",
+      "imageSource": "https://www.showtex.com/en/products/soft-goods/masking-draping/dim-blackout-fabric/velours-paris-cs",
+      "imageNote": "Illustrative manufacturer fabric swatch. Colour, texture and finish may vary; select by material specification and g/m²."
     },
     {
       "name": "ShowTex Velours Helena CS",
       "gsm": 380,
       "brand": "ShowTex",
       "source": "https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf",
-      "notes": "Fabric mass per square metre; finished curtain extras excluded."
+      "notes": "Fabric mass per square metre; finished curtain extras excluded.",
+      "photo": "./images/update-fabric-showtex-velours-helena-cs.jpg",
+      "imageSource": "https://www.showtex.com/en/products/soft-goods/masking-draping/dim-blackout-fabric/velours-helena-cs",
+      "imageNote": "Illustrative manufacturer fabric swatch. Colour, texture and finish may vary; select by material specification and g/m²."
     },
     {
       "name": "ShowTex Calmuc",
       "gsm": 500,
       "brand": "ShowTex",
       "source": "https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf",
-      "notes": "Fabric mass per square metre; finished curtain extras excluded."
+      "notes": "Fabric mass per square metre; finished curtain extras excluded.",
+      "photo": "./images/update-fabric-showtex-calmuc.jpg",
+      "imageSource": "https://www.showtex.com/en/products/soft-goods/masking-draping/dim-blackout-fabric/calmuc",
+      "imageNote": "Illustrative manufacturer fabric swatch. Colour, texture and finish may vary; select by material specification and g/m²."
     },
     {
       "name": "ShowTex Wool Serge Panne 540",
       "gsm": 540,
       "brand": "ShowTex",
       "source": "https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf",
-      "notes": "Fabric mass per square metre; finished curtain extras excluded."
+      "notes": "Fabric mass per square metre; finished curtain extras excluded.",
+      "photo": "./images/update-fabric-wool-serge.jpg",
+      "imageSource": "https://www.showtex.com/en/products/soft-goods/masking-draping/dim-blackout-fabric/wool-serge-panne-540",
+      "imageNote": "Illustrative manufacturer fabric swatch; colour and texture may vary."
     },
     {
       "name": "ShowTex Wool Serge Panne 1000",
       "gsm": 1000,
       "brand": "ShowTex",
       "source": "https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf",
-      "notes": "Fabric mass per square metre; finished curtain extras excluded."
+      "notes": "Fabric mass per square metre; finished curtain extras excluded.",
+      "photo": "./images/update-fabric-wool-serge.jpg",
+      "imageSource": "https://www.showtex.com/en/products/soft-goods/masking-draping/dim-blackout-fabric/wool-serge-panne-540",
+      "imageNote": "Representative Wool Serge Panne family swatch (540 shown); 1000 g/m² material may differ. Colour and texture are illustrative."
     },
     {
       "name": "ShowTex Molton CS",
       "gsm": 300,
       "brand": "ShowTex",
       "source": "https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf",
-      "notes": "Fabric mass per square metre; finished curtain extras excluded."
+      "notes": "Fabric mass per square metre; finished curtain extras excluded.",
+      "photo": "./images/update-fabric-showtex-molton-cs.jpg",
+      "imageSource": "https://www.showtex.com/en/products/soft-goods/masking-draping/dim-blackout-fabric/molton-cs",
+      "imageNote": "Illustrative manufacturer fabric swatch. Colour, texture and finish may vary; select by material specification and g/m²."
     },
     {
       "name": "ShowTex SoundVelours",
       "gsm": 750,
       "brand": "ShowTex",
       "source": "https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf",
-      "notes": "Fabric mass per square metre; finished curtain extras excluded."
+      "notes": "Fabric mass per square metre; finished curtain extras excluded.",
+      "photo": "./images/update-fabric-showtex-velours-garnier-cs.jpg",
+      "imageSource": "https://www.showtex.com/en/products/soft-goods/masking-draping/dim-blackout-fabric/velours-garnier-cs",
+      "imageNote": "Representative velvet texture only (ShowTex Velours Garnier CS shown), not an exact ShowTex SoundVelours swatch. Material construction, backing, colour and texture may differ; select by specification."
     },
     {
       "name": "J&C Joel Wool Serge 1.8",
       "gsm": 500,
       "brand": "J&C Joel",
       "source": "https://www.jcjoel.com/wp-content/uploads/2023/07/Wool-Serge-1.8-Datapack-1.pdf",
-      "notes": "Fabric mass per square metre; finished curtain extras excluded."
+      "notes": "Fabric mass per square metre; finished curtain extras excluded.",
+      "photo": "./images/update-fabric-j-c-joel-wool-serge-1-8.jpg",
+      "imageSource": "https://www.jcjoel.com/product/wool-serge-1-8/",
+      "imageNote": "Illustrative manufacturer fabric swatch. Colour, texture and finish may vary; select by material specification and g/m²."
     },
     {
       "name": "J&C Joel Wool Serge 3.0",
       "gsm": 565,
       "brand": "J&C Joel",
       "source": "https://www.jcjoel.com/product/wool-serge-3-0/",
-      "notes": "Fabric mass per square metre; finished curtain extras excluded."
+      "notes": "Fabric mass per square metre; finished curtain extras excluded.",
+      "photo": "./images/update-fabric-j-c-joel-wool-serge-3-0.jpg",
+      "imageSource": "https://www.jcjoel.com/product/wool-serge-3-0/",
+      "imageNote": "Illustrative manufacturer fabric swatch. Colour, texture and finish may vary; select by material specification and g/m²."
     },
     {
       "name": "J&C Joel Cotton Cyclorama Canvas 8.0",
       "gsm": 200,
       "brand": "J&C Joel",
       "source": "https://www.jcjoel.com/product/cotton-cyclorama-canvas-8-0/",
-      "notes": "Fabric mass per square metre; finished curtain extras excluded."
+      "notes": "Fabric mass per square metre; finished curtain extras excluded.",
+      "photo": "./images/update-fabric-j-c-joel-cotton-cyclorama-canvas-8-0.jpg",
+      "imageSource": "https://www.jcjoel.com/product/cotton-cyclorama-canvas-8-0/",
+      "imageNote": "Illustrative manufacturer fabric swatch. Colour, texture and finish may vary; select by material specification and g/m²."
     },
     {
       "name": "ShowTex Cyclo 200",
       "gsm": 200,
       "brand": "ShowTex",
       "source": "https://www.showtex.com/sites/default/files/attachments/3220-cyclo-200-tds-showtex.pdf",
-      "notes": "Fabric mass per square metre; finished curtain extras excluded."
+      "notes": "Fabric mass per square metre; finished curtain extras excluded.",
+      "photo": "./images/update-fabric-showtex-cyclo-200.jpg",
+      "imageSource": "https://www.showtex.com/en/products/soft-goods/masking-draping/acoustic-solutions/cyclo-200",
+      "imageNote": "Illustrative manufacturer fabric swatch. Colour, texture and finish may vary; select by material specification and g/m²."
     },
     {
       "name": "ShowTex Cyclo 270",
       "gsm": 270,
       "brand": "ShowTex",
       "source": "https://www.showtex.com/en/products/soft-goods/masking-draping/acoustic-solutions/cyclo-270",
-      "notes": "Fabric mass per square metre; finished curtain extras excluded."
+      "notes": "Fabric mass per square metre; finished curtain extras excluded.",
+      "photo": "./images/update-fabric-showtex-cyclo-270.jpg",
+      "imageSource": "https://www.showtex.com/en/products/soft-goods/masking-draping/acoustic-solutions/cyclo-270",
+      "imageNote": "Illustrative manufacturer fabric swatch. Colour, texture and finish may vary; select by material specification and g/m²."
     },
     {
       "name": "ShowTex Molton",
       "gsm": 300,
       "brand": "ShowTex",
       "source": "https://www.showtex.com/en/products/soft-goods/masking-draping/dim-blackout-fabric/molton",
-      "notes": "Fabric mass per square metre; finished curtain extras excluded."
+      "notes": "Fabric mass per square metre; finished curtain extras excluded.",
+      "photo": "./images/update-fabric-showtex-molton.jpg",
+      "imageSource": "https://www.showtex.com/en/products/soft-goods/masking-draping/dim-blackout-fabric/molton",
+      "imageNote": "Illustrative manufacturer fabric swatch. Colour, texture and finish may vary; select by material specification and g/m²."
     },
     {
       "name": "ShowTex Gobelintulle",
       "gsm": 85,
       "brand": "ShowTex",
       "source": "https://www.showtex.com/sites/default/files/attachments/3420-gobelintulle-tds-showtex-en.pdf",
-      "notes": "Fabric mass per square metre; finished curtain extras excluded."
+      "notes": "Fabric mass per square metre; finished curtain extras excluded.",
+      "photo": "./images/update-fabric-showtex-gobelintulle.png",
+      "imageSource": "https://www.showtex.com/en/products/soft-goods/backdrops-ceilings/scrim-netting-gauze/gobelintulle",
+      "imageNote": "Illustrative manufacturer fabric swatch. Colour, texture and finish may vary; select by material specification and g/m²."
     }
   ],
   "retiredEntries": [

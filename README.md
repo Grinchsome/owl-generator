@@ -14,17 +14,17 @@ The report includes inspector, date, job notes, itemised weights, source notes a
 
 ## Catalogue, 5 November 2026
 
-210 equipment and track entries; 102 have manufacturer references. 21 sourced fabric presets. This is an initial expansion, not every model in each manufacturer's historical range. Original entries without weight evidence remain labelled unverified legacy. Hall Stage original self weights remain unverified. Projector mounts and additional bracket variants can be added as known-weight items until sourced entries are available.
+213 equipment and track entries; 106 have manufacturer references (including estimated track rates). 21 sourced fabric presets with illustrative swatches. Includes 14 additional Claypaky fixtures. This is an initial expansion, not every model in each manufacturer's historical range. Original entries without weight evidence remain labelled unverified legacy. Hall Stage original self weights remain unverified. Projector mounts and additional bracket variants can be added as known-weight items until sourced entries are available.
 
-ROBE ColorWash 1200E AT is explicitly 41 kg; ambiguous old ColorWash, Acclaim and Ovation labels have been retired in favour of exact researched variants. UniTrack and SixTrack use exact manufactured section masses instead of unsupported universal kg/m values. Confirm model and revision against the installed equipment. Supplied-adapter inclusion is described where known; never automatically add a second copy of an included bracket. Catalogue inclusion does not establish suitability for suspension.
+ROBE ColorWash 1200E AT is explicitly 41 kg; ambiguous old ColorWash, Acclaim and Ovation labels have been retired in favour of exact researched variants. UniTrack and SixTrack each use one length-entry option. Their editable default rates (2.864 and 2.69 kg/m) are estimates derived from published one-metre sections, not universal manufacturer kg/m specifications; actual section mix changes the rate. Saved reports retain the selected rate and estimate/user-entered status. Old saved section entries keep their original weights. Curved track choices have been removed. Confirm model and revision against the installed equipment. Supplied-adapter inclusion is described where known; never automatically add a second copy of an included bracket. Catalogue inclusion does not establish suitability for suspension.
 
-Manufacturer source URLs, accessory notes and original image URLs are retained in catalogue-sources.json. 100 existing image assets are included locally. Some original remote photos may be unavailable; newly researched items may have no photo. Image rights remain with their respective owners.
+Manufacturer source URLs, accessory notes and photo source pages are retained in catalogue-sources.json. Newly researched models have locally bundled product pictures. Representative family or track-profile pictures are labelled in the gallery; pictured accessories are not evidence of weight inclusion. Some original remote photos may be unavailable. Image rights remain with their respective owners.
 
 ## GitHub Pages
 
-Upload the contents of this project to the root of grinchsome/owl-generator on main. In repository Settings → Pages, choose GitHub Actions as the source. The included workflow publishes only the app and assets. Existing old server.js, package.json and public/index.html are removed by the replacement change; they are recoverable from Git history.
+Upload the contents of this project to the root of grinchsome/owl-generator on main. In repository Settings → Pages, choose Deploy from a branch, main, and /(root). No .github folder or Render service is needed. Existing old server.js, package.json and public/index.html are removed by the replacement change; they are recoverable from Git history.
 
-Official setup guidance: https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages
+Official setup guidance: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
 
 After successful deployment visit https://grinchsome.github.io/owl-generator/ . Use the browser's install/add-to-home-screen option where available. The calculator and catalogue work offline after a successful first online load. Locally hosted pictures are cached as viewed; a new image can require an internet connection. Updates become available on a subsequent online load; close/reopen the app after updates.
 
