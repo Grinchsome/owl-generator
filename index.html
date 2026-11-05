@@ -169,7 +169,7 @@
     img.tablePhoto{
       width: 56px;
       height: 56px;
-      object-fit: cover;
+      object-fit: contain;
       border-radius: 10px;
       background:var(--imgBg);
       border: 1px solid rgba(0,0,0,.06);
@@ -179,7 +179,7 @@
     #equipPreviewImg, #hwPreviewImg, #barPreviewImg, #susPreviewImg, #equipLinPreviewImg{
       width: 84px;
       height: 84px;
-      object-fit: cover;
+      object-fit: contain;
       border-radius: 12px;
       background:var(--imgBg);
       border: 1px solid rgba(0,0,0,.06);
@@ -517,7 +517,7 @@ body.gallery-open{ overflow: hidden; }
 #galleryModal .galleryCard img{
   width: 100%;
   height: 110px;
-  object-fit: cover;
+  object-fit: contain;
   display:block;
   background: rgba(255,255,255,0.06);
 }
@@ -577,6 +577,7 @@ body.gallery-open{ overflow: hidden; }
 </style>
 
 <style>
+#galleryModal .galleryGrid{align-content:start}#galleryModal .gallerySelect{width:auto;flex:0 0 auto}#galleryModal .gallerySearch{width:0;min-width:0;flex:1 1 auto}#galleryModal .galleryName{overflow-wrap:anywhere}#galleryModal .galleryName small{font-size:11px}#closeGalleryBtn{width:auto} @media(max-width:800px){#galleryModal .gallerySelect,#galleryModal .gallerySearch{width:100%;box-sizing:border-box}}
 summary{font-weight:800;cursor:pointer;min-height:32px;padding:6px 0}select,textarea{width:100%;font:inherit;padding:12px;border-radius:10px;border:1px solid var(--border);background:var(--card);color:var(--text);box-sizing:border-box}small{display:block;margin-top:6px;line-height:1.4}a{color:#1565a7}body.dark a{color:#8bc8ff}.owlTools{display:grid;gap:6px}.owlTools>.row>label{flex:1 1 150px}.owlTools p{font-size:13px;color:var(--muted);line-height:1.5}.overCapacity{color:#b00020;font-weight:800}.savedItem{flex-wrap:wrap}.savedItem button{width:auto;min-width:72px}.savedItem span{flex:1 1 180px}.reportActions{display:flex;gap:12px}.reportActions button{width:auto}#owlReport{display:none;background:white;color:black;max-width:980px;margin:auto;padding:24px}#owlReport small{font-size:11px;overflow-wrap:anywhere}#owlReport td{vertical-align:top}body.report-open>.wrap{display:none}body.report-open #owlReport{display:block}#owlReport table{display:table;white-space:normal;font-size:13px}#owlReport p{line-height:1.5}#capacityStatus{font-size:12px}.stickyTop{position:static}button{min-height:44px}details.sectionCard{padding:12px 16px}body.dark .overCapacity{color:#ff8a9d}
 @media(max-width:520px){.topTitle{font-size:17px}.owlTools>.row{flex-direction:row;gap:8px}.owlTools>.row>label{flex:1 1 130px}.galleryPanel{height:90vh!important}#owlReport{padding:10px}#owlReport th,#owlReport td{padding:6px;font-size:11px}}
 @media print{@page{size:A4;margin:15mm}body>*{display:none!important}#owlReport{display:block!important;padding:0;max-width:none}.reportActions{display:none!important}#owlReport tr{break-inside:avoid}#owlReport thead{display:table-header-group}#owlReport h2{break-after:avoid}#owlReport table{display:table!important;width:100%}#owlReport a{color:black;text-decoration:none}}
@@ -1736,33 +1737,39 @@ const CATALOG = {
       "equipment_linear"
     ],
     "wpm": 1.17,
-    "photo": "./images/cd031645ff0391cf.png",
+    "photo": "./images/track-twoway.png",
     "brand": "Triple E",
     "notes": "Track only. 2W0101 black / 2W0201 silver.",
     "source": "https://triplee.ltd/products/download-documents/general-documents/products-weight-list/",
-    "originalPhoto": "https://triplee.ltd/sites/3-eee/assets/Image/png%202way.png"
+    "originalPhoto": "https://triplee.ltd/sites/3-eee/assets/Image/png%202way.png",
+    "imageSource": "https://triplee.ltd/products/2way-medium-duty-walkalong-curtain-track/",
+    "imageNote": "Representative track profile illustration; pictured runner is excluded from track weight and must be added separately."
   },
   "Triple E E-Rail Curtain Track": {
     "cats": [
       "equipment_linear"
     ],
     "wpm": 0.816,
-    "photo": "./images/8d7eca93e9bcc17c.png",
+    "photo": "./images/track-erail.png",
     "brand": "Triple E",
     "notes": "ERL0101. Track only.",
     "source": "https://triplee.ltd/products/download-documents/general-documents/products-weight-list/",
-    "originalPhoto": "https://triplee.ltd/sites/3-eee/assets/Image/erail%20png.png"
+    "originalPhoto": "https://triplee.ltd/sites/3-eee/assets/Image/erail%20png.png",
+    "imageSource": "https://triplee.ltd/products/erail/",
+    "imageNote": "Representative track profile illustration; pictured runner is excluded from track weight and must be added separately."
   },
   "Triple E Unibeam Curtain Track": {
     "cats": [
       "equipment_linear"
     ],
     "wpm": 3.441,
-    "photo": "./images/9d13f7c87f3ca2d9.png",
+    "photo": "./images/track-unibeam.png",
     "brand": "Triple E",
     "notes": "UBM0101. Track only.",
     "source": "https://triplee.ltd/products/download-documents/general-documents/products-weight-list/",
-    "originalPhoto": "https://triplee.ltd/sites/3-eee/assets/Image/unibeam%20png.png"
+    "originalPhoto": "https://triplee.ltd/sites/3-eee/assets/Image/unibeam%20png.png",
+    "imageSource": "https://triplee.ltd/products/unibeam/",
+    "imageNote": "Representative track profile illustration; pictured runner is excluded from track weight and must be added separately."
   },
   "Hall Stage T400 Curtain Track": {
     "cats": [
@@ -1849,7 +1856,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/lighting-robe-ledbeam150.webp",
+    "imageSource": "https://www.robe.cz/ledbeam-150",
+    "imageNote": "Manufacturer product photograph."
   },
   "ROBE MegaPointe": {
     "weight": 22,
@@ -1861,7 +1870,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/lighting-robe-megapointe.webp",
+    "imageSource": "https://www.robe.cz/megapointe",
+    "imageNote": "Manufacturer product photograph."
   },
   "ROBE T1 Profile": {
     "weight": 24.3,
@@ -1873,7 +1884,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/lighting-robe-t1.webp",
+    "imageSource": "https://www.robe.cz/t1-profile",
+    "imageNote": "Manufacturer product photograph."
   },
   "ROBE ESPRITE": {
     "weight": 28.2,
@@ -1885,7 +1898,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/lighting-robe-esprite.webp",
+    "imageSource": "https://www.robe.cz/esprite",
+    "imageNote": "Manufacturer product photograph."
   },
   "ROBE LEDBeam 350": {
     "weight": 9.85,
@@ -1897,7 +1912,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/lighting-robe-ledbeam350.webp",
+    "imageSource": "https://www.robe.cz/ledbeam-350",
+    "imageNote": "Manufacturer family photograph; lens, FW optic, dimmer or pole-operation configuration may differ."
   },
   "ROBE LEDBeam 350 FW": {
     "weight": 9.9,
@@ -1909,7 +1926,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/lighting-robe-ledbeam350.webp",
+    "imageSource": "https://www.robe.cz/ledbeam-350",
+    "imageNote": "Manufacturer family photograph; lens, FW optic, dimmer or pole-operation configuration may differ."
   },
   "ROBE ColorWash 1200E AT": {
     "weight": 41,
@@ -1921,7 +1940,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/lighting-robe-colorwash.webp",
+    "imageSource": "https://www.robe.cz/colorwash-1200e-at",
+    "imageNote": "Manufacturer product photograph."
   },
   "Martin MAC Aura XB": {
     "weight": 6.5,
@@ -1933,7 +1954,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/lighting-martin-xb.webp",
+    "imageSource": "https://www.martin.com/en-US/products/mac-aura-xb",
+    "imageNote": "Manufacturer product photograph."
   },
   "Martin MAC Aura XIP": {
     "weight": 8.95,
@@ -1945,7 +1968,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/lighting-martin-xip.webp",
+    "imageSource": "https://www.martin.com/en-US/products/mac-aura-xip",
+    "imageNote": "Manufacturer product photograph."
   },
   "Martin ERA 300 Profile": {
     "weight": 17,
@@ -1957,7 +1982,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/lighting-martin-era300.webp",
+    "imageSource": "https://www.martin.com/en-US/products/era-300-profile",
+    "imageNote": "Manufacturer product photograph."
   },
   "Chauvet Rogue R3X Wash": {
     "weight": 17.46,
@@ -1969,7 +1996,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/lighting-chauvet-r3x.png",
+    "imageSource": "https://chauvetprofessional.com/product/rogue-r3x-wash/",
+    "imageNote": "Manufacturer product photograph."
   },
   "Chauvet Ovation F-915FC": {
     "weight": 8.6,
@@ -1981,7 +2010,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/lighting-chauvet-f915.png",
+    "imageSource": "https://chauvetprofessional.com/product/ovation-f-915fc/",
+    "imageNote": "Manufacturer product photograph."
   },
   "Chauvet Ovation CYC 1 FC": {
     "weight": 4.2,
@@ -1993,7 +2024,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/lighting-chauvet-cyc.png",
+    "imageSource": "https://chauvetprofessional.com/product/ovation-cyc-1-fc/",
+    "imageNote": "Manufacturer product photograph."
   },
   "Chauvet Ovation E-910FC with 14° lens": {
     "weight": 9.43,
@@ -2005,7 +2038,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/lighting-chauvet-e910.png",
+    "imageSource": "https://chauvetprofessional.com/product/ovation-e-910fc/",
+    "imageNote": "Manufacturer family photograph; lens, FW optic, dimmer or pole-operation configuration may differ."
   },
   "Chauvet Ovation E-910FC with 26° lens": {
     "weight": 9,
@@ -2017,7 +2052,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/lighting-chauvet-e910.png",
+    "imageSource": "https://chauvetprofessional.com/product/ovation-e-910fc/",
+    "imageNote": "Manufacturer family photograph; lens, FW optic, dimmer or pole-operation configuration may differ."
   },
   "Chauvet Ovation E-910FC with 15–30° zoom lens": {
     "weight": 13.3,
@@ -2029,7 +2066,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/lighting-chauvet-e910.png",
+    "imageSource": "https://chauvetprofessional.com/product/ovation-e-910fc/",
+    "imageNote": "Manufacturer family photograph; lens, FW optic, dimmer or pole-operation configuration may differ."
   },
   "Chauvet Ovation E-910FC with 25–50° zoom lens": {
     "weight": 12.2,
@@ -2041,7 +2080,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/lighting-chauvet-e910.png",
+    "imageSource": "https://chauvetprofessional.com/product/ovation-e-910fc/",
+    "imageNote": "Manufacturer family photograph; lens, FW optic, dimmer or pole-operation configuration may differ."
   },
   "Chauvet Ovation E-910FC IP with 14° lens": {
     "weight": 12.9,
@@ -2053,7 +2094,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/lighting-chauvet-e910ip.png",
+    "imageSource": "https://chauvetprofessional.com/product/ovation-e-910fc-ip/",
+    "imageNote": "Manufacturer family photograph; lens, FW optic, dimmer or pole-operation configuration may differ."
   },
   "Chauvet Ovation E-910FC IP with 26° lens": {
     "weight": 12.4,
@@ -2065,7 +2108,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/lighting-chauvet-e910ip.png",
+    "imageSource": "https://chauvetprofessional.com/product/ovation-e-910fc-ip/",
+    "imageNote": "Manufacturer family photograph; lens, FW optic, dimmer or pole-operation configuration may differ."
   },
   "Chauvet Ovation E-910FC IP with 15–30° zoom lens": {
     "weight": 16.2,
@@ -2077,7 +2122,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/lighting-chauvet-e910ip.png",
+    "imageSource": "https://chauvetprofessional.com/product/ovation-e-910fc-ip/",
+    "imageNote": "Manufacturer family photograph; lens, FW optic, dimmer or pole-operation configuration may differ."
   },
   "Chauvet Ovation E-910FC IP with 25–50° zoom lens": {
     "weight": 14.8,
@@ -2089,7 +2136,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/lighting-chauvet-e910ip.png",
+    "imageSource": "https://chauvetprofessional.com/product/ovation-e-910fc-ip/",
+    "imageNote": "Manufacturer family photograph; lens, FW optic, dimmer or pole-operation configuration may differ."
   },
   "Showtec Performer 60 LED (33100)": {
     "weight": 4.8,
@@ -2101,7 +2150,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/lighting-showtec.jpg",
+    "imageSource": "https://www.stageroads.nl/assortiment/verlichting/theaterverlichting/theater-spots/showtec-performer-led-60-fresnel-dmx/",
+    "imageNote": "Exact-model product photograph from specialist equipment supplier."
   },
   "LEDJ Spectra Flood Q6": {
     "weight": 2.5,
@@ -2113,7 +2164,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/lighting-ledj-q6.jpg",
+    "imageSource": "https://www.prolight.co.uk/Catalogue/Products/Lighting/Washes/LEDJ286XX",
+    "imageNote": "Manufacturer product photograph."
   },
   "LEDJ Spectra Flood Q15": {
     "weight": 5.2,
@@ -2125,7 +2178,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/lighting-ledj-q15.jpg",
+    "imageSource": "https://www.prolight.co.uk/Catalogue/Products/Lighting/Washes/LEDJ287XX",
+    "imageNote": "Manufacturer product photograph."
   },
   "LEDJ Spectra Batten Q16": {
     "weight": 6.1,
@@ -2137,7 +2192,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/lighting-ledj-q16.jpg",
+    "imageSource": "https://www.prolight.co.uk/ftp-in/LEDJ286_Manual.pdf",
+    "imageNote": "Manufacturer product photograph extracted from the manual cover."
   },
   "LEDJ Exterior Spectra Batten RGB 1 m": {
     "weight": 4.2,
@@ -2149,7 +2206,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/lighting-ledj-exterior-1m.jpg",
+    "imageSource": "https://www.prolight.co.uk/ftp-in/LEDJ76A_Manual.pdf",
+    "imageNote": "Manufacturer product photograph extracted from the manual cover."
   },
   "LEDJ Exterior Spectra Batten RGB 0.5 m": {
     "weight": 2.7,
@@ -2161,7 +2220,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/lighting-ledj-exterior-half.jpg",
+    "imageSource": "https://www.prolight.co.uk/ftp-in/LEDJ76A_Manual.pdf",
+    "imageNote": "Manufacturer product photograph extracted from the manual cover."
   },
   "LEDJ Spectra Batten indoor (LEDJ75A)": {
     "weight": 2.5,
@@ -2173,7 +2234,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/lighting-ledj-indoor.jpg",
+    "imageSource": "https://www.prolight.co.uk/Catalogue/Products/Discontinued/RGB-Spectra-Batten-LED-Display-White-Case-LEDJ75A",
+    "imageNote": "Manufacturer product photograph."
   },
   "Elumen8 1RE Beam": {
     "weight": 9.2,
@@ -2185,7 +2248,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/lighting-elum-1re.jpg",
+    "imageSource": "https://www.prolight.co.uk/Catalogue/Products/Discontinued/1RE-Beam-ELUM015",
+    "imageNote": "Manufacturer product photograph."
   },
   "Elumen8 MP60 LED Fresnel WW MKII": {
     "weight": 3.8,
@@ -2197,7 +2262,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/lighting-elum-mp60.jpg",
+    "imageSource": "https://www.prolight.co.uk/Catalogue/Products/Lighting/Theatrical/ELUM104",
+    "imageNote": "Manufacturer product photograph."
   },
   "Elumen8 MP120 LED Fresnel WW": {
     "weight": 8.6,
@@ -2209,7 +2276,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/lighting-elum-mp120.jpg",
+    "imageSource": "https://www.prolight.co.uk/Catalogue/Products/Lighting/Theatrical/ELUM107",
+    "imageNote": "Manufacturer product photograph."
   },
   "Elumen8 Virtuoso 700 House Light HEX": {
     "weight": 8.3,
@@ -2221,7 +2290,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/lighting-elum-700.jpg",
+    "imageSource": "https://www.prolight.co.uk/Catalogue/Products/Lighting/Theatrical/ELUM139",
+    "imageNote": "Manufacturer product photograph."
   },
   "ETC ColorSource Linear 1": {
     "weight": 2.9,
@@ -2233,7 +2304,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/lighting-linear1.jpg",
+    "imageSource": "https://soundpro.com/products/etc-colorsource-linear-1-led-wash-light",
+    "imageNote": "Exact-model product photograph from specialist equipment supplier."
   },
   "ETC ColorSource Linear 2": {
     "weight": 9.12,
@@ -2245,7 +2318,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/lighting-linear2.png",
+    "imageSource": "https://goknight.com/etc-cslinear2-colorsource-linear-2/",
+    "imageNote": "Exact-model product photograph from specialist equipment supplier."
   },
   "ETC ColorSource Linear 4": {
     "weight": 17.01,
@@ -2257,7 +2332,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/lighting-linear4.jpg",
+    "imageSource": "https://goknight.com/etc-cslinear4-colorsource-linear-4/",
+    "imageNote": "Exact-model product photograph from specialist equipment supplier."
   },
   "Acclaim Fresnel (manufacturer net specification)": {
     "weight": 3.36,
@@ -2269,7 +2346,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/lighting-acclaim-f.jpg",
+    "imageSource": "https://www.vari-lite.com/global/products/acclaim-fresnel",
+    "imageNote": "Manufacturer product photograph."
   },
   "Acclaim PC (manufacturer net specification)": {
     "weight": 3.51,
@@ -2281,7 +2360,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/lighting-acclaim-pc.jpg",
+    "imageSource": "https://www.vari-lite.com/global/products/acclaim-pc",
+    "imageNote": "Manufacturer product photograph."
   },
   "Strand 200F TV Fresnel LED manual-operated": {
     "weight": 7.4,
@@ -2293,7 +2374,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/lighting-strand-200.jpg",
+    "imageSource": "https://www.vari-lite.com/global/products/200f",
+    "imageNote": "Manufacturer family photograph; lens, FW optic, dimmer or pole-operation configuration may differ."
   },
   "Strand 200F TV Fresnel LED pole-operated": {
     "weight": 7.9,
@@ -2305,7 +2388,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/lighting-strand-200.jpg",
+    "imageSource": "https://www.vari-lite.com/global/products/200f",
+    "imageNote": "Manufacturer family photograph; lens, FW optic, dimmer or pole-operation configuration may differ."
   },
   "LDR Suono 10/28 Plus": {
     "weight": 7.5,
@@ -2317,7 +2402,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/lighting-ldr-suono.jpg",
+    "imageSource": "https://www.ldr.it/lighting/suono-1028-plus/",
+    "imageNote": "Manufacturer product photograph."
   },
   "Vari-Lite VL2600 Profile": {
     "weight": 32,
@@ -2329,7 +2416,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/lighting-vl-profile.png",
+    "imageSource": "https://vari-lite.s3.eu-west-1.amazonaws.com/datasheets/Vari-Lite/VL2600_PROFILE.pdf",
+    "imageNote": "Manufacturer original VL2600 PROFILE photograph extracted from 2022 datasheet; not the SE variant."
   },
   "Vari-Lite VL2600 Spot": {
     "weight": 32,
@@ -2341,7 +2430,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/lighting-vl-spot.jpg",
+    "imageSource": "https://www.vari-lite.com/global/products/vl2600-spot",
+    "imageNote": "Manufacturer product photograph."
   },
   "Vari-Lite VL1100 TS tungsten (without dimmer)": {
     "weight": 32,
@@ -2353,7 +2444,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/lighting-vl1100.jpg",
+    "imageSource": "https://www.vari-lite.com/global/products/vl1100-1100d-tungsten",
+    "imageNote": "Manufacturer family photograph; lens, FW optic, dimmer or pole-operation configuration may differ."
   },
   "Vari-Lite VL1100 TSD tungsten (with dimmer)": {
     "weight": 32.65,
@@ -2365,7 +2458,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/lighting-vl1100.jpg",
+    "imageSource": "https://www.vari-lite.com/global/products/vl1100-1100d-tungsten",
+    "imageNote": "Manufacturer family photograph; lens, FW optic, dimmer or pole-operation configuration may differ."
   },
   "RCF ART 910-A": {
     "weight": 16.2,
@@ -2377,7 +2472,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/av-rcf-art-910-a.jpg",
+    "imageSource": "https://www.rcf.it/en/products/product-detail/art-910-a",
+    "imageNote": "Manufacturer product image from exact model page."
   },
   "RCF ART 912-A": {
     "weight": 19.5,
@@ -2389,7 +2486,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/av-rcf-art-912-a.jpg",
+    "imageSource": "https://www.rcf.it/en/products/product-detail/art-912-a",
+    "imageNote": "Manufacturer product image from exact model page."
   },
   "RCF ART 932-A": {
     "weight": 19.2,
@@ -2401,7 +2500,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/av-rcf-art-932-a.jpg",
+    "imageSource": "https://www.rcf.it/en/products/product-detail/art-932-a",
+    "imageNote": "Manufacturer product image from exact model page."
   },
   "RCF ART 915-A": {
     "weight": 22.4,
@@ -2413,7 +2514,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/av-rcf-art-915-a.jpg",
+    "imageSource": "https://www.rcf.it/en/products/product-detail/art-915-a",
+    "imageNote": "Manufacturer product image from exact model page."
   },
   "RCF ART 935-A": {
     "weight": 24.6,
@@ -2425,7 +2528,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/av-rcf-art-935-a.jpg",
+    "imageSource": "https://www.rcf.it/en/products/product-detail/art-935-a",
+    "imageNote": "Manufacturer product image from exact model page."
   },
   "RCF ART 945-A": {
     "weight": 22.4,
@@ -2437,7 +2542,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/av-rcf-art-945-a.jpg",
+    "imageSource": "https://www.rcf.it/en/products/product-detail/art-945-a",
+    "imageNote": "Manufacturer product image from exact model page."
   },
   "RCF ART 912-AX": {
     "weight": 18.7,
@@ -2449,7 +2556,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/av-rcf-art-912-ax.jpg",
+    "imageSource": "https://www.rcf.it/en/products/product-detail/art-912-ax",
+    "imageNote": "Manufacturer uses the ART 912-A exterior photograph on its ART 912-AX page; shared housing image."
   },
   "RCF H-BR ART 910": {
     "weight": 4.45,
@@ -2462,7 +2571,9 @@ const CATALOG = {
       "equipment",
       "hardware"
     ],
-    "photo": ""
+    "photo": "./images/av-rcf-h-br-art-910.jpg",
+    "imageSource": "https://www.rcf.it/en/products/product-detail/h-br-art-910",
+    "imageNote": "Manufacturer product image from exact model page."
   },
   "RCF H-BR ART 912": {
     "weight": 4.5,
@@ -2475,7 +2586,9 @@ const CATALOG = {
       "equipment",
       "hardware"
     ],
-    "photo": ""
+    "photo": "./images/av-rcf-h-br-art-912.jpg",
+    "imageSource": "https://www.rcf.it/en/products/product-detail/h-br-art-912",
+    "imageNote": "Manufacturer product image from exact model page."
   },
   "RCF V-BR ART 912": {
     "weight": 5.2,
@@ -2488,7 +2601,9 @@ const CATALOG = {
       "equipment",
       "hardware"
     ],
-    "photo": ""
+    "photo": "./images/av-rcf-v-br-art-912.jpg",
+    "imageSource": "https://www.rcf.it/en/products/product-detail/v-br-art-912",
+    "imageNote": "Manufacturer supplies a V-BR ART-series bracket photograph on this exact model page; image file named V-BR ART 915. Representative family image; check bracket fit independently."
   },
   "JBL Control 25-1": {
     "weight": 3.4,
@@ -2500,7 +2615,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/av-jbl-control-25-1.jpg",
+    "imageSource": "https://jblpro.com/en-US/products/control-25-1",
+    "imageNote": "Manufacturer product image from exact model page."
   },
   "JBL AC16": {
     "weight": 7.2,
@@ -2512,7 +2629,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/av-jbl-ac16.jpg",
+    "imageSource": "https://jblpro.com/ja/products/ac16",
+    "imageNote": "Manufacturer product image from exact model page."
   },
   "JBL AC18/26": {
     "weight": 12.8,
@@ -2524,7 +2643,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/av-jbl-ac18-26.jpg",
+    "imageSource": "https://jblpro.com/ja/products/ac18-26",
+    "imageNote": "Manufacturer product image from exact model page."
   },
   "JBL AC26": {
     "weight": 11,
@@ -2536,7 +2657,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/av-jbl-ac26.jpg",
+    "imageSource": "https://jblpro.com/ja/products/ac26",
+    "imageNote": "Manufacturer product image from exact model page."
   },
   "Electro-Voice ZLX-12P": {
     "weight": 15.6,
@@ -2548,7 +2671,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/av-electro-voice-zlx-12p.jpg",
+    "imageSource": "https://www.dlxmusic.se/storage/9B2D6407C268786C1F0070EEE13C7BB8F2F707CA82F19A114D0AB6103FF32844/28269210abe04a8cae405527de2303bf/pdf/media/1429f6ebf3e64da693ddf7d92237810d/625359.pdf#page=5",
+    "imageNote": "Exact original model photograph extracted from Electro-Voice 2018 Portable Loudspeakers brochure, page 5; manufacturer brochure hosted by DLX Music. Not the G2 model."
   },
   "Electro-Voice ZLX-15P": {
     "weight": 17.3,
@@ -2560,7 +2685,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/av-electro-voice-zlx-15p.jpg",
+    "imageSource": "https://www.dlxmusic.se/storage/9B2D6407C268786C1F0070EEE13C7BB8F2F707CA82F19A114D0AB6103FF32844/28269210abe04a8cae405527de2303bf/pdf/media/1429f6ebf3e64da693ddf7d92237810d/625359.pdf#page=5",
+    "imageNote": "Exact original model photograph extracted from Electro-Voice 2018 Portable Loudspeakers brochure, page 5; manufacturer brochure hosted by DLX Music. Not the G2 model."
   },
   "KEF Ventura 6": {
     "weight": 3.8,
@@ -2572,7 +2699,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/av-kef-ventura-6.jpg",
+    "imageSource": "https://uk.kef.com/products/ventura-6",
+    "imageNote": "Manufacturer product image from exact model page."
   },
   "KEF Ventura 5": {
     "weight": 2.85,
@@ -2584,7 +2713,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/av-kef-ventura-5.jpg",
+    "imageSource": "https://uk.kef.com/products/ventura-5",
+    "imageNote": "Manufacturer product image from exact model page."
   },
   "Bose DesignMax DM6SE (speaker and grille)": {
     "weight": 5.93,
@@ -2596,7 +2727,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/av-bose-designmax-dm6se-speaker-and-grille.jpg",
+    "imageSource": "https://boseprofessional.com/products/loudspeakers/surface-mount/designmax-surface-mount/designmax-dm6se-1-pair",
+    "imageNote": "Manufacturer product image from exact model page."
   },
   "Laney CXP-112": {
     "weight": 13.4,
@@ -2608,7 +2741,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/av-laney-cxp-112.jpg",
+    "imageSource": "https://www.laney.co.uk/amps/live-sound/concept/cxp-112",
+    "imageNote": "Manufacturer product image from exact model page."
   },
   "Behringer EUROLIVE B112D": {
     "weight": 12.3,
@@ -2620,7 +2755,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/av-behringer-eurolive-b112d.jpg",
+    "imageSource": "https://www.behringer.com/fr/products/0313-AED",
+    "imageNote": "Manufacturer product image from exact model page."
   },
   "Behringer EUROLIVE B115D": {
     "weight": 17.5,
@@ -2632,7 +2769,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/av-behringer-eurolive-b115d.jpg",
+    "imageSource": "https://www.behringer.com/en/products/0313-AEB",
+    "imageNote": "Manufacturer product image from exact model page."
   },
   "Citronic CUBA-8": {
     "weight": 10,
@@ -2644,7 +2783,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/av-citronic-cuba-8.jpg",
+    "imageSource": "https://www.avsl.com/product/178.709UK-cuba-full-range-wooden-pa-cabinets",
+    "imageNote": "Manufacturer product image from exact model page."
   },
   "Panasonic PT-VMZ71": {
     "weight": 7,
@@ -2656,7 +2797,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/av-panasonic-pt-vmz71.jpg",
+    "imageSource": "https://eu.connect.panasonic.com/gb/en/projectors/pt-vmz71-series/pt-vmz71",
+    "imageNote": "Manufacturer shared PT-VMZ71-series housing image supplied on this exact model product page."
   },
   "Panasonic PT-VMZ61": {
     "weight": 6.9,
@@ -2668,7 +2811,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/av-panasonic-pt-vmz61.jpg",
+    "imageSource": "https://eu.connect.panasonic.com/gb/en/projectors/pt-vmz71-series/pt-vmz61",
+    "imageNote": "Manufacturer shared PT-VMZ71-series housing image supplied on this exact model product page."
   },
   "Panasonic PT-VMZ51": {
     "weight": 6.5,
@@ -2680,7 +2825,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/av-panasonic-pt-vmz51.jpg",
+    "imageSource": "https://eu.connect.panasonic.com/gb/en/projectors/pt-vmz71-series/pt-vmz51",
+    "imageNote": "Manufacturer shared PT-VMZ71-series housing image supplied on this exact model product page."
   },
   "Panasonic PT-VMZ51S": {
     "weight": 6.5,
@@ -2692,7 +2839,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/av-panasonic-pt-vmz51s.jpg",
+    "imageSource": "https://eu.connect.panasonic.com/gb/en/projectors/pt-vmz71-series/pt-vmz51s",
+    "imageNote": "Manufacturer shared PT-VMZ71-series housing image supplied on this exact model product page."
   },
   "Epson PowerLite EB-L735U": {
     "weight": 8.4,
@@ -2704,7 +2853,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/av-epson-powerlite-eb-l735u.jpg",
+    "imageSource": "https://epson.com/For-Work/Projectors/Large-Venue/PowerLite-EB-L735U-Laser-Projector/p/V11HA25120",
+    "imageNote": "Manufacturer product image from exact model page."
   },
   "Epson PowerLite EB-L730U": {
     "weight": 8.4,
@@ -2716,7 +2867,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/av-epson-powerlite-eb-l730u.jpg",
+    "imageSource": "https://epson.com/For-Work/Projectors/Large-Venue/PowerLite-EB-L730U-Laser-Projector/p/V11HA25020",
+    "imageNote": "Manufacturer supplies shared L630U/L730U white housing photograph on this exact L730U SKU page; image asset named L630U."
   },
   "Epson PowerLite EB-L635SU": {
     "weight": 8.4,
@@ -2728,7 +2881,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/av-epson-powerlite-eb-l635su.jpg",
+    "imageSource": "https://epson.com/For-Work/Projectors/Large-Venue/PowerLite-EB-L635SU-Laser-Projector/p/V11HA29120",
+    "imageNote": "Manufacturer product image from exact model page."
   },
   "Epson PowerLite EB-L630SU": {
     "weight": 8.4,
@@ -2740,7 +2895,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/av-epson-powerlite-eb-l630su.jpg",
+    "imageSource": "https://epson.com/For-Work/Projectors/Large-Venue/PowerLite-EB-L630SU-Laser-Projector/p/V11HA29020",
+    "imageNote": "Manufacturer product image from exact model page."
   },
   "Epson PowerLite EB-L630U": {
     "weight": 8.4,
@@ -2752,7 +2909,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/av-epson-powerlite-eb-l630u.jpg",
+    "imageSource": "https://epson.com/For-Work/Projectors/Large-Venue/PowerLite-EB-L630U-Laser-Projector/p/V11HA26020",
+    "imageNote": "Manufacturer product image from exact model page."
   },
   "Epson PowerLite EB-L530U": {
     "weight": 8.2,
@@ -2764,7 +2923,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/av-epson-powerlite-eb-l530u.jpg",
+    "imageSource": "https://epson.com/For-Work/Projectors/Large-Venue/PowerLite-EB-L530U-Laser-Projector/p/V11HA27020",
+    "imageNote": "Manufacturer product image from exact model page."
   },
   "Epson PowerLite EB-L520U": {
     "weight": 7.7,
@@ -2776,7 +2937,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/av-epson-powerlite-eb-l520u.jpg",
+    "imageSource": "https://epson.com/For-Work/Projectors/Large-Venue/PowerLite-EB-L520U-Laser-Projector/p/V11HA30020",
+    "imageNote": "Manufacturer product image from exact model page."
   },
   "BenQ LH730": {
     "weight": 5.3,
@@ -2788,7 +2951,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/av-benq-lh730.jpg",
+    "imageSource": "https://www.benq.com/en-us/business/projector/lh730/specifications.html",
+    "imageNote": "Manufacturer product image from exact model page."
   },
   "BenQ LU930": {
     "weight": 6.3,
@@ -2800,7 +2965,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/av-benq-lu930.jpg",
+    "imageSource": "https://www.benq.eu/en-uk/business/projector/lu930/specifications.html",
+    "imageNote": "Manufacturer product image from exact model page."
   },
   "Sony VPL-PHZ61": {
     "weight": 7,
@@ -2812,7 +2979,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/av-sony-vpl-phz61.jpg",
+    "imageSource": "https://www.sony.jp/vpl/products/VPL-PHZ61/",
+    "imageNote": "Manufacturer product image from exact model page."
   },
   "Sony VPL-PHZ51": {
     "weight": 6.8,
@@ -2824,7 +2993,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/av-sony-vpl-phz51.jpg",
+    "imageSource": "https://www.sony.jp/vpl/products/VPL-PHZ51/",
+    "imageNote": "Manufacturer product image from exact model page."
   },
   "Optoma ZU506": {
     "weight": 5.5,
@@ -2836,7 +3007,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/av-optoma-zu506.jpg",
+    "imageSource": "https://www.optomausa.com/product/zu506-w",
+    "imageNote": "Exact ZU506-W white-finish product photograph from manufacturer page."
   },
   "Optoma ZU606T": {
     "weight": 5.5,
@@ -2848,7 +3021,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/av-optoma-zu606t.jpg",
+    "imageSource": "https://www.optomausa.com/product/ZU606T-B",
+    "imageNote": "Manufacturer ZU606T-B black-finish photograph. Representative colour variant of ZU606T; verify the individual projector variant and mass."
   },
   "Triple E UniTrack 0.25 m straight section (TRA0101)": {
     "weight": 0.806,
@@ -2858,7 +3033,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/track-unitrack.png",
+    "imageSource": "https://triplee.ltd/products/unitrack/",
+    "imageNote": "Representative track profile illustration; pictured runner is excluded from track weight and must be added separately."
   },
   "Triple E UniTrack 0.5 m straight section (TRA0102)": {
     "weight": 1.466,
@@ -2868,7 +3045,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/track-unitrack.png",
+    "imageSource": "https://triplee.ltd/products/unitrack/",
+    "imageNote": "Representative track profile illustration; pictured runner is excluded from track weight and must be added separately."
   },
   "Triple E UniTrack 1 m straight section (TRA0103)": {
     "weight": 2.864,
@@ -2878,7 +3057,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/track-unitrack.png",
+    "imageSource": "https://triplee.ltd/products/unitrack/",
+    "imageNote": "Representative track profile illustration; pictured runner is excluded from track weight and must be added separately."
   },
   "Triple E UniTrack 2 m straight section (TRA0104)": {
     "weight": 5.434,
@@ -2888,7 +3069,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/track-unitrack.png",
+    "imageSource": "https://triplee.ltd/products/unitrack/",
+    "imageNote": "Representative track profile illustration; pictured runner is excluded from track weight and must be added separately."
   },
   "Doughty SixTrack 0.25 m straight section (T63705)": {
     "weight": 0.63,
@@ -2898,7 +3081,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/track-sixtrack.jpg",
+    "imageSource": "https://doughty-engineering.co.uk/products/six-track-straight-sections/",
+    "imageNote": "Representative SixTrack straight section photograph; catalogue length is specified in the item name."
   },
   "Doughty SixTrack 0.5 m straight section (T63706)": {
     "weight": 1.19,
@@ -2908,7 +3093,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/track-sixtrack.jpg",
+    "imageSource": "https://doughty-engineering.co.uk/products/six-track-straight-sections/",
+    "imageNote": "Representative SixTrack straight section photograph; catalogue length is specified in the item name."
   },
   "Doughty SixTrack 0.75 m straight section (T63707)": {
     "weight": 1.99,
@@ -2918,7 +3105,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/track-sixtrack.jpg",
+    "imageSource": "https://doughty-engineering.co.uk/products/six-track-straight-sections/",
+    "imageNote": "Representative SixTrack straight section photograph; catalogue length is specified in the item name."
   },
   "Doughty SixTrack 1 m straight section (T63708)": {
     "weight": 2.69,
@@ -2928,7 +3117,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/track-sixtrack.jpg",
+    "imageSource": "https://doughty-engineering.co.uk/products/six-track-straight-sections/",
+    "imageNote": "Representative SixTrack straight section photograph; catalogue length is specified in the item name."
   },
   "Doughty SixTrack 2 m straight section (T63710)": {
     "weight": 4.47,
@@ -2938,7 +3129,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/track-sixtrack.jpg",
+    "imageSource": "https://doughty-engineering.co.uk/products/six-track-straight-sections/",
+    "imageNote": "Representative SixTrack straight section photograph; catalogue length is specified in the item name."
   },
   "Doughty SixTrack 3 m straight section (T63715)": {
     "weight": 6.71,
@@ -2948,7 +3141,9 @@ const CATALOG = {
     "cats": [
       "equipment"
     ],
-    "photo": ""
+    "photo": "./images/track-sixtrack.jpg",
+    "imageSource": "https://doughty-engineering.co.uk/products/six-track-straight-sections/",
+    "imageNote": "Representative SixTrack straight section photograph; catalogue length is specified in the item name."
   },
   "Triple E 2-way Curved Track (per metre)": {
     "wpm": 1.17,
@@ -2958,7 +3153,9 @@ const CATALOG = {
     "cats": [
       "equipment_linear"
     ],
-    "photo": ""
+    "photo": "./images/track-twoway-curve.png",
+    "imageSource": "https://triplee.ltd/products/2way-medium-duty-walkalong-curtain-track/",
+    "imageNote": "Representative curved track photograph of this profile; illustrated radius and end lengths may differ. Weight is calculated from the entered track length."
   },
   "Triple E E-Rail Curved Track (per metre)": {
     "wpm": 0.816,
@@ -2968,7 +3165,9 @@ const CATALOG = {
     "cats": [
       "equipment_linear"
     ],
-    "photo": ""
+    "photo": "./images/track-erail-curve.png",
+    "imageSource": "https://triplee.ltd/products/erail/",
+    "imageNote": "Representative curved track photograph of this profile; illustrated radius and end lengths may differ. Weight is calculated from the entered track length."
   },
   "Triple E Unibeam Curved Track (per metre)": {
     "wpm": 3.441,
@@ -2978,7 +3177,9 @@ const CATALOG = {
     "cats": [
       "equipment_linear"
     ],
-    "photo": ""
+    "photo": "./images/track-unibeam-curve.png",
+    "imageSource": "https://triplee.ltd/products/unibeam/",
+    "imageNote": "Representative curved track photograph of this profile; illustrated radius and end lengths may differ. Weight is calculated from the entered track length."
   }
 };
 const FABRICS = [{"name":"ShowTex Velours Bellini","gsm":605,"brand":"ShowTex","source":"https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf","notes":"Fabric mass per square metre; finished curtain extras excluded."},{"name":"ShowTex Velours Verdi","gsm":525,"brand":"ShowTex","source":"https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf","notes":"Fabric mass per square metre; finished curtain extras excluded."},{"name":"ShowTex Velours Gaudi","gsm":575,"brand":"ShowTex","source":"https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf","notes":"Fabric mass per square metre; finished curtain extras excluded."},{"name":"ShowTex Velours Garnier CS","gsm":450,"brand":"ShowTex","source":"https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf","notes":"Fabric mass per square metre; finished curtain extras excluded."},{"name":"ShowTex Velours Zeus CS","gsm":620,"brand":"ShowTex","source":"https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf","notes":"Fabric mass per square metre; finished curtain extras excluded."},{"name":"ShowTex Velours Delta","gsm":460,"brand":"ShowTex","source":"https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf","notes":"Fabric mass per square metre; finished curtain extras excluded."},{"name":"ShowTex Velours Puccini","gsm":360,"brand":"ShowTex","source":"https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf","notes":"Fabric mass per square metre; finished curtain extras excluded."},{"name":"ShowTex Velours Paris CS","gsm":500,"brand":"ShowTex","source":"https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf","notes":"Fabric mass per square metre; finished curtain extras excluded."},{"name":"ShowTex Velours Helena CS","gsm":380,"brand":"ShowTex","source":"https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf","notes":"Fabric mass per square metre; finished curtain extras excluded."},{"name":"ShowTex Calmuc","gsm":500,"brand":"ShowTex","source":"https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf","notes":"Fabric mass per square metre; finished curtain extras excluded."},{"name":"ShowTex Wool Serge Panne 540","gsm":540,"brand":"ShowTex","source":"https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf","notes":"Fabric mass per square metre; finished curtain extras excluded."},{"name":"ShowTex Wool Serge Panne 1000","gsm":1000,"brand":"ShowTex","source":"https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf","notes":"Fabric mass per square metre; finished curtain extras excluded."},{"name":"ShowTex Molton CS","gsm":300,"brand":"ShowTex","source":"https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf","notes":"Fabric mass per square metre; finished curtain extras excluded."},{"name":"ShowTex SoundVelours","gsm":750,"brand":"ShowTex","source":"https://explore.showtex.com/hubfs/eBooks/Acoustic%20eBook/Acoustics-eBook-ShowTex-en.pdf","notes":"Fabric mass per square metre; finished curtain extras excluded."},{"name":"J&C Joel Wool Serge 1.8","gsm":500,"brand":"J&C Joel","source":"https://www.jcjoel.com/wp-content/uploads/2023/07/Wool-Serge-1.8-Datapack-1.pdf","notes":"Fabric mass per square metre; finished curtain extras excluded."},{"name":"J&C Joel Wool Serge 3.0","gsm":565,"brand":"J&C Joel","source":"https://www.jcjoel.com/product/wool-serge-3-0/","notes":"Fabric mass per square metre; finished curtain extras excluded."},{"name":"J&C Joel Cotton Cyclorama Canvas 8.0","gsm":200,"brand":"J&C Joel","source":"https://www.jcjoel.com/product/cotton-cyclorama-canvas-8-0/","notes":"Fabric mass per square metre; finished curtain extras excluded."},{"name":"ShowTex Cyclo 200","gsm":200,"brand":"ShowTex","source":"https://www.showtex.com/sites/default/files/attachments/3220-cyclo-200-tds-showtex.pdf","notes":"Fabric mass per square metre; finished curtain extras excluded."},{"name":"ShowTex Cyclo 270","gsm":270,"brand":"ShowTex","source":"https://www.showtex.com/en/products/soft-goods/masking-draping/acoustic-solutions/cyclo-270","notes":"Fabric mass per square metre; finished curtain extras excluded."},{"name":"ShowTex Molton","gsm":300,"brand":"ShowTex","source":"https://www.showtex.com/en/products/soft-goods/masking-draping/dim-blackout-fabric/molton","notes":"Fabric mass per square metre; finished curtain extras excluded."},{"name":"ShowTex Gobelintulle","gsm":85,"brand":"ShowTex","source":"https://www.showtex.com/sites/default/files/attachments/3420-gobelintulle-tds-showtex-en.pdf","notes":"Fabric mass per square metre; finished curtain extras excluded."}];
@@ -3695,7 +3896,7 @@ const FABRICS = [{"name":"ShowTex Velours Bellini","gsm":605,"brand":"ShowTex","
       .map(([name, obj]) => ({
         name,
         cats: obj.cats,
-        img: (obj.photo || "").trim()
+        img: (obj.photo || "").trim(), imageNote: obj.imageNote || ""
       }));
   }
 
@@ -3726,18 +3927,20 @@ const FABRICS = [{"name":"ShowTex Velours Bellini","gsm":605,"brand":"ShowTex","
       imp(card, "display", "grid");
       imp(card, "grid-template-rows", `${thumbH}px auto`);
       const cardH = thumbH + 72;
-      imp(card, "height", `${cardH}px`);
+      imp(card, "height", "auto");
       imp(card, "min-height", `${cardH}px`);
 
       card.innerHTML = `
         <img alt="${item.name}" loading="lazy">
-        <div class="galleryName">${item.name}</div>
+        <div class="galleryName">${item.name}${/representative|family|length.*differ/i.test(item.imageNote || "") ? "<small>Representative photo</small>" : ""}</div>
       `;
 
       const img = card.querySelector("img");
+      img.title = item.imageNote || item.name;
+      img.alt = item.name + (item.imageNote ? " — " + item.imageNote : "");
       imp(img, "width", "100%");
       imp(img, "height", `${thumbH}px`);
-      imp(img, "object-fit", "cover");
+      imp(img, "object-fit", "contain");
       imp(img, "display", "block");
       imp(img, "position", "static");
 

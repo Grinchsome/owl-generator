@@ -852,33 +852,39 @@
         "equipment_linear"
       ],
       "wpm": 1.17,
-      "photo": "./images/cd031645ff0391cf.png",
+      "photo": "./images/track-twoway.png",
       "brand": "Triple E",
       "notes": "Track only. 2W0101 black / 2W0201 silver.",
       "source": "https://triplee.ltd/products/download-documents/general-documents/products-weight-list/",
-      "originalPhoto": "https://triplee.ltd/sites/3-eee/assets/Image/png%202way.png"
+      "originalPhoto": "https://triplee.ltd/sites/3-eee/assets/Image/png%202way.png",
+      "imageSource": "https://triplee.ltd/products/2way-medium-duty-walkalong-curtain-track/",
+      "imageNote": "Representative track profile illustration; pictured runner is excluded from track weight and must be added separately."
     },
     "Triple E E-Rail Curtain Track": {
       "cats": [
         "equipment_linear"
       ],
       "wpm": 0.816,
-      "photo": "./images/8d7eca93e9bcc17c.png",
+      "photo": "./images/track-erail.png",
       "brand": "Triple E",
       "notes": "ERL0101. Track only.",
       "source": "https://triplee.ltd/products/download-documents/general-documents/products-weight-list/",
-      "originalPhoto": "https://triplee.ltd/sites/3-eee/assets/Image/erail%20png.png"
+      "originalPhoto": "https://triplee.ltd/sites/3-eee/assets/Image/erail%20png.png",
+      "imageSource": "https://triplee.ltd/products/erail/",
+      "imageNote": "Representative track profile illustration; pictured runner is excluded from track weight and must be added separately."
     },
     "Triple E Unibeam Curtain Track": {
       "cats": [
         "equipment_linear"
       ],
       "wpm": 3.441,
-      "photo": "./images/9d13f7c87f3ca2d9.png",
+      "photo": "./images/track-unibeam.png",
       "brand": "Triple E",
       "notes": "UBM0101. Track only.",
       "source": "https://triplee.ltd/products/download-documents/general-documents/products-weight-list/",
-      "originalPhoto": "https://triplee.ltd/sites/3-eee/assets/Image/unibeam%20png.png"
+      "originalPhoto": "https://triplee.ltd/sites/3-eee/assets/Image/unibeam%20png.png",
+      "imageSource": "https://triplee.ltd/products/unibeam/",
+      "imageNote": "Representative track profile illustration; pictured runner is excluded from track weight and must be added separately."
     },
     "Hall Stage T400 Curtain Track": {
       "cats": [
@@ -965,7 +971,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/lighting-robe-ledbeam150.webp",
+      "imageSource": "https://www.robe.cz/ledbeam-150",
+      "imageNote": "Manufacturer product photograph."
     },
     "ROBE MegaPointe": {
       "weight": 22,
@@ -977,7 +985,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/lighting-robe-megapointe.webp",
+      "imageSource": "https://www.robe.cz/megapointe",
+      "imageNote": "Manufacturer product photograph."
     },
     "ROBE T1 Profile": {
       "weight": 24.3,
@@ -989,7 +999,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/lighting-robe-t1.webp",
+      "imageSource": "https://www.robe.cz/t1-profile",
+      "imageNote": "Manufacturer product photograph."
     },
     "ROBE ESPRITE": {
       "weight": 28.2,
@@ -1001,7 +1013,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/lighting-robe-esprite.webp",
+      "imageSource": "https://www.robe.cz/esprite",
+      "imageNote": "Manufacturer product photograph."
     },
     "ROBE LEDBeam 350": {
       "weight": 9.85,
@@ -1013,7 +1027,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/lighting-robe-ledbeam350.webp",
+      "imageSource": "https://www.robe.cz/ledbeam-350",
+      "imageNote": "Manufacturer family photograph; lens, FW optic, dimmer or pole-operation configuration may differ."
     },
     "ROBE LEDBeam 350 FW": {
       "weight": 9.9,
@@ -1025,7 +1041,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/lighting-robe-ledbeam350.webp",
+      "imageSource": "https://www.robe.cz/ledbeam-350",
+      "imageNote": "Manufacturer family photograph; lens, FW optic, dimmer or pole-operation configuration may differ."
     },
     "ROBE ColorWash 1200E AT": {
       "weight": 41,
@@ -1037,7 +1055,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/lighting-robe-colorwash.webp",
+      "imageSource": "https://www.robe.cz/colorwash-1200e-at",
+      "imageNote": "Manufacturer product photograph."
     },
     "Martin MAC Aura XB": {
       "weight": 6.5,
@@ -1049,7 +1069,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/lighting-martin-xb.webp",
+      "imageSource": "https://www.martin.com/en-US/products/mac-aura-xb",
+      "imageNote": "Manufacturer product photograph."
     },
     "Martin MAC Aura XIP": {
       "weight": 8.95,
@@ -1061,7 +1083,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/lighting-martin-xip.webp",
+      "imageSource": "https://www.martin.com/en-US/products/mac-aura-xip",
+      "imageNote": "Manufacturer product photograph."
     },
     "Martin ERA 300 Profile": {
       "weight": 17,
@@ -1073,7 +1097,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/lighting-martin-era300.webp",
+      "imageSource": "https://www.martin.com/en-US/products/era-300-profile",
+      "imageNote": "Manufacturer product photograph."
     },
     "Chauvet Rogue R3X Wash": {
       "weight": 17.46,
@@ -1085,7 +1111,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/lighting-chauvet-r3x.png",
+      "imageSource": "https://chauvetprofessional.com/product/rogue-r3x-wash/",
+      "imageNote": "Manufacturer product photograph."
     },
     "Chauvet Ovation F-915FC": {
       "weight": 8.6,
@@ -1097,7 +1125,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/lighting-chauvet-f915.png",
+      "imageSource": "https://chauvetprofessional.com/product/ovation-f-915fc/",
+      "imageNote": "Manufacturer product photograph."
     },
     "Chauvet Ovation CYC 1 FC": {
       "weight": 4.2,
@@ -1109,7 +1139,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/lighting-chauvet-cyc.png",
+      "imageSource": "https://chauvetprofessional.com/product/ovation-cyc-1-fc/",
+      "imageNote": "Manufacturer product photograph."
     },
     "Chauvet Ovation E-910FC with 14° lens": {
       "weight": 9.43,
@@ -1121,7 +1153,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/lighting-chauvet-e910.png",
+      "imageSource": "https://chauvetprofessional.com/product/ovation-e-910fc/",
+      "imageNote": "Manufacturer family photograph; lens, FW optic, dimmer or pole-operation configuration may differ."
     },
     "Chauvet Ovation E-910FC with 26° lens": {
       "weight": 9,
@@ -1133,7 +1167,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/lighting-chauvet-e910.png",
+      "imageSource": "https://chauvetprofessional.com/product/ovation-e-910fc/",
+      "imageNote": "Manufacturer family photograph; lens, FW optic, dimmer or pole-operation configuration may differ."
     },
     "Chauvet Ovation E-910FC with 15–30° zoom lens": {
       "weight": 13.3,
@@ -1145,7 +1181,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/lighting-chauvet-e910.png",
+      "imageSource": "https://chauvetprofessional.com/product/ovation-e-910fc/",
+      "imageNote": "Manufacturer family photograph; lens, FW optic, dimmer or pole-operation configuration may differ."
     },
     "Chauvet Ovation E-910FC with 25–50° zoom lens": {
       "weight": 12.2,
@@ -1157,7 +1195,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/lighting-chauvet-e910.png",
+      "imageSource": "https://chauvetprofessional.com/product/ovation-e-910fc/",
+      "imageNote": "Manufacturer family photograph; lens, FW optic, dimmer or pole-operation configuration may differ."
     },
     "Chauvet Ovation E-910FC IP with 14° lens": {
       "weight": 12.9,
@@ -1169,7 +1209,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/lighting-chauvet-e910ip.png",
+      "imageSource": "https://chauvetprofessional.com/product/ovation-e-910fc-ip/",
+      "imageNote": "Manufacturer family photograph; lens, FW optic, dimmer or pole-operation configuration may differ."
     },
     "Chauvet Ovation E-910FC IP with 26° lens": {
       "weight": 12.4,
@@ -1181,7 +1223,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/lighting-chauvet-e910ip.png",
+      "imageSource": "https://chauvetprofessional.com/product/ovation-e-910fc-ip/",
+      "imageNote": "Manufacturer family photograph; lens, FW optic, dimmer or pole-operation configuration may differ."
     },
     "Chauvet Ovation E-910FC IP with 15–30° zoom lens": {
       "weight": 16.2,
@@ -1193,7 +1237,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/lighting-chauvet-e910ip.png",
+      "imageSource": "https://chauvetprofessional.com/product/ovation-e-910fc-ip/",
+      "imageNote": "Manufacturer family photograph; lens, FW optic, dimmer or pole-operation configuration may differ."
     },
     "Chauvet Ovation E-910FC IP with 25–50° zoom lens": {
       "weight": 14.8,
@@ -1205,7 +1251,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/lighting-chauvet-e910ip.png",
+      "imageSource": "https://chauvetprofessional.com/product/ovation-e-910fc-ip/",
+      "imageNote": "Manufacturer family photograph; lens, FW optic, dimmer or pole-operation configuration may differ."
     },
     "Showtec Performer 60 LED (33100)": {
       "weight": 4.8,
@@ -1217,7 +1265,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/lighting-showtec.jpg",
+      "imageSource": "https://www.stageroads.nl/assortiment/verlichting/theaterverlichting/theater-spots/showtec-performer-led-60-fresnel-dmx/",
+      "imageNote": "Exact-model product photograph from specialist equipment supplier."
     },
     "LEDJ Spectra Flood Q6": {
       "weight": 2.5,
@@ -1229,7 +1279,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/lighting-ledj-q6.jpg",
+      "imageSource": "https://www.prolight.co.uk/Catalogue/Products/Lighting/Washes/LEDJ286XX",
+      "imageNote": "Manufacturer product photograph."
     },
     "LEDJ Spectra Flood Q15": {
       "weight": 5.2,
@@ -1241,7 +1293,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/lighting-ledj-q15.jpg",
+      "imageSource": "https://www.prolight.co.uk/Catalogue/Products/Lighting/Washes/LEDJ287XX",
+      "imageNote": "Manufacturer product photograph."
     },
     "LEDJ Spectra Batten Q16": {
       "weight": 6.1,
@@ -1253,7 +1307,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/lighting-ledj-q16.jpg",
+      "imageSource": "https://www.prolight.co.uk/ftp-in/LEDJ286_Manual.pdf",
+      "imageNote": "Manufacturer product photograph extracted from the manual cover."
     },
     "LEDJ Exterior Spectra Batten RGB 1 m": {
       "weight": 4.2,
@@ -1265,7 +1321,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/lighting-ledj-exterior-1m.jpg",
+      "imageSource": "https://www.prolight.co.uk/ftp-in/LEDJ76A_Manual.pdf",
+      "imageNote": "Manufacturer product photograph extracted from the manual cover."
     },
     "LEDJ Exterior Spectra Batten RGB 0.5 m": {
       "weight": 2.7,
@@ -1277,7 +1335,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/lighting-ledj-exterior-half.jpg",
+      "imageSource": "https://www.prolight.co.uk/ftp-in/LEDJ76A_Manual.pdf",
+      "imageNote": "Manufacturer product photograph extracted from the manual cover."
     },
     "LEDJ Spectra Batten indoor (LEDJ75A)": {
       "weight": 2.5,
@@ -1289,7 +1349,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/lighting-ledj-indoor.jpg",
+      "imageSource": "https://www.prolight.co.uk/Catalogue/Products/Discontinued/RGB-Spectra-Batten-LED-Display-White-Case-LEDJ75A",
+      "imageNote": "Manufacturer product photograph."
     },
     "Elumen8 1RE Beam": {
       "weight": 9.2,
@@ -1301,7 +1363,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/lighting-elum-1re.jpg",
+      "imageSource": "https://www.prolight.co.uk/Catalogue/Products/Discontinued/1RE-Beam-ELUM015",
+      "imageNote": "Manufacturer product photograph."
     },
     "Elumen8 MP60 LED Fresnel WW MKII": {
       "weight": 3.8,
@@ -1313,7 +1377,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/lighting-elum-mp60.jpg",
+      "imageSource": "https://www.prolight.co.uk/Catalogue/Products/Lighting/Theatrical/ELUM104",
+      "imageNote": "Manufacturer product photograph."
     },
     "Elumen8 MP120 LED Fresnel WW": {
       "weight": 8.6,
@@ -1325,7 +1391,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/lighting-elum-mp120.jpg",
+      "imageSource": "https://www.prolight.co.uk/Catalogue/Products/Lighting/Theatrical/ELUM107",
+      "imageNote": "Manufacturer product photograph."
     },
     "Elumen8 Virtuoso 700 House Light HEX": {
       "weight": 8.3,
@@ -1337,7 +1405,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/lighting-elum-700.jpg",
+      "imageSource": "https://www.prolight.co.uk/Catalogue/Products/Lighting/Theatrical/ELUM139",
+      "imageNote": "Manufacturer product photograph."
     },
     "ETC ColorSource Linear 1": {
       "weight": 2.9,
@@ -1349,7 +1419,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/lighting-linear1.jpg",
+      "imageSource": "https://soundpro.com/products/etc-colorsource-linear-1-led-wash-light",
+      "imageNote": "Exact-model product photograph from specialist equipment supplier."
     },
     "ETC ColorSource Linear 2": {
       "weight": 9.12,
@@ -1361,7 +1433,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/lighting-linear2.png",
+      "imageSource": "https://goknight.com/etc-cslinear2-colorsource-linear-2/",
+      "imageNote": "Exact-model product photograph from specialist equipment supplier."
     },
     "ETC ColorSource Linear 4": {
       "weight": 17.01,
@@ -1373,7 +1447,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/lighting-linear4.jpg",
+      "imageSource": "https://goknight.com/etc-cslinear4-colorsource-linear-4/",
+      "imageNote": "Exact-model product photograph from specialist equipment supplier."
     },
     "Acclaim Fresnel (manufacturer net specification)": {
       "weight": 3.36,
@@ -1385,7 +1461,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/lighting-acclaim-f.jpg",
+      "imageSource": "https://www.vari-lite.com/global/products/acclaim-fresnel",
+      "imageNote": "Manufacturer product photograph."
     },
     "Acclaim PC (manufacturer net specification)": {
       "weight": 3.51,
@@ -1397,7 +1475,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/lighting-acclaim-pc.jpg",
+      "imageSource": "https://www.vari-lite.com/global/products/acclaim-pc",
+      "imageNote": "Manufacturer product photograph."
     },
     "Strand 200F TV Fresnel LED manual-operated": {
       "weight": 7.4,
@@ -1409,7 +1489,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/lighting-strand-200.jpg",
+      "imageSource": "https://www.vari-lite.com/global/products/200f",
+      "imageNote": "Manufacturer family photograph; lens, FW optic, dimmer or pole-operation configuration may differ."
     },
     "Strand 200F TV Fresnel LED pole-operated": {
       "weight": 7.9,
@@ -1421,7 +1503,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/lighting-strand-200.jpg",
+      "imageSource": "https://www.vari-lite.com/global/products/200f",
+      "imageNote": "Manufacturer family photograph; lens, FW optic, dimmer or pole-operation configuration may differ."
     },
     "LDR Suono 10/28 Plus": {
       "weight": 7.5,
@@ -1433,7 +1517,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/lighting-ldr-suono.jpg",
+      "imageSource": "https://www.ldr.it/lighting/suono-1028-plus/",
+      "imageNote": "Manufacturer product photograph."
     },
     "Vari-Lite VL2600 Profile": {
       "weight": 32,
@@ -1445,7 +1531,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/lighting-vl-profile.png",
+      "imageSource": "https://vari-lite.s3.eu-west-1.amazonaws.com/datasheets/Vari-Lite/VL2600_PROFILE.pdf",
+      "imageNote": "Manufacturer original VL2600 PROFILE photograph extracted from 2022 datasheet; not the SE variant."
     },
     "Vari-Lite VL2600 Spot": {
       "weight": 32,
@@ -1457,7 +1545,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/lighting-vl-spot.jpg",
+      "imageSource": "https://www.vari-lite.com/global/products/vl2600-spot",
+      "imageNote": "Manufacturer product photograph."
     },
     "Vari-Lite VL1100 TS tungsten (without dimmer)": {
       "weight": 32,
@@ -1469,7 +1559,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/lighting-vl1100.jpg",
+      "imageSource": "https://www.vari-lite.com/global/products/vl1100-1100d-tungsten",
+      "imageNote": "Manufacturer family photograph; lens, FW optic, dimmer or pole-operation configuration may differ."
     },
     "Vari-Lite VL1100 TSD tungsten (with dimmer)": {
       "weight": 32.65,
@@ -1481,7 +1573,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/lighting-vl1100.jpg",
+      "imageSource": "https://www.vari-lite.com/global/products/vl1100-1100d-tungsten",
+      "imageNote": "Manufacturer family photograph; lens, FW optic, dimmer or pole-operation configuration may differ."
     },
     "RCF ART 910-A": {
       "weight": 16.2,
@@ -1493,7 +1587,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/av-rcf-art-910-a.jpg",
+      "imageSource": "https://www.rcf.it/en/products/product-detail/art-910-a",
+      "imageNote": "Manufacturer product image from exact model page."
     },
     "RCF ART 912-A": {
       "weight": 19.5,
@@ -1505,7 +1601,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/av-rcf-art-912-a.jpg",
+      "imageSource": "https://www.rcf.it/en/products/product-detail/art-912-a",
+      "imageNote": "Manufacturer product image from exact model page."
     },
     "RCF ART 932-A": {
       "weight": 19.2,
@@ -1517,7 +1615,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/av-rcf-art-932-a.jpg",
+      "imageSource": "https://www.rcf.it/en/products/product-detail/art-932-a",
+      "imageNote": "Manufacturer product image from exact model page."
     },
     "RCF ART 915-A": {
       "weight": 22.4,
@@ -1529,7 +1629,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/av-rcf-art-915-a.jpg",
+      "imageSource": "https://www.rcf.it/en/products/product-detail/art-915-a",
+      "imageNote": "Manufacturer product image from exact model page."
     },
     "RCF ART 935-A": {
       "weight": 24.6,
@@ -1541,7 +1643,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/av-rcf-art-935-a.jpg",
+      "imageSource": "https://www.rcf.it/en/products/product-detail/art-935-a",
+      "imageNote": "Manufacturer product image from exact model page."
     },
     "RCF ART 945-A": {
       "weight": 22.4,
@@ -1553,7 +1657,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/av-rcf-art-945-a.jpg",
+      "imageSource": "https://www.rcf.it/en/products/product-detail/art-945-a",
+      "imageNote": "Manufacturer product image from exact model page."
     },
     "RCF ART 912-AX": {
       "weight": 18.7,
@@ -1565,7 +1671,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/av-rcf-art-912-ax.jpg",
+      "imageSource": "https://www.rcf.it/en/products/product-detail/art-912-ax",
+      "imageNote": "Manufacturer uses the ART 912-A exterior photograph on its ART 912-AX page; shared housing image."
     },
     "RCF H-BR ART 910": {
       "weight": 4.45,
@@ -1578,7 +1686,9 @@
         "equipment",
         "hardware"
       ],
-      "photo": ""
+      "photo": "./images/av-rcf-h-br-art-910.jpg",
+      "imageSource": "https://www.rcf.it/en/products/product-detail/h-br-art-910",
+      "imageNote": "Manufacturer product image from exact model page."
     },
     "RCF H-BR ART 912": {
       "weight": 4.5,
@@ -1591,7 +1701,9 @@
         "equipment",
         "hardware"
       ],
-      "photo": ""
+      "photo": "./images/av-rcf-h-br-art-912.jpg",
+      "imageSource": "https://www.rcf.it/en/products/product-detail/h-br-art-912",
+      "imageNote": "Manufacturer product image from exact model page."
     },
     "RCF V-BR ART 912": {
       "weight": 5.2,
@@ -1604,7 +1716,9 @@
         "equipment",
         "hardware"
       ],
-      "photo": ""
+      "photo": "./images/av-rcf-v-br-art-912.jpg",
+      "imageSource": "https://www.rcf.it/en/products/product-detail/v-br-art-912",
+      "imageNote": "Manufacturer supplies a V-BR ART-series bracket photograph on this exact model page; image file named V-BR ART 915. Representative family image; check bracket fit independently."
     },
     "JBL Control 25-1": {
       "weight": 3.4,
@@ -1616,7 +1730,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/av-jbl-control-25-1.jpg",
+      "imageSource": "https://jblpro.com/en-US/products/control-25-1",
+      "imageNote": "Manufacturer product image from exact model page."
     },
     "JBL AC16": {
       "weight": 7.2,
@@ -1628,7 +1744,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/av-jbl-ac16.jpg",
+      "imageSource": "https://jblpro.com/ja/products/ac16",
+      "imageNote": "Manufacturer product image from exact model page."
     },
     "JBL AC18/26": {
       "weight": 12.8,
@@ -1640,7 +1758,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/av-jbl-ac18-26.jpg",
+      "imageSource": "https://jblpro.com/ja/products/ac18-26",
+      "imageNote": "Manufacturer product image from exact model page."
     },
     "JBL AC26": {
       "weight": 11,
@@ -1652,7 +1772,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/av-jbl-ac26.jpg",
+      "imageSource": "https://jblpro.com/ja/products/ac26",
+      "imageNote": "Manufacturer product image from exact model page."
     },
     "Electro-Voice ZLX-12P": {
       "weight": 15.6,
@@ -1664,7 +1786,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/av-electro-voice-zlx-12p.jpg",
+      "imageSource": "https://www.dlxmusic.se/storage/9B2D6407C268786C1F0070EEE13C7BB8F2F707CA82F19A114D0AB6103FF32844/28269210abe04a8cae405527de2303bf/pdf/media/1429f6ebf3e64da693ddf7d92237810d/625359.pdf#page=5",
+      "imageNote": "Exact original model photograph extracted from Electro-Voice 2018 Portable Loudspeakers brochure, page 5; manufacturer brochure hosted by DLX Music. Not the G2 model."
     },
     "Electro-Voice ZLX-15P": {
       "weight": 17.3,
@@ -1676,7 +1800,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/av-electro-voice-zlx-15p.jpg",
+      "imageSource": "https://www.dlxmusic.se/storage/9B2D6407C268786C1F0070EEE13C7BB8F2F707CA82F19A114D0AB6103FF32844/28269210abe04a8cae405527de2303bf/pdf/media/1429f6ebf3e64da693ddf7d92237810d/625359.pdf#page=5",
+      "imageNote": "Exact original model photograph extracted from Electro-Voice 2018 Portable Loudspeakers brochure, page 5; manufacturer brochure hosted by DLX Music. Not the G2 model."
     },
     "KEF Ventura 6": {
       "weight": 3.8,
@@ -1688,7 +1814,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/av-kef-ventura-6.jpg",
+      "imageSource": "https://uk.kef.com/products/ventura-6",
+      "imageNote": "Manufacturer product image from exact model page."
     },
     "KEF Ventura 5": {
       "weight": 2.85,
@@ -1700,7 +1828,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/av-kef-ventura-5.jpg",
+      "imageSource": "https://uk.kef.com/products/ventura-5",
+      "imageNote": "Manufacturer product image from exact model page."
     },
     "Bose DesignMax DM6SE (speaker and grille)": {
       "weight": 5.93,
@@ -1712,7 +1842,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/av-bose-designmax-dm6se-speaker-and-grille.jpg",
+      "imageSource": "https://boseprofessional.com/products/loudspeakers/surface-mount/designmax-surface-mount/designmax-dm6se-1-pair",
+      "imageNote": "Manufacturer product image from exact model page."
     },
     "Laney CXP-112": {
       "weight": 13.4,
@@ -1724,7 +1856,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/av-laney-cxp-112.jpg",
+      "imageSource": "https://www.laney.co.uk/amps/live-sound/concept/cxp-112",
+      "imageNote": "Manufacturer product image from exact model page."
     },
     "Behringer EUROLIVE B112D": {
       "weight": 12.3,
@@ -1736,7 +1870,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/av-behringer-eurolive-b112d.jpg",
+      "imageSource": "https://www.behringer.com/fr/products/0313-AED",
+      "imageNote": "Manufacturer product image from exact model page."
     },
     "Behringer EUROLIVE B115D": {
       "weight": 17.5,
@@ -1748,7 +1884,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/av-behringer-eurolive-b115d.jpg",
+      "imageSource": "https://www.behringer.com/en/products/0313-AEB",
+      "imageNote": "Manufacturer product image from exact model page."
     },
     "Citronic CUBA-8": {
       "weight": 10,
@@ -1760,7 +1898,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/av-citronic-cuba-8.jpg",
+      "imageSource": "https://www.avsl.com/product/178.709UK-cuba-full-range-wooden-pa-cabinets",
+      "imageNote": "Manufacturer product image from exact model page."
     },
     "Panasonic PT-VMZ71": {
       "weight": 7,
@@ -1772,7 +1912,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/av-panasonic-pt-vmz71.jpg",
+      "imageSource": "https://eu.connect.panasonic.com/gb/en/projectors/pt-vmz71-series/pt-vmz71",
+      "imageNote": "Manufacturer shared PT-VMZ71-series housing image supplied on this exact model product page."
     },
     "Panasonic PT-VMZ61": {
       "weight": 6.9,
@@ -1784,7 +1926,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/av-panasonic-pt-vmz61.jpg",
+      "imageSource": "https://eu.connect.panasonic.com/gb/en/projectors/pt-vmz71-series/pt-vmz61",
+      "imageNote": "Manufacturer shared PT-VMZ71-series housing image supplied on this exact model product page."
     },
     "Panasonic PT-VMZ51": {
       "weight": 6.5,
@@ -1796,7 +1940,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/av-panasonic-pt-vmz51.jpg",
+      "imageSource": "https://eu.connect.panasonic.com/gb/en/projectors/pt-vmz71-series/pt-vmz51",
+      "imageNote": "Manufacturer shared PT-VMZ71-series housing image supplied on this exact model product page."
     },
     "Panasonic PT-VMZ51S": {
       "weight": 6.5,
@@ -1808,7 +1954,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/av-panasonic-pt-vmz51s.jpg",
+      "imageSource": "https://eu.connect.panasonic.com/gb/en/projectors/pt-vmz71-series/pt-vmz51s",
+      "imageNote": "Manufacturer shared PT-VMZ71-series housing image supplied on this exact model product page."
     },
     "Epson PowerLite EB-L735U": {
       "weight": 8.4,
@@ -1820,7 +1968,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/av-epson-powerlite-eb-l735u.jpg",
+      "imageSource": "https://epson.com/For-Work/Projectors/Large-Venue/PowerLite-EB-L735U-Laser-Projector/p/V11HA25120",
+      "imageNote": "Manufacturer product image from exact model page."
     },
     "Epson PowerLite EB-L730U": {
       "weight": 8.4,
@@ -1832,7 +1982,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/av-epson-powerlite-eb-l730u.jpg",
+      "imageSource": "https://epson.com/For-Work/Projectors/Large-Venue/PowerLite-EB-L730U-Laser-Projector/p/V11HA25020",
+      "imageNote": "Manufacturer supplies shared L630U/L730U white housing photograph on this exact L730U SKU page; image asset named L630U."
     },
     "Epson PowerLite EB-L635SU": {
       "weight": 8.4,
@@ -1844,7 +1996,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/av-epson-powerlite-eb-l635su.jpg",
+      "imageSource": "https://epson.com/For-Work/Projectors/Large-Venue/PowerLite-EB-L635SU-Laser-Projector/p/V11HA29120",
+      "imageNote": "Manufacturer product image from exact model page."
     },
     "Epson PowerLite EB-L630SU": {
       "weight": 8.4,
@@ -1856,7 +2010,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/av-epson-powerlite-eb-l630su.jpg",
+      "imageSource": "https://epson.com/For-Work/Projectors/Large-Venue/PowerLite-EB-L630SU-Laser-Projector/p/V11HA29020",
+      "imageNote": "Manufacturer product image from exact model page."
     },
     "Epson PowerLite EB-L630U": {
       "weight": 8.4,
@@ -1868,7 +2024,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/av-epson-powerlite-eb-l630u.jpg",
+      "imageSource": "https://epson.com/For-Work/Projectors/Large-Venue/PowerLite-EB-L630U-Laser-Projector/p/V11HA26020",
+      "imageNote": "Manufacturer product image from exact model page."
     },
     "Epson PowerLite EB-L530U": {
       "weight": 8.2,
@@ -1880,7 +2038,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/av-epson-powerlite-eb-l530u.jpg",
+      "imageSource": "https://epson.com/For-Work/Projectors/Large-Venue/PowerLite-EB-L530U-Laser-Projector/p/V11HA27020",
+      "imageNote": "Manufacturer product image from exact model page."
     },
     "Epson PowerLite EB-L520U": {
       "weight": 7.7,
@@ -1892,7 +2052,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/av-epson-powerlite-eb-l520u.jpg",
+      "imageSource": "https://epson.com/For-Work/Projectors/Large-Venue/PowerLite-EB-L520U-Laser-Projector/p/V11HA30020",
+      "imageNote": "Manufacturer product image from exact model page."
     },
     "BenQ LH730": {
       "weight": 5.3,
@@ -1904,7 +2066,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/av-benq-lh730.jpg",
+      "imageSource": "https://www.benq.com/en-us/business/projector/lh730/specifications.html",
+      "imageNote": "Manufacturer product image from exact model page."
     },
     "BenQ LU930": {
       "weight": 6.3,
@@ -1916,7 +2080,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/av-benq-lu930.jpg",
+      "imageSource": "https://www.benq.eu/en-uk/business/projector/lu930/specifications.html",
+      "imageNote": "Manufacturer product image from exact model page."
     },
     "Sony VPL-PHZ61": {
       "weight": 7,
@@ -1928,7 +2094,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/av-sony-vpl-phz61.jpg",
+      "imageSource": "https://www.sony.jp/vpl/products/VPL-PHZ61/",
+      "imageNote": "Manufacturer product image from exact model page."
     },
     "Sony VPL-PHZ51": {
       "weight": 6.8,
@@ -1940,7 +2108,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/av-sony-vpl-phz51.jpg",
+      "imageSource": "https://www.sony.jp/vpl/products/VPL-PHZ51/",
+      "imageNote": "Manufacturer product image from exact model page."
     },
     "Optoma ZU506": {
       "weight": 5.5,
@@ -1952,7 +2122,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/av-optoma-zu506.jpg",
+      "imageSource": "https://www.optomausa.com/product/zu506-w",
+      "imageNote": "Exact ZU506-W white-finish product photograph from manufacturer page."
     },
     "Optoma ZU606T": {
       "weight": 5.5,
@@ -1964,7 +2136,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/av-optoma-zu606t.jpg",
+      "imageSource": "https://www.optomausa.com/product/ZU606T-B",
+      "imageNote": "Manufacturer ZU606T-B black-finish photograph. Representative colour variant of ZU606T; verify the individual projector variant and mass."
     },
     "Triple E UniTrack 0.25 m straight section (TRA0101)": {
       "weight": 0.806,
@@ -1974,7 +2148,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/track-unitrack.png",
+      "imageSource": "https://triplee.ltd/products/unitrack/",
+      "imageNote": "Representative track profile illustration; pictured runner is excluded from track weight and must be added separately."
     },
     "Triple E UniTrack 0.5 m straight section (TRA0102)": {
       "weight": 1.466,
@@ -1984,7 +2160,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/track-unitrack.png",
+      "imageSource": "https://triplee.ltd/products/unitrack/",
+      "imageNote": "Representative track profile illustration; pictured runner is excluded from track weight and must be added separately."
     },
     "Triple E UniTrack 1 m straight section (TRA0103)": {
       "weight": 2.864,
@@ -1994,7 +2172,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/track-unitrack.png",
+      "imageSource": "https://triplee.ltd/products/unitrack/",
+      "imageNote": "Representative track profile illustration; pictured runner is excluded from track weight and must be added separately."
     },
     "Triple E UniTrack 2 m straight section (TRA0104)": {
       "weight": 5.434,
@@ -2004,7 +2184,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/track-unitrack.png",
+      "imageSource": "https://triplee.ltd/products/unitrack/",
+      "imageNote": "Representative track profile illustration; pictured runner is excluded from track weight and must be added separately."
     },
     "Doughty SixTrack 0.25 m straight section (T63705)": {
       "weight": 0.63,
@@ -2014,7 +2196,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/track-sixtrack.jpg",
+      "imageSource": "https://doughty-engineering.co.uk/products/six-track-straight-sections/",
+      "imageNote": "Representative SixTrack straight section photograph; catalogue length is specified in the item name."
     },
     "Doughty SixTrack 0.5 m straight section (T63706)": {
       "weight": 1.19,
@@ -2024,7 +2208,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/track-sixtrack.jpg",
+      "imageSource": "https://doughty-engineering.co.uk/products/six-track-straight-sections/",
+      "imageNote": "Representative SixTrack straight section photograph; catalogue length is specified in the item name."
     },
     "Doughty SixTrack 0.75 m straight section (T63707)": {
       "weight": 1.99,
@@ -2034,7 +2220,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/track-sixtrack.jpg",
+      "imageSource": "https://doughty-engineering.co.uk/products/six-track-straight-sections/",
+      "imageNote": "Representative SixTrack straight section photograph; catalogue length is specified in the item name."
     },
     "Doughty SixTrack 1 m straight section (T63708)": {
       "weight": 2.69,
@@ -2044,7 +2232,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/track-sixtrack.jpg",
+      "imageSource": "https://doughty-engineering.co.uk/products/six-track-straight-sections/",
+      "imageNote": "Representative SixTrack straight section photograph; catalogue length is specified in the item name."
     },
     "Doughty SixTrack 2 m straight section (T63710)": {
       "weight": 4.47,
@@ -2054,7 +2244,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/track-sixtrack.jpg",
+      "imageSource": "https://doughty-engineering.co.uk/products/six-track-straight-sections/",
+      "imageNote": "Representative SixTrack straight section photograph; catalogue length is specified in the item name."
     },
     "Doughty SixTrack 3 m straight section (T63715)": {
       "weight": 6.71,
@@ -2064,7 +2256,9 @@
       "cats": [
         "equipment"
       ],
-      "photo": ""
+      "photo": "./images/track-sixtrack.jpg",
+      "imageSource": "https://doughty-engineering.co.uk/products/six-track-straight-sections/",
+      "imageNote": "Representative SixTrack straight section photograph; catalogue length is specified in the item name."
     },
     "Triple E 2-way Curved Track (per metre)": {
       "wpm": 1.17,
@@ -2074,7 +2268,9 @@
       "cats": [
         "equipment_linear"
       ],
-      "photo": ""
+      "photo": "./images/track-twoway-curve.png",
+      "imageSource": "https://triplee.ltd/products/2way-medium-duty-walkalong-curtain-track/",
+      "imageNote": "Representative curved track photograph of this profile; illustrated radius and end lengths may differ. Weight is calculated from the entered track length."
     },
     "Triple E E-Rail Curved Track (per metre)": {
       "wpm": 0.816,
@@ -2084,7 +2280,9 @@
       "cats": [
         "equipment_linear"
       ],
-      "photo": ""
+      "photo": "./images/track-erail-curve.png",
+      "imageSource": "https://triplee.ltd/products/erail/",
+      "imageNote": "Representative curved track photograph of this profile; illustrated radius and end lengths may differ. Weight is calculated from the entered track length."
     },
     "Triple E Unibeam Curved Track (per metre)": {
       "wpm": 3.441,
@@ -2094,7 +2292,9 @@
       "cats": [
         "equipment_linear"
       ],
-      "photo": ""
+      "photo": "./images/track-unibeam-curve.png",
+      "imageSource": "https://triplee.ltd/products/unibeam/",
+      "imageNote": "Representative curved track photograph of this profile; illustrated radius and end lengths may differ. Weight is calculated from the entered track length."
     }
   },
   "fabrics": [
