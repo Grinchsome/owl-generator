@@ -2627,6 +2627,47 @@
       "photo": "./images/update-fabric-showtex-gobelintulle.png",
       "imageSource": "https://www.showtex.com/en/products/soft-goods/backdrops-ceilings/scrim-netting-gauze/gobelintulle",
       "imageNote": "Illustrative manufacturer fabric swatch. Colour, texture and finish may vary; select by material specification and g/m²."
+    },
+    {
+      "name": "Direct Fabrics Black Wool Serge",
+      "brand": "Direct Fabrics",
+      "gsm": 560,
+      "source": "https://www.direct-fabrics.co.uk/black-wool-serge-fabric-flame-retardant.html",
+      "notes": "Supplier lists approximately 560 g/m². Fabric only; lining, headings, hems, chain and fittings are additional.",
+      "photo": "./images/direct-wool.jpg",
+      "imageSource": "https://www.direct-fabrics.co.uk/black-wool-serge-fabric-flame-retardant.html",
+      "imageNote": "Illustrative supplier product image. Colour and finish may vary."
+    },
+    {
+      "name": "Direct Fabrics Pasco Blackout Stage Velvet",
+      "brand": "Direct Fabrics",
+      "gsm": 460,
+      "source": "https://www.direct-fabrics.co.uk/velvet-fr-stage-curtains.html",
+      "notes": "Supplier fabric specification: 460 g/m², including its acrylic blackout coating. Additional lining, headings, hems, chain and fittings are separate.",
+      "photo": "./images/direct-pasco.jpg",
+      "imageSource": "https://www.direct-fabrics.co.uk/velvet-fr-stage-curtains.html",
+      "imageNote": "Illustrative supplier curtain photograph in blue. Colour and finish may vary."
+    },
+    {
+      "name": "Direct Fabrics Bolton Twill",
+      "brand": "Direct Fabrics",
+      "gsm": 240,
+      "source": "https://www.direct-fabrics.co.uk/bolton-twill-stage-fabric.html",
+      "notes": "Supplier lists 240gms, used here as an estimated fabric area weight of 240 g/m². Fabric only; lining, headings, hems, chain and fittings are additional.",
+      "photo": "./images/direct-bolton.jpg",
+      "imageSource": "https://www.direct-fabrics.co.uk/bolton-twill-stage-fabric.html",
+      "imageNote": "Illustrative supplier product image. Colour and finish may vary."
+    },
+    {
+      "name": "Direct Fabrics KILO Wool Serge (860 g/m² estimate)",
+      "brand": "Direct Fabrics",
+      "gsm": 860,
+      "source": "https://www.direct-fabrics.co.uk/kilo-black-wool-kilo-curtains.html",
+      "notes": "User-selected estimate: 860 g/m². Supplier title says 840gms; description says circa 860g plus lining, without explicitly stating the area unit. 860 g/m² is adopted for this estimating tool, not a verified universal specification. Lining, headings, hems, chain and fittings are additional.",
+      "photo": "./images/direct-kilo.jpg",
+      "imageSource": "https://www.direct-fabrics.co.uk/kilo-black-wool-kilo-curtains.html",
+      "imageNote": "Illustrative supplier KILO Wool Serge product image. Colour and finish may vary.",
+      "weightStatus": "user-selected estimate"
     }
   ],
   "retiredEntries": [
