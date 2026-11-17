@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>if ('scrollRestoration' in history) history.scrollRestoration = 'manual';</script>
   <title>OWL Generator</title><meta name="theme-color" content="#172c40"><link rel="manifest" href="./manifest.webmanifest"><link rel="icon" href="./icon.svg">
 
   <style>
@@ -4305,5 +4306,13 @@ $('jobRestore').onchange=async event=>{try{const file=event.target.files[0];if(!
   dialog.addEventListener('close', () => document.body.classList.remove('gallery-open'));
   search.addEventListener('input', renderFabrics); brand.addEventListener('change', renderFabrics);
 })();
+</script>
+<script>
+// Start at the closed section cards, including when restored from browser history.
+window.addEventListener('pageshow', () => {
+  document.querySelectorAll('details.sectionCard').forEach(card => { card.open = false; });
+  window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  requestAnimationFrame(() => window.scrollTo({ top: 0, left: 0, behavior: 'instant' }));
+});
 </script></body>
 </html>
