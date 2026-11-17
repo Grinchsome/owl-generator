@@ -4135,7 +4135,7 @@ const FABRICS = [{"name":"ShowTex Velours Bellini","gsm":605,"brand":"ShowTex","
 const $=id=>document.getElementById(id), esc=escapeHtml, clone=v=>structuredClone(v);
 const JOB_KEY='owl_jobs_v2', DRAFT_KEY='owl_draft_v3';
 // Native disclosure cards retain the existing input nodes and their listeners.
-for(const [selector,title,opened] of [['#riggingCard','Rigging',false],['.equipmentBox:not(#riggingCard)','Equipment',true]]){
+for(const [selector,title,opened] of [['#riggingCard','Rigging',false],['.equipmentBox:not(#riggingCard)','Equipment',false]]){
  const old=document.querySelector(selector),card=document.createElement('details');
  card.id=old.id||'equipmentCard';card.className='card sectionCard equipmentBox disclosureCard';card.open=opened;
  const summary=document.createElement('summary');summary.textContent=title;card.append(summary);
@@ -4148,7 +4148,7 @@ const sum=rows=>rows.reduce((v,r)=>v+r.qty*r.eachKg,0);
 function positive(v){return typeof v==='number'&&Number.isFinite(v)&&v>0}
 function validLine(l){return l&&typeof l.name==='string'&&typeof l.kind==='string'&&positive(l.qty)&&typeof l.eachKg==='number'&&Number.isFinite(l.eachKg)&&l.eachKg>=0&&Number.isFinite(l.qty*l.eachKg)}
 function validateJobs(value){if(!value||typeof value!=='object'||Array.isArray(value))throw Error('Invalid jobs');for(const j of Object.values(value)){if(!j||!Array.isArray(j.bars)||!Array.isArray(j.draft)||!j.draft.every(validLine)||!j.bars.every(b=>b&&typeof b.name==='string'&&Array.isArray(b.lines)&&b.lines.every(validLine)&&(b.capacity==null||positive(b.capacity))))throw Error('Invalid job data')}return value}
-const jobCard=document.createElement('details');jobCard.className='card sectionCard';jobCard.open=true;
+const jobCard=document.createElement('details');jobCard.className='card sectionCard';jobCard.open=false;
 jobCard.innerHTML=`<summary>Job and reports</summary><div class="owlTools"><label>Job / venue<input id="jobName" placeholder="Venue and inspection reference"></label><div class="row"><label>Inspector<input id="inspector" autocomplete="name"></label><label>Inspection date<input id="inspectionDate" type="date"></label></div><label>Job notes<textarea id="jobNotes" rows="2"></textarea></label><label>Saved jobs<select id="jobSelect"><option value="">Choose a job</option></select></label><div class="actionsRow"><button id="jobSave" class="btn-primary">Save job</button><button id="jobNew" class="btn-ghost">New job</button><button id="jobPrint" class="btn-ghost">Preview / print report</button></div><details><summary>Backup and restore</summary><p>Jobs stay in this browser on this device. Download a backup to keep a separate copy or transfer to another device.</p><button id="jobBackup">Download all jobs</button><label>Restore backup<input id="jobRestore" type="file" accept=".json,application/json"></label></details><p id="jobStatus" role="status"></p></div>`;
 document.querySelector('.stickyTop').after(jobCard);
 const capacityField=document.createElement('label');capacityField.innerHTML='Optional stated SWL/WLL (kg)<input id="capacity" type="number" min="0.01" step="any" placeholder="Unknown / not entered"><small id="capacityStatus"></small>'; $('barName').parentElement.append(capacityField);
