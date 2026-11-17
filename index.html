@@ -4240,5 +4240,70 @@ $('jobBackup').textContent='Download jobs and saved items';
 $('jobBackup').onclick=()=>{if(personalBroken){alert('The saved item list could not be read. Restore a valid library backup before exporting a combined backup.');return;}const backup={...jobs};if(lines.length||savedBars.length)backup[$('jobName').value.trim()||'Unsaved draft']=currentSnapshot();download('owl-backup-'+new Date().toISOString().slice(0,10)+'.json',JSON.stringify({version:2,jobs:backup,personalItems},null,2));status('Jobs and saved items downloaded. Keep the backup in a safe location.');};
 $('jobRestore').onchange=async event=>{try{const file=event.target.files[0];if(!file)return;if(file.size>20000000)throw Error('Backup too large');const data=JSON.parse(await file.text());if(data.version!==2)throw Error('Unsupported backup version');validateJobs(data.jobs);const incoming=data.personalItems===undefined?null:validatePersonal(data.personalItems);if(!confirm('Merge this backup? Matching job and saved item names will be replaced.'))return;const nextJobs={...jobs,...data.jobs},nextItems=personalBroken?[]:personalItems.slice();if(incoming)for(const e of incoming){const i=nextItems.findIndex(x=>x.name.toLowerCase()===e.name.toLowerCase());if(i>=0)nextItems[i]=e;else nextItems.push(e);}const oldJobs=localStorage.getItem(JOB_KEY),oldItems=localStorage.getItem(PERSONAL_KEY);try{localStorage.setItem(JOB_KEY,JSON.stringify(nextJobs));if(incoming)localStorage.setItem(PERSONAL_KEY,JSON.stringify(nextItems));}catch(error){try{oldJobs===null?localStorage.removeItem(JOB_KEY):localStorage.setItem(JOB_KEY,oldJobs);oldItems===null?localStorage.removeItem(PERSONAL_KEY):localStorage.setItem(PERSONAL_KEY,oldItems);}catch{}throw error;}jobs=nextJobs;storageBroken=false;if(incoming){personalItems=nextItems;personalBroken=false;$('personalStatus').textContent='Saved items restored.';refreshPersonal();}refreshJobs();status('Backup restored. Choose a job or saved item to open.');}catch(e){alert('Restore failed: '+e.message);}event.target.value='';};
 
+</script>
+<style>
+#fabricGallery{box-sizing:border-box;width:min(1050px,94vw);max-height:90vh;padding:0;border:1px solid var(--border);border-radius:14px;background:var(--card);color:var(--text)}
+#fabricGallery::backdrop{background:rgba(0,0,0,.7)}
+#fabricGallery[open]{display:flex;flex-direction:column;overflow:hidden}#fabricGalleryGrid{min-height:0;flex:1 1 auto;overscroll-behavior:contain}.fabricGalleryHeader{flex:0 0 auto}
+.fabricGalleryHeader{padding:18px;border-bottom:1px solid var(--border)}
+.fabricGalleryTitle{display:flex;justify-content:space-between;align-items:center;gap:16px}.fabricGalleryTitle h2{margin:0}.fabricGalleryTitle button{width:auto}
+.fabricGalleryFilters{display:flex;gap:12px}.fabricGalleryFilters label{flex:1;min-width:0}
+#fabricGalleryGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;padding:18px;max-height:52vh;overflow:auto}
+.fabricGalleryCard{display:flex;flex-direction:column;gap:10px;border:1px solid var(--border);border-radius:10px;padding:12px;min-width:0}.fabricGalleryCard img{width:100%;height:150px;object-fit:contain;background:#fff;border-radius:6px}.fabricGalleryCard h3,.fabricGalleryCard p{margin:0;overflow-wrap:anywhere}.fabricGalleryCard p{font-size:13px;line-height:1.5}.fabricGalleryCard button{margin-top:auto}.fabricGalleryCard a{color:inherit;text-decoration:underline}
+#appCredit{text-align:center;padding:20px 16px;font-size:13px;color:var(--text);line-height:1.6}
+@media(max-width:520px){.fabricGalleryFilters{flex-direction:column;gap:0}#fabricGalleryGrid{grid-template-columns:1fr;max-height:45vh}.fabricGalleryTitle h2{font-size:20px}}
+@media print{#fabricGallery,#appCredit{display:none!important}}
+</style>
+<dialog id="fabricGallery" aria-labelledby="fabricGalleryTitle" aria-describedby="fabricGalleryHelp">
+<div class="fabricGalleryHeader">
+<div class="fabricGalleryTitle"><h2 id="fabricGalleryTitle">Fabric gallery</h2><button id="fabricGalleryClose" type="button">Close</button></div>
+<p id="fabricGalleryHelp">Choose a fabric to fill in its name and weight in the curtain calculator. Images are illustrative; check the material specification.</p>
+<div class="fabricGalleryFilters"><label>Search fabrics<input id="fabricGallerySearch" type="search" placeholder="Name, manufacturer or g/m²"></label><label>Manufacturer<select id="fabricGalleryBrand"><option value="">All manufacturers</option></select></label></div>
+<p id="fabricGalleryCount" role="status"></p></div><div id="fabricGalleryGrid"></div>
+</dialog>
+<footer id="appCredit">Created by Andy Jones, with AI development from ChatGPT ("Charlie")</footer>
+<script>
+(() => {
+  const dialog = document.getElementById('fabricGallery');
+  const search = document.getElementById('fabricGallerySearch');
+  const brand = document.getElementById('fabricGalleryBrand');
+  const grid = document.getElementById('fabricGalleryGrid');
+  const browse = document.createElement('button');
+  browse.id = 'fabricGalleryOpen'; browse.type = 'button'; browse.textContent = 'Fabric gallery';
+  browse.setAttribute('aria-haspopup', 'dialog');
+  document.getElementById('fabricSelect').closest('label').after(browse);
+  [...new Set(FABRICS.map(f => f.brand))].sort().forEach(name => brand.add(new Option(name, name)));
+  function renderFabrics() {
+    const query = search.value.trim().toLowerCase();
+    const fabrics = FABRICS.filter(f => (!brand.value || f.brand === brand.value) && `${f.name} ${f.brand} ${f.gsm}`.toLowerCase().includes(query));
+    grid.replaceChildren();
+    document.getElementById('fabricGalleryCount').textContent = `${fabrics.length} of ${FABRICS.length} fabrics`;
+    if (!fabrics.length) { const empty = document.createElement('p'); empty.textContent = 'No matching fabrics. Try another search or manufacturer.'; grid.append(empty); }
+    fabrics.forEach(f => {
+      const card = document.createElement('article'); card.className = 'fabricGalleryCard';
+      const image = document.createElement('img'); image.src = f.photo; image.alt = f.name + ' — illustrative fabric image'; image.loading = 'lazy';
+      image.addEventListener('error', () => { image.hidden = true; });
+      const title = document.createElement('h3'); title.textContent = f.name;
+      const weight = document.createElement('p'); weight.textContent = `${f.gsm} g/m²` + (/estimate/i.test(f.weightStatus || f.notes || '') ? ' · estimate' : '');
+      const note = document.createElement('p'); note.textContent = f.imageNote || 'Illustrative fabric image. Colour and texture may vary.';
+      const source = document.createElement('a'); source.href = f.imageSource || f.source; source.target = '_blank'; source.rel = 'noopener'; source.textContent = 'Fabric image source';
+      const use = document.createElement('button'); use.type = 'button'; use.className = 'btn-primary'; use.textContent = 'Use this fabric'; use.setAttribute('aria-label', 'Use ' + f.name);
+      use.addEventListener('click', () => {
+        const select = document.getElementById('fabricSelect'); select.value = f.name;
+        select.dispatchEvent(new Event('change', { bubbles: true }));
+        select.dispatchEvent(new Event('input', { bubbles: true }));
+        dialog.close(); document.getElementById('fabricName').focus();
+      });
+      card.append(image, title, weight, note, source, use); grid.append(card);
+    });
+  }
+  browse.addEventListener('click', () => {
+    search.value = ''; brand.value = ''; renderFabrics(); dialog.showModal();
+    document.body.classList.add('gallery-open'); search.focus();
+  });
+  document.getElementById('fabricGalleryClose').addEventListener('click', () => dialog.close());
+  dialog.addEventListener('close', () => document.body.classList.remove('gallery-open'));
+  search.addEventListener('input', renderFabrics); brand.addEventListener('change', renderFabrics);
+})();
 </script></body>
 </html>

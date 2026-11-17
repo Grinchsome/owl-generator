@@ -4,6 +4,10 @@ Phone-friendly observed working load calculator. Standalone HTML, no AI or serve
 
 ## Use
 
+The Curtains and cyclorama cloths section includes a Fabric gallery with all 25 bundled fabric presets. Search by name, manufacturer or fabric weight, or filter by manufacturer. Choose Use this fabric to fill in the curtain name, g/m², specification link and swatch before entering dimensions. Representative textures and estimated weights remain labelled.
+
+Created by Andy Jones, with AI development from ChatGPT ("Charlie")
+
 Name a job and bar, add equipment and accessories, and save the bar. Reopen saved bars with Edit; Update Bar replaces the original. Optional capacity is the stated SWL/WLL supplied by the inspector. Comparisons are weight comparisons, not structural or installation assessments.
 
 Curtains use opening width × drop × (1 + fullness/100) × gsm/1000, plus the entered extra weight. Use 0% fullness for actual flat fabric width. Include hems, lining, bottom chains, fittings and bars once. A pair may be entered separately or using combined width. A custom known-weight item can be used for a measured completed curtain.
